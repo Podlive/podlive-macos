@@ -1,0 +1,360 @@
+/* @LANGUAGE en 
+   @DIRECTORY Podlive/Supporting Files 
+   @FILE Podlive/Supporting Files/Localizable.strings */
+
+/* Parse Push Notifications */
+"channel_state_live" = "Open";
+
+"channel_state_title_live" = "New Live Stream";
+
+"channel_state_message_live" = "'%@' has started live stream.";
+
+"channel_state_preshow" = "Open";
+
+"channel_state_title_preshow" = "New Preshow";
+
+"channel_state_message_preshow" = "'%@' has started preshow.";
+
+/* Application Theme Selector Label */
+"Application Theme" = "Application Theme";
+
+/* Application Theme */
+"Aqua Theme" = "Aqua Theme";
+
+/* ChannelGrid Section Header Title */
+"Available Podcasts" = "Available Podcasts";
+
+/* Application Theme */
+"Dark Theme" = "Dark Theme";
+
+/* TextField Placeholder */
+"Email Address" = "Email Address";
+
+/* ChannelGrid Section Header Title */
+"Live" = "Live";
+
+/* TextField Placeholder */
+"Password" = "Password";
+
+/* Preferences ViewController Title */
+"Preferences" = "Preferences";
+
+/* Login Window Headline */
+"%@ Login" = "%@ Login";
+
+/* Signup Window Headline */
+"%@ Signup" = "%@ Signup";
+
+/* Login Window Headline Subtext */
+"If you already have a \"%@\" account just enter your username and password to synchronize your favourite podcasts to all your devices." = "If you already have a \"%@\" account just enter your username and password to synchronize your favourite podcasts to all your devices.";
+
+/* Signup Window Headline Subtext */
+"Signup to \"%@\" to synchronize your favourite podcasts to all your connected devices." = "Signup to \"%@\" to synchronize your favourite podcasts to all your connected devices.";
+
+/* Button Title */
+"Signup" = "Signup";
+
+/* Email Textfield Placeholder String */
+"Your Email Address" = "Your Email Address";
+
+/* Password Textfield Placeholder String */
+"Your Password" = "Your Password";
+
+/* Username Textfield Placeholder String */
+"Your Username" = "Your Username";
+
+/* No comment provided by engineer. */
+"Email: %@" = "Email: %@";
+
+/* Alert Title */
+"Login Failed" = "Login Failed";
+
+/* No comment provided by engineer. */
+"Logout" = "Logout";
+
+/* Alert Sub-Message */
+"Please check your entries and try again." = "Please check your entries and try again.";
+
+/* Alert Title */
+"Sign Up Error" = "Sign Up Error";
+
+/* Alert Message */
+"Something went wrong..." = "Something went wrong...";
+
+/* Alert Message */
+"The email '%@' is taken. Please try using a different email." = "The email '%@' is taken. Please try using a different email.";
+
+/* Alert Message */
+"The username '%@' is taken. Please try choosing a different username." = "The username '%@' is taken. Please try choosing a different username.";
+
+/* Alert Message */
+"The username and password you entered don't match." = "The username and password you entered don't match.";
+
+/* No comment provided by engineer. */
+"Username: %@" = "Username: %@";
+
+/* Alert Message */
+"Welcome %@!" = "Welcome %@!";
+
+/* Alert Message */
+"You successfully registered to %@. In order to validate your registration we sent a confirmation message to your email address at:\n\n%@" = "You successfully registered to %@. In order to validate your registration we sent a confirmation message to your email address at:\n\n%@";
+
+/* Password Reset Window Headline */
+"%@ Password Reset" = "%@ Password Reset";
+
+/* Button Label */
+"Cancel" = "Cancel";
+
+/* Button Title */
+"Forgot Password..." = "Forgot Password...";
+
+/* Password Reset Window Headline Subtext */
+"Please enter your email address in the textfield below. We will send you an email with a link to reset your password." = "Please enter your email address in the textfield below. We will send you an email with a link to reset your password.";
+
+/* Button Title */
+"Reset" = "Reset";
+
+/* TextField Label */
+"Username" = "Username";
+
+/* Button Title */
+"Login" = "Login";
+
+/* Button Title */
+"← Forgot Password" = "← Forgot Password";
+
+/* Button Title */
+"← Login" = "← Login";
+
+/* Button Title */
+"Login →" = "Login →";
+
+/* Button Title */
+"Signup →" = "Signup →";
+
+/* Alert Message */
+"No email address found." = "No email address found.";
+
+/* Alert Title */
+"Password Reset Error" = "Password Reset Error";
+
+/* Alert Message */
+"Password Reset" = "Password Reset";
+
+/* Alert Message */
+"Please check your mailbox, we sent you an email to\n\n%@\n\n with a link to reset your password." = "Please check your mailbox, we sent you an email to\n\n%@\n\n with a link to reset your password.";
+
+/* Alert Sub-Message */
+"Unfortunately we found no user with an email address\n\na%@\n\nPlease try again." = "Unfortunately we found no user with an email address\n\na%@\n\nPlease try again.";
+
+/* No comment provided by engineer. */
+"★ " = "★ ";
+
+/* Paddle Trial Text */
+"Thanks for downloading a trial of %@. I hope you enjoy it!" = "Thanks for downloading a trial of %@. I hope you enjoy it!";
+
+/* Alert Sub-Message */
+"Unfortunately we found no user with an email address\n\n%@\n\nPlease try again." = "Unfortunately we found no user with an email address\n\n%@\n\nPlease try again.";
+
+/* Button Label */
+"Activate License" = "Activate License";
+
+/* Button Label */
+"Buy License" = "Buy License";
+
+/* Button Label */
+"Continue Trial" = "Continue Trial";
+
+/* LicenseTrialView Title */
+"Thank you for trying %@" = "Thank you for trying %@";
+
+/* LicenseTrialView Days Remaining Message */
+"You have %@ days remaining in your trial period." = "You have %@ days remaining in your trial period.";
+
+/* Currency Label */
+"%@" = "%@";
+
+/* App Author Name Label */
+"by %@" = "by %@";
+
+/* Button Label */
+"Quit %@" = "Quit %@";
+
+/* Main Menu Item Title */
+"About %@" = "About %@";
+
+/* Main Menu Item Title */
+"Bring All to Front" = "Bring All to Front";
+
+/* Main Menu Item Title */
+"Close Window" = "Close Window";
+
+/* Main Menu Item Title */
+"Copy" = "Copy";
+
+/* Main Menu Item Title */
+"Cut" = "Cut";
+
+/* Main Menu Item Title */
+"Delete" = "Delete";
+
+/* The Edit menu */
+"Edit" = "Edit";
+
+/* Main Menu Item Title */
+"Enter Full Screen" = "Enter Full Screen";
+
+/* The Help menu
+   nil */
+"Help" = "Help";
+
+/* Main Menu Item Title */
+"Hide Others" = "Hide Others";
+
+/* Main Menu Item Title */
+"Minimize" = "Minimize";
+
+/* Main Menu Item Title */
+"Select All" = "Select All";
+
+/* Main Menu Item Title */
+"Services" = "Services";
+
+/* Main Menu Item Title */
+"Show All" = "Show All";
+
+/* Main Menu Item Title */
+"Zoom" = "Zoom";
+
+/* Main Menu Item Title */
+"%@ Hide" = "%@ Hide";
+
+/* Listeners Count: Singular */
+"%@ Listener" = "%@ Listener";
+
+/* Listeners Count: Plural */
+"%@ Listeners" = "%@ Listeners";
+
+/* Main Menu Item Title */
+"Podcast Overview" = "Podcast Overview";
+
+/* Main Menu Item Title */
+"Find Next" = "Find Next";
+
+/* Main Menu Item Title */
+"Find Previous" = "Find Previous";
+
+/* Main Menu Item Title */
+"Find…" = "Find…";
+
+/* Main Menu Item Title */
+"Find" = "Find";
+
+/* Main Menu Item Title */
+"Jump to Selection" = "Jump to Selection";
+
+/* nil */
+"Paste and Match Style" = "Paste and Match Style";
+
+/* Main Menu Item Title */
+"Paste" = "Paste";
+
+/* The File menu */
+"Podcasts" = "Podcasts";
+
+/* nil */
+"Spelling" = "Spelling";
+
+/* Main Menu Item Title */
+"Subscribed Podcasts" = "Favourite Podcasts";
+
+/* LicenseTrialView Subtitle */
+"Thank you for downloading a trial of %@. I hope you enjoy it!" = "Thank you for downloading a trial of %@. I hope you enjoy it!";
+
+/* Main Menu Item Title */
+"Use Selection for Find" = "Use Selection for Find";
+
+/* The View menu */
+"View" = "View";
+
+/* The Window menu */
+"Window" = "Window";
+
+/* followerCountFormatString */
+"%li Follower" = "%li Follower";
+
+/* followerCountFormatString */
+"%li Followers" = "%li Followers";
+
+/* litenerCountSingularFormatString */
+"%li Listener" = "%li Listener";
+
+/* litenerCountPluralFormatString */
+"%li Listeners" = "%li Listeners";
+
+/* Preferences ViewController Title */
+"Account" = "Account";
+
+/* Preferences ViewController Title */
+"Appearance" = "Appearance";
+
+/* Preferences ViewController Title */
+"Audio" = "Audio";
+
+/* Main Menu Item Title */
+"Feedback..." = "Feedback...";
+
+/* Volume Level Selector Item */
+"Globally" = "Globally";
+
+/* Volume Level Selector Item */
+"Per Podcast" = "Per Podcast";
+
+/* Volume Level Selector Label */
+"Save Volume Level" = "Save Volume Level";
+
+/* Application Theme Selector Label */
+"Set Application Theme to" = "Set Application Theme to";
+
+/* Prefs: Volume Level Description */
+"The current volume level of a streaming channel will be saved separately for this channel only.\n\nSwitching to another streaming channel adjusts the volume level automatically." = "The current volume level of a streaming channel will be saved separately for this channel only.\n\nSwitching to another streaming channel adjusts the volume level automatically.";
+
+/* Prefs: Volume Level Description */
+"The current volume level will be saved globally for all channels." = "The current volume level will be saved globally for all channels.";
+
+/* Preferences ViewController Title */
+"Interface" = "Interface";
+
+/* No comment provided by engineer. */
+"%@ Username:" = "%@ Username:";
+
+/* Preferences ViewController Title */
+"General" = "General";
+
+/* No comment provided by engineer. */
+"I forgot my password" = "I forgot my password";
+
+/* No comment provided by engineer. */
+"I have an account, but forgot my password" = "I have an account, but forgot my password";
+
+/* Button Title */
+"Log In..." = "Log In...";
+
+/* Username Label */
+"Not Logged In" = "Not Logged In";
+
+/* No comment provided by engineer. */
+"PREF_LOGIN_STATUS_DESCRIPTION" = "PREF_LOGIN_STATUS_DESCRIPTION";
+
+/* Button Title */
+"Signup..." = "Signup...";
+
+/* Preferences ViewController Title */
+"Sync" = "Sync";
+
+/* No comment provided by engineer. */
+"unfortunately, no favorite live stream..." = "unfortunately, no favorite live stream...";
+
+/* No comment provided by engineer. */
+"unfortunately, no live stream..." = "unfortunately, no live stream...";
+
