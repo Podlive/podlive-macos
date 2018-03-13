@@ -10,7 +10,7 @@
 // Parse Data
 + (NSString *)parseApplicationId;
 + (NSString *)parseClientKey;
-+ (NSString *)parseServer;
++ (NSString *)parseServerUrl;
 
 @end
 

@@ -114,7 +114,7 @@
     let parseConfiguration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = CCNConstants.parseApplicationId;
         configuration.clientKey     = CCNConstants.parseClientKey;
-        configuration.server        = CCNConstants.parseServer;
+        configuration.server        = CCNConstants.parseServerUrl;
         NSLog(@"using parse server: %@", configuration.server);
     }];
     [Parse initializeWithConfiguration:parseConfiguration];

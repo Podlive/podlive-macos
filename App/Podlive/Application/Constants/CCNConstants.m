@@ -5,32 +5,48 @@
 
 #import "CCNConstants.h"
 
+typedef NS_ENUM(NSInteger, CCNBackendType) {
+    CCNBackendTypeTest = 0,
+    CCNBackendTypeProduction = 1
+};
+
+static NSString *const CCNParseApplicationId = @"ParseApplicationId";
+static NSString *const CCNParseClientKey     = @"ParseClientKey";
+static NSString *const CCNParseServerUrl     = @"ParseServerUrl";
+
 @implementation CCNConstants
 
 // MARK: - Parse Data
 
 + (NSString *)parseApplicationId {
 #if TESTSERVER
-    return @"iePaewo3chah2cis0ophei9moosh5ief7ooviereithiemaech";
+    return [self valueForBackendType:CCNBackendTypeTest withKey:CCNParseApplicationId];
 #else
-    return @"ni2aeFaed4goo3feis2doo7vegeoy5iJaip0Aexech5Iegahp1";
+    return [self valueForBackendType:CCNBackendTypeProduction withKey:CCNParseApplicationId];
 #endif
 }
 
 + (NSString *)parseClientKey {
 #if TESTSERVER
-    return @"eiquudihe5Ohgh6IeVu2Ahy1pai0iDie4aJai0iewohW4ju9Oo";
+    return [self valueForBackendType:CCNBackendTypeTest withKey:CCNParseClientKey];
 #else
-    return @"boopup4quoludoh0ohSh8du8iophohhouYixaighi0ohp0Pah2";
+    return [self valueForBackendType:CCNBackendTypeProduction withKey:CCNParseClientKey];
 #endif
 }
 
-+ (NSString *)parseServer{
++ (NSString *)parseServerUrl {
 #if TESTSERVER
-    return @"https://podlive-parse-server-test.herokuapp.com/parse";
+    return [self valueForBackendType:CCNBackendTypeTest withKey:CCNParseServerUrl];
 #else
-    return @"https://podlive-parse-server.herokuapp.com/parse";
+    return [self valueForBackendType:CCNBackendTypeProduction withKey:CCNParseServerUrl];
 #endif
+}
+
++ (NSString *)valueForBackendType:(CCNBackendType)backendType withKey:(NSString *)key {
+    let parsePlist = [NSBundle.mainBundle pathForResource:@"Parse" ofType:@"plist"];
+    let parseArray = [NSArray arrayWithContentsOfFile:parsePlist];
+
+    return parseArray[backendType][key];
 }
 
 @end

@@ -12,6 +12,7 @@
 		FD0F9DCF205827A70066E677 /* CCNAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD0F9DD0205827AA0066E677 /* CCNFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */; };
 		FD0F9DD1205827AA0066E677 /* CCNFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD0F9DD42058324B0066E677 /* Parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD0F9DD32058324B0066E677 /* Parse.plist */; };
 		FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */; };
 		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
 		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
@@ -107,6 +108,7 @@
 		FD0F9DC6205827200066E677 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Telekinesis.framework; sourceTree = "<group>"; };
 		FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CCNAppKit.framework; sourceTree = "<group>"; };
 		FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CCNFoundation.framework; sourceTree = "<group>"; };
+		FD0F9DD32058324B0066E677 /* Parse.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Parse.plist; sourceTree = "<group>"; };
 		FD1041AC1E6F37A2003EA6C9 /* CCNAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNAuthViewController.h; sourceTree = "<group>"; };
 		FD1041AD1E6F37A2003EA6C9 /* CCNAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNAuthViewController.m; sourceTree = "<group>"; };
 		FD10E5811E746EA000560D74 /* NSImage+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Podlive.h"; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 			children = (
 				FDAE07231EDF0F9D009E5A2D /* CCNConstants.h */,
 				FDAE07241EDF0F9D009E5A2D /* CCNConstants.m */,
+				FD0F9DD32058324B0066E677 /* Parse.plist */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0F9DD42058324B0066E677 /* Parse.plist in Resources */,
 				FD634D041EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf in Resources */,
 				FDD1D67E1F06708D00DED89C /* CCNPreferencesAudio.xib in Resources */,
 				FD634D021EF1F76B006243A4 /* ProximaNova-Light.otf in Resources */,
