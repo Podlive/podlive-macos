@@ -16,7 +16,7 @@ The goal to develop this software was a lag of a personal need, at the beginning
 
 We really would like to see passionate developers with tons of ideas to improve and push forward this Mac client. And there is just one requirement: *I would like to see it Objective-C only*.
 
-Please don’t get me wrong, I’m a Swift developer too. But my private passion still is on ObjC. So, Podlive for Mac may be born with the idea in mind to let ObjC a living language, who knows it (naive minded, isn’t it?)...  
+Please don’t get me wrong, I’m a Swift developer too. But my private passion still is on ObjC. So, Podlive for Mac may be born with the idea in mind to keep ObjC a living language, who knows (naive minded, isn’t it?)...  
 And for all you Swift fans, the code style of this project looks very familiar. 😉
 
 To contribute, just clone this project and start to develop. *Please avoid to spam us with tons of issues.* It really doesn’t help us. The best way is to fork this project, make your (changes|fixes|additions) and open a pull request. Thanks for understanding.
