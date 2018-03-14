@@ -50,9 +50,9 @@ git submodule update
 
 ## Contact
 
-* 📨 [Write us an email](mailto:mail@podlive.io)
-* 🐦 [Ping us on Twitter](https://twitter.com/PodliveApp)
-* 📝 [Read our blog](https://podlive.io/blog)
+* :envelope: [Write us an email](mailto:mail@podlive.io)
+* :bird: [Ping us on Twitter](https://twitter.com/PodliveApp)
+* :memo: [Read our blog](https://podlive.io/blog)
 
 ## License
 This software is published under the [MIT License](http://cocoanaut.mit-license.org).
