@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CCNPreferencesAudio">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="volumeDescriptionLabel" destination="2t2-2E-gke" id="yan-sK-goI"/>
+                <outlet property="volumeLabel" destination="icU-fn-ylh" id="9AT-yk-1Rv"/>
+                <outlet property="volumePopup" destination="RPd-XW-6HP" id="bjq-Pd-jMG"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="550" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RPd-XW-6HP">
+                    <rect key="frame" x="246" y="117" width="285" height="26"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="DtG-IT-iX5" id="RCk-c6-dtF">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="2U5-xI-PeO">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="DtG-IT-iX5"/>
+                                <menuItem title="Item 2" id="UoV-g7-h6H"/>
+                                <menuItem title="Item 3" id="6xx-aM-py9"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="volumePopupAction:" target="-2" id="ngR-gf-2vH"/>
+                    </connections>
+                </popUpButton>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="2t2-2E-gke">
+                    <rect key="frame" x="246" y="20" width="286" height="92"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="282" id="6qX-Ct-MdB"/>
+                        <constraint firstAttribute="height" constant="92" id="uY1-p4-ZNS"/>
+                    </constraints>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="vWo-uv-rIO">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="icU-fn-ylh">
+                    <rect key="frame" x="18" y="123" width="224" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="ZS3-qw-ZE2"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Save Volume Level" id="FQN-fd-L0z">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="RPd-XW-6HP" firstAttribute="leading" secondItem="icU-fn-ylh" secondAttribute="trailing" constant="8" symbolic="YES" id="0U0-7E-RGA"/>
+                <constraint firstItem="icU-fn-ylh" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="1Rt-7E-mgO"/>
+                <constraint firstItem="RPd-XW-6HP" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="AcX-U1-9lt"/>
+                <constraint firstItem="icU-fn-ylh" firstAttribute="centerY" secondItem="RPd-XW-6HP" secondAttribute="centerY" constant="-1" id="URs-AT-2st"/>
+                <constraint firstAttribute="trailing" secondItem="RPd-XW-6HP" secondAttribute="trailing" constant="22" id="azt-Rk-GuV"/>
+                <constraint firstItem="2t2-2E-gke" firstAttribute="top" secondItem="RPd-XW-6HP" secondAttribute="bottom" constant="8" symbolic="YES" id="ghp-1L-8xz"/>
+                <constraint firstItem="RPd-XW-6HP" firstAttribute="trailing" secondItem="2t2-2E-gke" secondAttribute="trailing" constant="-2" id="szd-VB-McR"/>
+            </constraints>
+            <point key="canvasLocation" x="89" y="93"/>
+        </customView>
+    </objects>
+</document>

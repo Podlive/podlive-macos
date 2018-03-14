@@ -1,0 +1,1074 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4493D674057FA091CD19A5A3 /* libPods-Podlive.a */; };
+		FD0F9DCE205827A70066E677 /* CCNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */; };
+		FD0F9DCF205827A70066E677 /* CCNAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD0F9DD0205827AA0066E677 /* CCNFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */; };
+		FD0F9DD1205827AA0066E677 /* CCNFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD0F9DD42058324B0066E677 /* Parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD0F9DD32058324B0066E677 /* Parse.plist */; };
+		FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */; };
+		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
+		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
+		FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */; };
+		FD4BF7E91EDC1E9B00BC15E9 /* CCNUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FEE761E83B251002AC2A7 /* CCNUserInfoViewController.m */; };
+		FD4BF7EA1EDC1E9B00BC15E9 /* CCNNotificationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29587D1EAA473300B564CB /* CCNNotificationCoordinator.m */; };
+		FD4BF7ED1EDC1E9B00BC15E9 /* CCNChannelGridItemControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD46B4D61E65871C005BC0CD /* CCNChannelGridItemControlView.m */; };
+		FD4BF7EE1EDC1E9B00BC15E9 /* CCNUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5FEE7A1E83B716002AC2A7 /* CCNUserInfoView.m */; };
+		FD4BF7EF1EDC1E9B00BC15E9 /* CCNPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD95F22F1E85632D00F5B394 /* CCNPlayer.m */; };
+		FD4BF7F01EDC1E9B00BC15E9 /* NSWindow+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD47A2071ED219AD00EFCBB9 /* NSWindow+Podlive.m */; };
+		FD4BF7F11EDC1E9B00BC15E9 /* CCNChannelGridFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9DC8A61E6CE5850027211F /* CCNChannelGridFlowLayout.m */; };
+		FD4BF7F21EDC1E9B00BC15E9 /* CCNPlayerStopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FE61E93EA150089CD34 /* CCNPlayerStopButton.m */; };
+		FD4BF7F31EDC1E9B00BC15E9 /* CCNPlayerPlayPauseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAF0C9D1E8AA66700A7AB63 /* CCNPlayerPlayPauseButton.m */; };
+		FD4BF7F41EDC1E9B00BC15E9 /* CCNApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF642B61E5CCD260005EA72 /* CCNApplicationViewController.m */; };
+		FD4BF7F51EDC1E9B00BC15E9 /* NSImage+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD10E5821E746EA000560D74 /* NSImage+Podlive.m */; };
+		FD4BF7F61EDC1E9B00BC15E9 /* CCNAuthView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2A348C1E8E591200A40BE9 /* CCNAuthView.m */; };
+		FD4BF7F71EDC1E9B00BC15E9 /* CCNAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1041AD1E6F37A2003EA6C9 /* CCNAuthViewController.m */; };
+		FD4BF7F81EDC1E9B00BC15E9 /* CCNPreferencesGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3385241E6B7569007D0D74 /* CCNPreferencesGeneral.m */; };
+		FD4BF7F91EDC1E9B00BC15E9 /* CCNPlayerVolumeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FEA1E93EEAF0089CD34 /* CCNPlayerVolumeSlider.m */; };
+		FD4BF7FB1EDC1E9B00BC15E9 /* NSBKeyframeAnimation+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD3511E981EA10081CEA8 /* NSBKeyframeAnimation+Animations.m */; };
+		FD4BF7FD1EDC1E9B00BC15E9 /* CCNChannelGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6482381E656B3000657124 /* CCNChannelGridViewController.m */; };
+		FD4BF7FE1EDC1E9B00BC15E9 /* CCNChannelGridSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0526CF1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.m */; };
+		FD4BF7FF1EDC1E9B00BC15E9 /* CCNChannelGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FD64823C1E65787400657124 /* CCNChannelGridItem.m */; };
+		FD4BF8011EDC1E9B00BC15E9 /* CCNPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE9F01B1E79E15100D27FF6 /* CCNPlayerViewController.m */; };
+		FD4BF8021EDC1E9B00BC15E9 /* NSColor+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD71D4CF1E66FCFD003D6E01 /* NSColor+Podlive.m */; };
+		FD4BF8031EDC1E9B00BC15E9 /* CCNBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FE31E93E9AD0089CD34 /* CCNBaseButton.m */; };
+		FD4BF8051EDC1E9B00BC15E9 /* CCNLoginLogoutButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD57E4581E736C1F0097A6AE /* CCNLoginLogoutButton.m */; };
+		FD4BF8061EDC1E9B00BC15E9 /* NSBKeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD35A1E981FE60081CEA8 /* NSBKeyframeAnimation.m */; };
+		FD4BF8071EDC1E9B00BC15E9 /* CCNPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE9F0201E79E18400D27FF6 /* CCNPlayerView.m */; };
+		FD4BF8081EDC1E9B00BC15E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0722B61E5CEB35000A2860 /* main.m */; };
+		FD4BF80B1EDC1E9B00BC15E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4C672E1E81105E001F012E /* QuartzCore.framework */; };
+		FD4BF80C1EDC1E9B00BC15E9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD36B99A1E7893FD00FB9456 /* IOKit.framework */; };
+		FD4BF80D1EDC1E9B00BC15E9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD36B9981E7893F100FB9456 /* Security.framework */; };
+		FD4BF8101EDC1E9B00BC15E9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD95F2321E85635A00F5B394 /* AVFoundation.framework */; };
+		FD4BF8141EDC1E9B00BC15E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD1AC74F1E70D7A500C5E692 /* Localizable.strings */; };
+		FD4BF8151EDC1E9B00BC15E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD0722BE1E5CEB56000A2860 /* Assets.xcassets */; };
+		FD4BF8161EDC1E9B00BC15E9 /* CCNPreferencesGeneral.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3385251E6B7569007D0D74 /* CCNPreferencesGeneral.xib */; };
+		FD634D011EF1F76B006243A4 /* ProximaNova-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD634CF41EF1F76B006243A4 /* ProximaNova-ExtraBold.otf */; };
+		FD634D021EF1F76B006243A4 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD634CF51EF1F76B006243A4 /* ProximaNova-Light.otf */; };
+		FD634D031EF1F76B006243A4 /* ProximaNova-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD634CF61EF1F76B006243A4 /* ProximaNova-Thin.otf */; };
+		FD634D041EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634CF71EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf */; };
+		FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634CF81EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf */; };
+		FD634D071EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634D061EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf */; };
+		FD634D091EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634D081EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf */; };
+		FD7792F61FD5E105006D2D62 /* NSApplication+MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */; };
+		FD7E632B1EDF57D20011BE89 /* NSFont+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E63291EDF57D20011BE89 /* NSFont+Podlive.m */; };
+		FD88D1411EE80CCF00875AD5 /* CCNApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88D1401EE80CCF00875AD5 /* CCNApplicationDelegate.m */; };
+		FD88DB3D1F02A4B300B0215A /* CCNChannelGridItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88DB3C1F02A4B300B0215A /* CCNChannelGridItemView.m */; };
+		FD9A90772058636A00B9A5BE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FD9A90762058636A00B9A5BE /* README.md */; };
+		FD9A90792058637700B9A5BE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FD9A90782058637700B9A5BE /* .gitignore */; };
+		FDAE070D1EDF0DDE009E5A2D /* NSDictionary+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE07071EDF0DDE009E5A2D /* NSDictionary+Podlive.m */; };
+		FDAE070F1EDF0DDE009E5A2D /* NSString+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE07091EDF0DDE009E5A2D /* NSString+Podlive.m */; };
+		FDAE07111EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE070B1EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m */; };
+		FDAE07161EDF0DE6009E5A2D /* PFUser+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE07141EDF0DE6009E5A2D /* PFUser+Podlive.m */; };
+		FDAE07171EDF0E23009E5A2D /* CCNChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2958801EAA4C5200B564CB /* CCNChannelManager.m */; };
+		FDAE07191EDF0E26009E5A2D /* CCNUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFB89D1E858EB9000AD128 /* CCNUserManager.m */; };
+		FDAE071B1EDF0EA3009E5A2D /* CCNChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD95F27A1E8582E500F5B394 /* CCNChannel.m */; };
+		FDAE071D1EDF0EAA009E5A2D /* CCNChannel+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2958791EAA2ACF00B564CB /* CCNChannel+Convenience.m */; };
+		FDAE071F1EDF0ECE009E5A2D /* PodliveDefaultStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FD888C531ED0E1CB00A6B8BB /* PodliveDefaultStyleKit.m */; };
+		FDAE07211EDF0ED3009E5A2D /* PodliveGUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7129E91ED61723008B779F /* PodliveGUIKit.m */; };
+		FDAE07261EDF0F9D009E5A2D /* CCNConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE07241EDF0F9D009E5A2D /* CCNConstants.m */; };
+		FDC82DA21FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC82DA11FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m */; };
+		FDD1D6791F0647A200DED89C /* NSSlider+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1D6781F0647A200DED89C /* NSSlider+Podlive.m */; };
+		FDD1D67D1F06708D00DED89C /* CCNPreferencesAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1D67B1F06708D00DED89C /* CCNPreferencesAudio.m */; };
+		FDD1D67E1F06708D00DED89C /* CCNPreferencesAudio.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD1D67C1F06708D00DED89C /* CCNPreferencesAudio.xib */; };
+		FDD1D6821F0672B000DED89C /* CCNPreferencesSync.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1D6801F0672B000DED89C /* CCNPreferencesSync.m */; };
+		FDD1D6831F0672B000DED89C /* CCNPreferencesSync.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD1D6811F0672B000DED89C /* CCNPreferencesSync.xib */; };
+		FDD1D6861F06732400DED89C /* CCNPreferencesBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1D6851F06732400DED89C /* CCNPreferencesBase.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD0F9DA72058244D0066E677 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FD0F9DD1205827AA0066E677 /* CCNFoundation.framework in Embed Frameworks */,
+				FD0F9DCF205827A70066E677 /* CCNAppKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlive.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podlive/Pods-Podlive.release.xcconfig"; sourceTree = "<group>"; };
+		4493D674057FA091CD19A5A3 /* libPods-Podlive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Podlive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podlive/Pods-Podlive.debug.xcconfig"; sourceTree = "<group>"; };
+		FD0526CE1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridSectionHeaderView.h; sourceTree = "<group>"; };
+		FD0526CF1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridSectionHeaderView.m; sourceTree = "<group>"; };
+		FD0722B61E5CEB35000A2860 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD0722B91E5CEB3D000A2860 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FD0722BE1E5CEB56000A2860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD0F9DC6205827200066E677 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Telekinesis.framework; sourceTree = "<group>"; };
+		FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CCNAppKit.framework; sourceTree = "<group>"; };
+		FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CCNFoundation.framework; sourceTree = "<group>"; };
+		FD0F9DD32058324B0066E677 /* Parse.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Parse.plist; sourceTree = "<group>"; };
+		FD1041AC1E6F37A2003EA6C9 /* CCNAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNAuthViewController.h; sourceTree = "<group>"; };
+		FD1041AD1E6F37A2003EA6C9 /* CCNAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNAuthViewController.m; sourceTree = "<group>"; };
+		FD10E5811E746EA000560D74 /* NSImage+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Podlive.h"; sourceTree = "<group>"; };
+		FD10E5821E746EA000560D74 /* NSImage+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Podlive.m"; sourceTree = "<group>"; };
+		FD1868511E6B9843008BF3D4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FD1AC74E1E70D7A500C5E692 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FD1AC7501E70D7A800C5E692 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FD1BAC6C1EF04EE700FC7F1B /* CCNPlayerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNPlayerImageView.h; path = "Player Views/CCNPlayerImageView.h"; sourceTree = "<group>"; };
+		FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNPlayerImageView.m; path = "Player Views/CCNPlayerImageView.m"; sourceTree = "<group>"; };
+		FD2958781EAA2ACF00B564CB /* CCNChannel+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNChannel+Convenience.h"; sourceTree = "<group>"; };
+		FD2958791EAA2ACF00B564CB /* CCNChannel+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNChannel+Convenience.m"; sourceTree = "<group>"; };
+		FD29587C1EAA473300B564CB /* CCNNotificationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNNotificationCoordinator.h; sourceTree = "<group>"; };
+		FD29587D1EAA473300B564CB /* CCNNotificationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNNotificationCoordinator.m; sourceTree = "<group>"; };
+		FD29587F1EAA4C5200B564CB /* CCNChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelManager.h; sourceTree = "<group>"; };
+		FD2958801EAA4C5200B564CB /* CCNChannelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelManager.m; sourceTree = "<group>"; };
+		FD2A348B1E8E591200A40BE9 /* CCNAuthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNAuthView.h; sourceTree = "<group>"; };
+		FD2A348C1E8E591200A40BE9 /* CCNAuthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNAuthView.m; sourceTree = "<group>"; };
+		FD3385231E6B7569007D0D74 /* CCNPreferencesGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesGeneral.h; sourceTree = "<group>"; };
+		FD3385241E6B7569007D0D74 /* CCNPreferencesGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesGeneral.m; sourceTree = "<group>"; };
+		FD3385251E6B7569007D0D74 /* CCNPreferencesGeneral.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCNPreferencesGeneral.xib; sourceTree = "<group>"; };
+		FD36B9981E7893F100FB9456 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FD36B99A1E7893FD00FB9456 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podlive.entitlements; sourceTree = "<group>"; };
+		FD46B4D51E65871C005BC0CD /* CCNChannelGridItemControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridItemControlView.h; sourceTree = "<group>"; };
+		FD46B4D61E65871C005BC0CD /* CCNChannelGridItemControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridItemControlView.m; sourceTree = "<group>"; };
+		FD47A2061ED219AD00EFCBB9 /* NSWindow+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow+Podlive.h"; sourceTree = "<group>"; };
+		FD47A2071ED219AD00EFCBB9 /* NSWindow+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+Podlive.m"; sourceTree = "<group>"; };
+		FD4BF8241EDC1E9B00BC15E9 /* Podlive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podlive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4C672A1E7FF6A2001F012E /* CCNChannelGridItemDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridItemDetailView.h; sourceTree = "<group>"; };
+		FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridItemDetailView.m; sourceTree = "<group>"; };
+		FD4C672E1E81105E001F012E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FD4C67301E8111E2001F012E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		FD4FD3501E981EA10081CEA8 /* NSBKeyframeAnimation+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBKeyframeAnimation+Animations.h"; sourceTree = "<group>"; };
+		FD4FD3511E981EA10081CEA8 /* NSBKeyframeAnimation+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBKeyframeAnimation+Animations.m"; sourceTree = "<group>"; };
+		FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBKeyframeAnimationFunctions.m; sourceTree = "<group>"; };
+		FD4FD3571E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBKeyframeAnimationFunctions.h; sourceTree = "<group>"; };
+		FD4FD3591E981FE60081CEA8 /* NSBKeyframeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBKeyframeAnimation.h; sourceTree = "<group>"; };
+		FD4FD35A1E981FE60081CEA8 /* NSBKeyframeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBKeyframeAnimation.m; sourceTree = "<group>"; };
+		FD547D0D1ED40F4B00456184 /* Podlive-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Podlive-Info.plist"; sourceTree = "<group>"; };
+		FD57E4571E736C1F0097A6AE /* CCNLoginLogoutButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNLoginLogoutButton.h; sourceTree = "<group>"; };
+		FD57E4581E736C1F0097A6AE /* CCNLoginLogoutButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNLoginLogoutButton.m; sourceTree = "<group>"; };
+		FD5FEE751E83B251002AC2A7 /* CCNUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNUserInfoViewController.h; sourceTree = "<group>"; };
+		FD5FEE761E83B251002AC2A7 /* CCNUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNUserInfoViewController.m; sourceTree = "<group>"; };
+		FD5FEE791E83B716002AC2A7 /* CCNUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNUserInfoView.h; sourceTree = "<group>"; };
+		FD5FEE7A1E83B716002AC2A7 /* CCNUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNUserInfoView.m; sourceTree = "<group>"; };
+		FD634CF41EF1F76B006243A4 /* ProximaNova-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-ExtraBold.otf"; sourceTree = "<group>"; };
+		FD634CF51EF1F76B006243A4 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		FD634CF61EF1F76B006243A4 /* ProximaNova-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Thin.otf"; sourceTree = "<group>"; };
+		FD634CF71EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Bold.ttf"; sourceTree = "<group>"; };
+		FD634CF81EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Regular.ttf"; sourceTree = "<group>"; };
+		FD634D061EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Medium.ttf"; sourceTree = "<group>"; };
+		FD634D081EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-SemiBold.ttf"; sourceTree = "<group>"; };
+		FD6482371E656B3000657124 /* CCNChannelGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridViewController.h; sourceTree = "<group>"; };
+		FD6482381E656B3000657124 /* CCNChannelGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridViewController.m; sourceTree = "<group>"; };
+		FD64823B1E65787400657124 /* CCNChannelGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridItem.h; sourceTree = "<group>"; };
+		FD64823C1E65787400657124 /* CCNChannelGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridItem.m; sourceTree = "<group>"; };
+		FD7129E81ED61723008B779F /* PodliveGUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodliveGUIKit.h; sourceTree = "<group>"; };
+		FD7129E91ED61723008B779F /* PodliveGUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodliveGUIKit.m; sourceTree = "<group>"; };
+		FD71D4CE1E66FCFD003D6E01 /* NSColor+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Podlive.h"; sourceTree = "<group>"; };
+		FD71D4CF1E66FCFD003D6E01 /* NSColor+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Podlive.m"; sourceTree = "<group>"; };
+		FD7792F41FD5E105006D2D62 /* NSApplication+MainMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSApplication+MainMenu.h"; sourceTree = "<group>"; };
+		FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+MainMenu.m"; sourceTree = "<group>"; };
+		FD7E63281EDF57D20011BE89 /* NSFont+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFont+Podlive.h"; sourceTree = "<group>"; };
+		FD7E63291EDF57D20011BE89 /* NSFont+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont+Podlive.m"; sourceTree = "<group>"; };
+		FD859FE21E93E9AD0089CD34 /* CCNBaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNBaseButton.h; sourceTree = "<group>"; };
+		FD859FE31E93E9AD0089CD34 /* CCNBaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNBaseButton.m; sourceTree = "<group>"; };
+		FD859FE51E93EA150089CD34 /* CCNPlayerStopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerStopButton.h; sourceTree = "<group>"; };
+		FD859FE61E93EA150089CD34 /* CCNPlayerStopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerStopButton.m; sourceTree = "<group>"; };
+		FD859FE91E93EEAF0089CD34 /* CCNPlayerVolumeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerVolumeSlider.h; sourceTree = "<group>"; };
+		FD859FEA1E93EEAF0089CD34 /* CCNPlayerVolumeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerVolumeSlider.m; sourceTree = "<group>"; };
+		FD859FEC1E9410420089CD34 /* CCNPlayerVolumeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerVolumeControl.h; sourceTree = "<group>"; };
+		FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerVolumeControl.m; sourceTree = "<group>"; };
+		FD888C521ED0E1CB00A6B8BB /* PodliveDefaultStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodliveDefaultStyleKit.h; sourceTree = "<group>"; };
+		FD888C531ED0E1CB00A6B8BB /* PodliveDefaultStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodliveDefaultStyleKit.m; sourceTree = "<group>"; };
+		FD88D13F1EE80CCF00875AD5 /* CCNApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNApplicationDelegate.h; sourceTree = "<group>"; };
+		FD88D1401EE80CCF00875AD5 /* CCNApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNApplicationDelegate.m; sourceTree = "<group>"; };
+		FD88DB3B1F02A4B300B0215A /* CCNChannelGridItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridItemView.h; sourceTree = "<group>"; };
+		FD88DB3C1F02A4B300B0215A /* CCNChannelGridItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridItemView.m; sourceTree = "<group>"; };
+		FD95F22E1E85632D00F5B394 /* CCNPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayer.h; sourceTree = "<group>"; };
+		FD95F22F1E85632D00F5B394 /* CCNPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayer.m; sourceTree = "<group>"; };
+		FD95F2321E85635A00F5B394 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FD95F2421E85812200F5B394 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		FD95F2791E8582E500F5B394 /* CCNChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannel.h; sourceTree = "<group>"; };
+		FD95F27A1E8582E500F5B394 /* CCNChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannel.m; sourceTree = "<group>"; };
+		FD9A90762058636A00B9A5BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FD9A90782058637700B9A5BE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		FD9D6D271EA7B2D5005ED568 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
+		FD9D6D291EA7B2D8005ED568 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		FD9DC8A51E6CE5850027211F /* CCNChannelGridFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridFlowLayout.h; sourceTree = "<group>"; };
+		FD9DC8A61E6CE5850027211F /* CCNChannelGridFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridFlowLayout.m; sourceTree = "<group>"; };
+		FDAE07061EDF0DDE009E5A2D /* NSDictionary+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Podlive.h"; sourceTree = "<group>"; };
+		FDAE07071EDF0DDE009E5A2D /* NSDictionary+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Podlive.m"; sourceTree = "<group>"; };
+		FDAE07081EDF0DDE009E5A2D /* NSString+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Podlive.h"; sourceTree = "<group>"; };
+		FDAE07091EDF0DDE009E5A2D /* NSString+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Podlive.m"; sourceTree = "<group>"; };
+		FDAE070A1EDF0DDE009E5A2D /* NSUserDefaults+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Podlive.h"; sourceTree = "<group>"; };
+		FDAE070B1EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Podlive.m"; sourceTree = "<group>"; };
+		FDAE07131EDF0DE6009E5A2D /* PFUser+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+Podlive.h"; sourceTree = "<group>"; };
+		FDAE07141EDF0DE6009E5A2D /* PFUser+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+Podlive.m"; sourceTree = "<group>"; };
+		FDAE07231EDF0F9D009E5A2D /* CCNConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNConstants.h; sourceTree = "<group>"; };
+		FDAE07241EDF0F9D009E5A2D /* CCNConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNConstants.m; sourceTree = "<group>"; };
+		FDAF0C9C1E8AA66700A7AB63 /* CCNPlayerPlayPauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerPlayPauseButton.h; sourceTree = "<group>"; };
+		FDAF0C9D1E8AA66700A7AB63 /* CCNPlayerPlayPauseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerPlayPauseButton.m; sourceTree = "<group>"; };
+		FDC82DA01FE1118F00197D84 /* CCNChannelGridNoStreamItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridNoStreamItemView.h; sourceTree = "<group>"; };
+		FDC82DA11FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridNoStreamItemView.m; sourceTree = "<group>"; };
+		FDD1D6771F0647A200DED89C /* NSSlider+Podlive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSlider+Podlive.h"; sourceTree = "<group>"; };
+		FDD1D6781F0647A200DED89C /* NSSlider+Podlive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSlider+Podlive.m"; sourceTree = "<group>"; };
+		FDD1D67A1F06708D00DED89C /* CCNPreferencesAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesAudio.h; sourceTree = "<group>"; };
+		FDD1D67B1F06708D00DED89C /* CCNPreferencesAudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesAudio.m; sourceTree = "<group>"; };
+		FDD1D67C1F06708D00DED89C /* CCNPreferencesAudio.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CCNPreferencesAudio.xib; sourceTree = "<group>"; };
+		FDD1D67F1F0672B000DED89C /* CCNPreferencesSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesSync.h; sourceTree = "<group>"; };
+		FDD1D6801F0672B000DED89C /* CCNPreferencesSync.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesSync.m; sourceTree = "<group>"; };
+		FDD1D6811F0672B000DED89C /* CCNPreferencesSync.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CCNPreferencesSync.xib; sourceTree = "<group>"; };
+		FDD1D6841F06732400DED89C /* CCNPreferencesBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesBase.h; sourceTree = "<group>"; };
+		FDD1D6851F06732400DED89C /* CCNPreferencesBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesBase.m; sourceTree = "<group>"; };
+		FDE9F01A1E79E15100D27FF6 /* CCNPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerViewController.h; sourceTree = "<group>"; };
+		FDE9F01B1E79E15100D27FF6 /* CCNPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerViewController.m; sourceTree = "<group>"; };
+		FDE9F01F1E79E18400D27FF6 /* CCNPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerView.h; sourceTree = "<group>"; };
+		FDE9F0201E79E18400D27FF6 /* CCNPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerView.m; sourceTree = "<group>"; };
+		FDEB0BFB1E7A86A20008EDD3 /* CCNPlayerView_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerView_Private.h; sourceTree = "<group>"; };
+		FDEFB89C1E858EB9000AD128 /* CCNUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNUserManager.h; sourceTree = "<group>"; };
+		FDEFB89D1E858EB9000AD128 /* CCNUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNUserManager.m; sourceTree = "<group>"; };
+		FDF642B51E5CCD260005EA72 /* CCNApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNApplicationViewController.h; sourceTree = "<group>"; };
+		FDF642B61E5CCD260005EA72 /* CCNApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNApplicationViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD4BF80A1EDC1E9B00BC15E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4BF8101EDC1E9B00BC15E9 /* AVFoundation.framework in Frameworks */,
+				FD4BF80C1EDC1E9B00BC15E9 /* IOKit.framework in Frameworks */,
+				FD4BF80B1EDC1E9B00BC15E9 /* QuartzCore.framework in Frameworks */,
+				FD4BF80D1EDC1E9B00BC15E9 /* Security.framework in Frameworks */,
+				FD0F9DCE205827A70066E677 /* CCNAppKit.framework in Frameworks */,
+				B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */,
+				FD0F9DD0205827AA0066E677 /* CCNFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF382EAA5C4E038B15E192CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */,
+				3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD0F9DC5205827200066E677 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */,
+				FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */,
+				FD0F9DC6205827200066E677 /* Telekinesis.framework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FD1041A71E6F356E003EA6C9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FD2A348B1E8E591200A40BE9 /* CCNAuthView.h */,
+				FD2A348C1E8E591200A40BE9 /* CCNAuthView.m */,
+				FD1041AC1E6F37A2003EA6C9 /* CCNAuthViewController.h */,
+				FD1041AD1E6F37A2003EA6C9 /* CCNAuthViewController.m */,
+				FD57E4571E736C1F0097A6AE /* CCNLoginLogoutButton.h */,
+				FD57E4581E736C1F0097A6AE /* CCNLoginLogoutButton.m */,
+				FD5FEE791E83B716002AC2A7 /* CCNUserInfoView.h */,
+				FD5FEE7A1E83B716002AC2A7 /* CCNUserInfoView.m */,
+				FD5FEE751E83B251002AC2A7 /* CCNUserInfoViewController.h */,
+				FD5FEE761E83B251002AC2A7 /* CCNUserInfoViewController.m */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FD1BAC6B1EF04EAC00FC7F1B /* Player Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BAC6C1EF04EE700FC7F1B /* CCNPlayerImageView.h */,
+				FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */,
+				FDEB0BFB1E7A86A20008EDD3 /* CCNPlayerView_Private.h */,
+				FDE9F01F1E79E18400D27FF6 /* CCNPlayerView.h */,
+				FDE9F0201E79E18400D27FF6 /* CCNPlayerView.m */,
+			);
+			name = "Player Views";
+			sourceTree = "<group>";
+		};
+		FD3385221E6B750F007D0D74 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				FDD1D67A1F06708D00DED89C /* CCNPreferencesAudio.h */,
+				FDD1D67B1F06708D00DED89C /* CCNPreferencesAudio.m */,
+				FDD1D67C1F06708D00DED89C /* CCNPreferencesAudio.xib */,
+				FDD1D6841F06732400DED89C /* CCNPreferencesBase.h */,
+				FDD1D6851F06732400DED89C /* CCNPreferencesBase.m */,
+				FD3385231E6B7569007D0D74 /* CCNPreferencesGeneral.h */,
+				FD3385241E6B7569007D0D74 /* CCNPreferencesGeneral.m */,
+				FD3385251E6B7569007D0D74 /* CCNPreferencesGeneral.xib */,
+				FDD1D67F1F0672B000DED89C /* CCNPreferencesSync.h */,
+				FDD1D6801F0672B000DED89C /* CCNPreferencesSync.m */,
+				FDD1D6811F0672B000DED89C /* CCNPreferencesSync.xib */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		FD4FD34F1E981EA10081CEA8 /* Core Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FD4FD3501E981EA10081CEA8 /* NSBKeyframeAnimation+Animations.h */,
+				FD4FD3511E981EA10081CEA8 /* NSBKeyframeAnimation+Animations.m */,
+				FD4FD3591E981FE60081CEA8 /* NSBKeyframeAnimation.h */,
+				FD4FD35A1E981FE60081CEA8 /* NSBKeyframeAnimation.m */,
+				FD4FD3571E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.h */,
+				FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */,
+			);
+			path = "Core Animation";
+			sourceTree = "<group>";
+		};
+		FD634CCB1EF1EDA6006243A4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FD634CF41EF1F76B006243A4 /* ProximaNova-ExtraBold.otf */,
+				FD634CF51EF1F76B006243A4 /* ProximaNova-Light.otf */,
+				FD634CF61EF1F76B006243A4 /* ProximaNova-Thin.otf */,
+				FD634CF71EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf */,
+				FD634D061EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf */,
+				FD634CF81EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf */,
+				FD634D081EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FD71D4D21E66FDD4003D6E01 /* Appkit */ = {
+			isa = PBXGroup;
+			children = (
+				FD7792F41FD5E105006D2D62 /* NSApplication+MainMenu.h */,
+				FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */,
+				FD71D4CE1E66FCFD003D6E01 /* NSColor+Podlive.h */,
+				FD71D4CF1E66FCFD003D6E01 /* NSColor+Podlive.m */,
+				FD10E5811E746EA000560D74 /* NSImage+Podlive.h */,
+				FD10E5821E746EA000560D74 /* NSImage+Podlive.m */,
+				FDD1D6771F0647A200DED89C /* NSSlider+Podlive.h */,
+				FDD1D6781F0647A200DED89C /* NSSlider+Podlive.m */,
+				FD47A2061ED219AD00EFCBB9 /* NSWindow+Podlive.h */,
+				FD47A2071ED219AD00EFCBB9 /* NSWindow+Podlive.m */,
+			);
+			path = Appkit;
+			sourceTree = "<group>";
+		};
+		FD859FE81E93EA240089CD34 /* Player Controls */ = {
+			isa = PBXGroup;
+			children = (
+				FD859FE21E93E9AD0089CD34 /* CCNBaseButton.h */,
+				FD859FE31E93E9AD0089CD34 /* CCNBaseButton.m */,
+				FDAF0C9C1E8AA66700A7AB63 /* CCNPlayerPlayPauseButton.h */,
+				FDAF0C9D1E8AA66700A7AB63 /* CCNPlayerPlayPauseButton.m */,
+				FD859FE51E93EA150089CD34 /* CCNPlayerStopButton.h */,
+				FD859FE61E93EA150089CD34 /* CCNPlayerStopButton.m */,
+				FD859FEC1E9410420089CD34 /* CCNPlayerVolumeControl.h */,
+				FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */,
+				FD859FE91E93EEAF0089CD34 /* CCNPlayerVolumeSlider.h */,
+				FD859FEA1E93EEAF0089CD34 /* CCNPlayerVolumeSlider.m */,
+			);
+			path = "Player Controls";
+			sourceTree = "<group>";
+		};
+		FD888C4C1ED0DEDA00A6B8BB /* StyleKit */ = {
+			isa = PBXGroup;
+			children = (
+				FD888C521ED0E1CB00A6B8BB /* PodliveDefaultStyleKit.h */,
+				FD888C531ED0E1CB00A6B8BB /* PodliveDefaultStyleKit.m */,
+				FD7129E81ED61723008B779F /* PodliveGUIKit.h */,
+				FD7129E91ED61723008B779F /* PodliveGUIKit.m */,
+			);
+			path = StyleKit;
+			sourceTree = "<group>";
+		};
+		FD95F2781E8582E500F5B394 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD2958781EAA2ACF00B564CB /* CCNChannel+Convenience.h */,
+				FD2958791EAA2ACF00B564CB /* CCNChannel+Convenience.m */,
+				FD95F2791E8582E500F5B394 /* CCNChannel.h */,
+				FD95F27A1E8582E500F5B394 /* CCNChannel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDAE07051EDF0DDE009E5A2D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE07061EDF0DDE009E5A2D /* NSDictionary+Podlive.h */,
+				FDAE07071EDF0DDE009E5A2D /* NSDictionary+Podlive.m */,
+				FD7E63281EDF57D20011BE89 /* NSFont+Podlive.h */,
+				FD7E63291EDF57D20011BE89 /* NSFont+Podlive.m */,
+				FDAE07081EDF0DDE009E5A2D /* NSString+Podlive.h */,
+				FDAE07091EDF0DDE009E5A2D /* NSString+Podlive.m */,
+				FDAE070A1EDF0DDE009E5A2D /* NSUserDefaults+Podlive.h */,
+				FDAE070B1EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		FDAE07121EDF0DE6009E5A2D /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE07131EDF0DE6009E5A2D /* PFUser+Podlive.h */,
+				FDAE07141EDF0DE6009E5A2D /* PFUser+Podlive.m */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		FDAE07271EDF0FD8009E5A2D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE07231EDF0F9D009E5A2D /* CCNConstants.h */,
+				FDAE07241EDF0F9D009E5A2D /* CCNConstants.m */,
+				FD0F9DD32058324B0066E677 /* Parse.plist */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FDE9F01E1E79E15500D27FF6 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				FD95F22E1E85632D00F5B394 /* CCNPlayer.h */,
+				FD95F22F1E85632D00F5B394 /* CCNPlayer.m */,
+				FDE9F01A1E79E15100D27FF6 /* CCNPlayerViewController.h */,
+				FDE9F01B1E79E15100D27FF6 /* CCNPlayerViewController.m */,
+				FD859FE81E93EA240089CD34 /* Player Controls */,
+				FD1BAC6B1EF04EAC00FC7F1B /* Player Views */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		FDEFB89B1E858EB9000AD128 /* Manager Area */ = {
+			isa = PBXGroup;
+			children = (
+				FD29587F1EAA4C5200B564CB /* CCNChannelManager.h */,
+				FD2958801EAA4C5200B564CB /* CCNChannelManager.m */,
+				FDEFB89C1E858EB9000AD128 /* CCNUserManager.h */,
+				FDEFB89D1E858EB9000AD128 /* CCNUserManager.m */,
+			);
+			path = "Manager Area";
+			sourceTree = "<group>";
+		};
+		FDF6427C1E5CC4870005EA72 = {
+			isa = PBXGroup;
+			children = (
+				FD9A90762058636A00B9A5BE /* README.md */,
+				FD9A90782058637700B9A5BE /* .gitignore */,
+				FDF642AE1E5CC6300005EA72 /* Frameworks */,
+				FDF642871E5CC4870005EA72 /* Podlive */,
+				EF382EAA5C4E038B15E192CB /* Pods */,
+				FDF642861E5CC4870005EA72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDF642861E5CC4870005EA72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD4BF8241EDC1E9B00BC15E9 /* Podlive.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDF642871E5CC4870005EA72 /* Podlive */ = {
+			isa = PBXGroup;
+			children = (
+				FDF642991E5CC4BD0005EA72 /* Application */,
+				FD1041A71E6F356E003EA6C9 /* Authentication */,
+				FDF6429A1E5CC4DA0005EA72 /* Categories */,
+				FDF642B11E5CCCF50005EA72 /* Channel Grid */,
+				FDEFB89B1E858EB9000AD128 /* Manager Area */,
+				FD95F2781E8582E500F5B394 /* Model */,
+				FDE9F01E1E79E15500D27FF6 /* Player */,
+				FD3385221E6B750F007D0D74 /* Preferences */,
+				FD888C4C1ED0DEDA00A6B8BB /* StyleKit */,
+				FDF6428B1E5CC4870005EA72 /* Supporting Files */,
+			);
+			path = Podlive;
+			sourceTree = "<group>";
+		};
+		FDF6428B1E5CC4870005EA72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD634CCB1EF1EDA6006243A4 /* Fonts */,
+				FD0722BE1E5CEB56000A2860 /* Assets.xcassets */,
+				FD9D6D281EA7B2D5005ED568 /* Credits.rtf */,
+				FD1AC74F1E70D7A500C5E692 /* Localizable.strings */,
+				FD547D0D1ED40F4B00456184 /* Podlive-Info.plist */,
+				FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */,
+				FD0722B91E5CEB3D000A2860 /* PrefixHeader.pch */,
+				FD0722B61E5CEB35000A2860 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDF642991E5CC4BD0005EA72 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FD88D13F1EE80CCF00875AD5 /* CCNApplicationDelegate.h */,
+				FD88D1401EE80CCF00875AD5 /* CCNApplicationDelegate.m */,
+				FDF642B51E5CCD260005EA72 /* CCNApplicationViewController.h */,
+				FDF642B61E5CCD260005EA72 /* CCNApplicationViewController.m */,
+				FD29587C1EAA473300B564CB /* CCNNotificationCoordinator.h */,
+				FD29587D1EAA473300B564CB /* CCNNotificationCoordinator.m */,
+				FDAE07271EDF0FD8009E5A2D /* Constants */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FDF6429A1E5CC4DA0005EA72 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FD71D4D21E66FDD4003D6E01 /* Appkit */,
+				FD4FD34F1E981EA10081CEA8 /* Core Animation */,
+				FDAE07051EDF0DDE009E5A2D /* Foundation */,
+				FDAE07121EDF0DE6009E5A2D /* Parse */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FDF642AE1E5CC6300005EA72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD95F2321E85635A00F5B394 /* AVFoundation.framework */,
+				FD4C67301E8111E2001F012E /* CoreVideo.framework */,
+				FD36B99A1E7893FD00FB9456 /* IOKit.framework */,
+				4493D674057FA091CD19A5A3 /* libPods-Podlive.a */,
+				FD1868511E6B9843008BF3D4 /* libsqlite3.tbd */,
+				FD95F2421E85812200F5B394 /* NotificationCenter.framework */,
+				FD4C672E1E81105E001F012E /* QuartzCore.framework */,
+				FD36B9981E7893F100FB9456 /* Security.framework */,
+				FD0F9DC5205827200066E677 /* Vendor */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDF642B11E5CCCF50005EA72 /* Channel Grid */ = {
+			isa = PBXGroup;
+			children = (
+				FD9DC8A51E6CE5850027211F /* CCNChannelGridFlowLayout.h */,
+				FD9DC8A61E6CE5850027211F /* CCNChannelGridFlowLayout.m */,
+				FD64823B1E65787400657124 /* CCNChannelGridItem.h */,
+				FD64823C1E65787400657124 /* CCNChannelGridItem.m */,
+				FD46B4D51E65871C005BC0CD /* CCNChannelGridItemControlView.h */,
+				FD46B4D61E65871C005BC0CD /* CCNChannelGridItemControlView.m */,
+				FD4C672A1E7FF6A2001F012E /* CCNChannelGridItemDetailView.h */,
+				FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */,
+				FD88DB3B1F02A4B300B0215A /* CCNChannelGridItemView.h */,
+				FD88DB3C1F02A4B300B0215A /* CCNChannelGridItemView.m */,
+				FDC82DA01FE1118F00197D84 /* CCNChannelGridNoStreamItemView.h */,
+				FDC82DA11FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m */,
+				FD0526CE1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.h */,
+				FD0526CF1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.m */,
+				FD6482371E656B3000657124 /* CCNChannelGridViewController.h */,
+				FD6482381E656B3000657124 /* CCNChannelGridViewController.m */,
+			);
+			path = "Channel Grid";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD4BF7E01EDC1E9B00BC15E9 /* Podlive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD4BF8211EDC1E9B00BC15E9 /* Build configuration list for PBXNativeTarget "Podlive" */;
+			buildPhases = (
+				FD4BF7E41EDC1E9B00BC15E9 /* [CP] Check Pods Manifest.lock */,
+				FD4BF7E31EDC1E9B00BC15E9 /* Update Build Number */,
+				FD4BF7E51EDC1E9B00BC15E9 /* Sources */,
+				FD4BF80A1EDC1E9B00BC15E9 /* Frameworks */,
+				FD4BF8131EDC1E9B00BC15E9 /* Resources */,
+				FD4BF81E1EDC1E9B00BC15E9 /* [CP] Embed Pods Frameworks */,
+				FD4BF81F1EDC1E9B00BC15E9 /* [CP] Copy Pods Resources */,
+				FD0F9DA72058244D0066E677 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Podlive;
+			productName = Podlive;
+			productReference = FD4BF8241EDC1E9B00BC15E9 /* Podlive.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDF6427D1E5CC4870005EA72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CCN;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "cocoa:naut";
+				TargetAttributes = {
+					FD4BF7E01EDC1E9B00BC15E9 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FDF642801E5CC4870005EA72 /* Build configuration list for PBXProject "Podlive" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+				Base,
+			);
+			mainGroup = FDF6427C1E5CC4870005EA72;
+			productRefGroup = FDF642861E5CC4870005EA72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD4BF7E01EDC1E9B00BC15E9 /* Podlive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD4BF8131EDC1E9B00BC15E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD0F9DD42058324B0066E677 /* Parse.plist in Resources */,
+				FD634D041EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf in Resources */,
+				FDD1D67E1F06708D00DED89C /* CCNPreferencesAudio.xib in Resources */,
+				FD634D021EF1F76B006243A4 /* ProximaNova-Light.otf in Resources */,
+				FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */,
+				FD4BF8141EDC1E9B00BC15E9 /* Localizable.strings in Resources */,
+				FDD1D6831F0672B000DED89C /* CCNPreferencesSync.xib in Resources */,
+				FD634D071EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf in Resources */,
+				FD634D091EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf in Resources */,
+				FD4BF8151EDC1E9B00BC15E9 /* Assets.xcassets in Resources */,
+				FD9A90792058637700B9A5BE /* .gitignore in Resources */,
+				FD9A90772058636A00B9A5BE /* README.md in Resources */,
+				FD634D031EF1F76B006243A4 /* ProximaNova-Thin.otf in Resources */,
+				FD634D011EF1F76B006243A4 /* ProximaNova-ExtraBold.otf in Resources */,
+				FD4BF8161EDC1E9B00BC15E9 /* CCNPreferencesGeneral.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FD4BF7E31EDC1E9B00BC15E9 /* Update Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/bash;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4BF7E41EDC1E9B00BC15E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Podlive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4BF81E1EDC1E9B00BC15E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podlive/Pods-Podlive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4BF81F1EDC1E9B00BC15E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Podlive/Pods-Podlive-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podlive/Pods-Podlive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD4BF7E51EDC1E9B00BC15E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */,
+				FDAE070F1EDF0DDE009E5A2D /* NSString+Podlive.m in Sources */,
+				FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */,
+				FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */,
+				FD4BF7E91EDC1E9B00BC15E9 /* CCNUserInfoViewController.m in Sources */,
+				FDAE07211EDF0ED3009E5A2D /* PodliveGUIKit.m in Sources */,
+				FDD1D67D1F06708D00DED89C /* CCNPreferencesAudio.m in Sources */,
+				FD4BF7EA1EDC1E9B00BC15E9 /* CCNNotificationCoordinator.m in Sources */,
+				FD4BF7ED1EDC1E9B00BC15E9 /* CCNChannelGridItemControlView.m in Sources */,
+				FDAE07191EDF0E26009E5A2D /* CCNUserManager.m in Sources */,
+				FDAE070D1EDF0DDE009E5A2D /* NSDictionary+Podlive.m in Sources */,
+				FD4BF7EE1EDC1E9B00BC15E9 /* CCNUserInfoView.m in Sources */,
+				FD4BF7EF1EDC1E9B00BC15E9 /* CCNPlayer.m in Sources */,
+				FD4BF7F01EDC1E9B00BC15E9 /* NSWindow+Podlive.m in Sources */,
+				FDC82DA21FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m in Sources */,
+				FD4BF7F11EDC1E9B00BC15E9 /* CCNChannelGridFlowLayout.m in Sources */,
+				FD4BF7F21EDC1E9B00BC15E9 /* CCNPlayerStopButton.m in Sources */,
+				FD4BF7F31EDC1E9B00BC15E9 /* CCNPlayerPlayPauseButton.m in Sources */,
+				FD7792F61FD5E105006D2D62 /* NSApplication+MainMenu.m in Sources */,
+				FDAE07171EDF0E23009E5A2D /* CCNChannelManager.m in Sources */,
+				FD4BF7F41EDC1E9B00BC15E9 /* CCNApplicationViewController.m in Sources */,
+				FD4BF7F51EDC1E9B00BC15E9 /* NSImage+Podlive.m in Sources */,
+				FD4BF7F61EDC1E9B00BC15E9 /* CCNAuthView.m in Sources */,
+				FDD1D6821F0672B000DED89C /* CCNPreferencesSync.m in Sources */,
+				FD4BF7F71EDC1E9B00BC15E9 /* CCNAuthViewController.m in Sources */,
+				FD4BF7F81EDC1E9B00BC15E9 /* CCNPreferencesGeneral.m in Sources */,
+				FD4BF7F91EDC1E9B00BC15E9 /* CCNPlayerVolumeSlider.m in Sources */,
+				FD4BF7FB1EDC1E9B00BC15E9 /* NSBKeyframeAnimation+Animations.m in Sources */,
+				FD4BF7FD1EDC1E9B00BC15E9 /* CCNChannelGridViewController.m in Sources */,
+				FDAE07161EDF0DE6009E5A2D /* PFUser+Podlive.m in Sources */,
+				FDAE071D1EDF0EAA009E5A2D /* CCNChannel+Convenience.m in Sources */,
+				FD4BF7FE1EDC1E9B00BC15E9 /* CCNChannelGridSectionHeaderView.m in Sources */,
+				FD4BF7FF1EDC1E9B00BC15E9 /* CCNChannelGridItem.m in Sources */,
+				FD4BF8011EDC1E9B00BC15E9 /* CCNPlayerViewController.m in Sources */,
+				FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */,
+				FD4BF8021EDC1E9B00BC15E9 /* NSColor+Podlive.m in Sources */,
+				FD4BF8031EDC1E9B00BC15E9 /* CCNBaseButton.m in Sources */,
+				FD4BF8051EDC1E9B00BC15E9 /* CCNLoginLogoutButton.m in Sources */,
+				FD4BF8061EDC1E9B00BC15E9 /* NSBKeyframeAnimation.m in Sources */,
+				FDAE07261EDF0F9D009E5A2D /* CCNConstants.m in Sources */,
+				FDAE071B1EDF0EA3009E5A2D /* CCNChannel.m in Sources */,
+				FD88D1411EE80CCF00875AD5 /* CCNApplicationDelegate.m in Sources */,
+				FDAE071F1EDF0ECE009E5A2D /* PodliveDefaultStyleKit.m in Sources */,
+				FDAE07111EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m in Sources */,
+				FD7E632B1EDF57D20011BE89 /* NSFont+Podlive.m in Sources */,
+				FDD1D6861F06732400DED89C /* CCNPreferencesBase.m in Sources */,
+				FD4BF8071EDC1E9B00BC15E9 /* CCNPlayerView.m in Sources */,
+				FD4BF8081EDC1E9B00BC15E9 /* main.m in Sources */,
+				FD88DB3D1F02A4B300B0215A /* CCNChannelGridItemView.m in Sources */,
+				FDD1D6791F0647A200DED89C /* NSSlider+Podlive.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD1AC74F1E70D7A500C5E692 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD1AC7501E70D7A800C5E692 /* de */,
+				FD1AC74E1E70D7A500C5E692 /* en */,
+			);
+			name = Localizable.strings;
+			path = .;
+			sourceTree = "<group>";
+		};
+		FD9D6D281EA7B2D5005ED568 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD9D6D271EA7B2D5005ED568 /* de */,
+				FD9D6D291EA7B2D8005ED568 /* en */,
+			);
+			name = Credits.rtf;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD4BF8221EDC1E9B00BC15E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
+				CODE_SIGN_ENTITLEMENTS = "Podlive/Supporting Files/Podlive.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R8XXQFTA4C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Vendor/**",
+					"$(PROJECT_DIR)/Vendor",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Podlive/Supporting Files/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CONFIGURATION_$(CONFIGURATION)",
+				);
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Podlive/Supporting Files/Podlive-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CCNNavigationController\"",
+					"-l\"CCNPreferencesWindowController\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"ApplicationServices\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocoanaut.Podlive;
+				PRODUCT_NAME = Podlive;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		FD4BF8231EDC1E9B00BC15E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
+				CODE_SIGN_ENTITLEMENTS = "Podlive/Supporting Files/Podlive.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R8XXQFTA4C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Vendor/**",
+					"$(PROJECT_DIR)/Vendor",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Podlive/Supporting Files/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CONFIGURATION_$(CONFIGURATION)",
+				);
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Podlive/Supporting Files/Podlive-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CCNNavigationController\"",
+					"-l\"CCNPreferencesWindowController\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"ApplicationServices\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocoanaut.Podlive;
+				PRODUCT_NAME = Podlive;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		FDF642941E5CC4870005EA72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = R8XXQFTA4C;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FDF642951E5CC4870005EA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = R8XXQFTA4C;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD4BF8211EDC1E9B00BC15E9 /* Build configuration list for PBXNativeTarget "Podlive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4BF8221EDC1E9B00BC15E9 /* Debug */,
+				FD4BF8231EDC1E9B00BC15E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF642801E5CC4870005EA72 /* Build configuration list for PBXProject "Podlive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF642941E5CC4870005EA72 /* Debug */,
+				FDF642951E5CC4870005EA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDF6427D1E5CC4870005EA72 /* Project object */;
+}

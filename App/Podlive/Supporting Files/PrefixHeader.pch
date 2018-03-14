@@ -1,0 +1,27 @@
+//
+//  Created by Frank Gregor on 21/02/2017.
+//  Copyright © 2017 cocoa:naut. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+@import CCNAppKit;
+@import CCNFoundation;
+
+#import <libextobjc/EXTScope.h>
+#import <Parse/Parse.h>
+
+
+#import "PodliveDefaultStyleKit.h"
+#import "PodliveGUIKit.h"
+
+#import "CCNConstants.h"
+#import "CCNChannelManager.h"
+#import "CCNUserManager.h"
+
+#import "CCNNavigationController.h"
+#import "CCNNotificationCoordinator.h"
+#import "CCNPlayer.h"
+
+#endif /* PrefixHeader_pch */

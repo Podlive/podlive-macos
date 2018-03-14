@@ -1,0 +1,6 @@
+framework module CCNFoundation {
+  umbrella header "CCNFoundation.h"
+
+  export *
+  module * { export * }
+}

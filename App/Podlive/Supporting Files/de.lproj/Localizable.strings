@@ -1,0 +1,330 @@
+/* @LANGUAGE en 
+   @DIRECTORY Podlive/Supporting Files 
+   @FILE Podlive/Supporting Files/Localizable.strings */
+
+/* Parse Push Notifications */
+"channel_state_live" = "Öffnen";
+
+"channel_state_title_live" = "Neuer Live-Stream";
+
+"channel_state_message_live" = "'%@' ist jetzt live.";
+
+"channel_state_preshow" = "Öffnen";
+
+"channel_state_title_preshow" = "Neue Preshow";
+
+"channel_state_message_preshow" = "'%@' hat die Preshow gestartet.";
+
+/* Application Theme Selector Label */
+"Application Theme" = "Application Theme";
+
+/* Application Theme */
+"Aqua Theme" = "Aqua Theme";
+
+/* ChannelGrid Section Header Title */
+"Available Podcasts" = "Verfügbare Podcasts";
+
+/* Application Theme */
+"Dark Theme" = "Dark Theme";
+
+/* TextField Placeholder */
+"Email Address" = "Email Adresse";
+
+/* ChannelGrid Section Header Title */
+"Live" = "Live";
+
+/* TextField Placeholder */
+"Password" = "Passwort";
+
+/* Preferences ViewController Title */
+"Preferences" = "Einstellungen";
+
+/* Login Window Headline */
+"%@ Login" = "%@ Anmeldung";
+
+/* Signup Window Headline */
+"%@ Signup" = "%@ Registrierung";
+
+/* Login Window Headline Subtext */
+"If you already have a \"%@\" account just enter your username and password to synchronize your favourite podcasts to all your devices." = "Wenn Du bereits ein \"%@\"-Konto hast, dann trage einfach Benutzername und Passwort ein, und Deine Lieblings-Podcasts werden synchronisiert.";
+
+/* Signup Window Headline Subtext */
+"Signup to \"%@\" to synchronize your favourite podcasts to all your connected devices." = "Registriere Dich, und lege Dir ein \"%@\"-Konto an, damit deine Lieblings-Podcasts auf all Deine Geräte synchronisiert werden.";
+
+/* Button Title */
+"Signup" = "Registrieren";
+
+/* Email Textfield Placeholder String */
+"Your Email Address" = "Dein Email-Adresse";
+
+/* Password Textfield Placeholder String */
+"Your Password" = "Dein Passwort";
+
+/* Username Textfield Placeholder String */
+"Your Username" = "Dein Benutzername";
+
+/* No comment provided by engineer. */
+"Email: %@" = "Email: %@";
+
+/* Alert Title */
+"Login Failed" = "Login fehlgeschlagen";
+
+/* No comment provided by engineer. */
+"Logout" = "Logout";
+
+/* Alert Sub-Message */
+"Please check your entries and try again." = "Bitte überprüe Deine Eingaben, und versuche es erneut.";
+
+/* Alert Title */
+"Sign Up Error" = "Registrierungsfehler";
+
+/* Alert Message */
+"Something went wrong..." = "Da ist was schief gelaufen...";
+
+/* Alert Message */
+"The email '%@' is taken. Please try using a different email." = "Die Email-Adress '%@' ist bereits vergeben. Bitte versuche eine andere zu verwenden.";
+
+/* Alert Message */
+"The username '%@' is taken. Please try choosing a different username." = "Der Benutzername '%@' ist bereits vergeben. Bitte versuche einen anderen zu verwenden.";
+
+/* Alert Message */
+"The username and password you entered don't match." = "Dein Benutzername und Passwort passen nicht zusammen.";
+
+/* No comment provided by engineer. */
+"Username: %@" = "Benutzer: %@";
+
+/* Alert Message */
+"Welcome %@!" = "Willkommen %@!";
+
+/* Alert Message */
+"You successfully registered to %@. In order to validate your registration we sent a confirmation message to your email address at:\n\n%@" = "Du hast Dich erfolgreich bei %@ registriert. Zur Überprüfung haben wir Dir eine Bestätigungs-Email an deine Email-Adresse geschickt:\n\n%@";
+
+/* Password Reset Window Headline */
+"%@ Password Reset" = "%@ Passwort Reset";
+
+/* Button Label */
+"Cancel" = "Abbruch";
+
+/* Button Title */
+"Forgot Password..." = "Passwort vergessen...";
+
+/* Password Reset Window Headline Subtext */
+"Please enter your email address in the textfield below. We will send you an email with a link to reset your password." = "Bitte trage in das unten stehende Textfeld deine Email-Adresse ein. Wir werden Dir eine Email mit einem Link zusenden, mit dem Du das Passwort zurücksetzen und ein neues auswählen kannst.";
+
+/* Button Title */
+"Reset" = "Zurücksetzen";
+
+/* TextField Label */
+"Username" = "Benutzer";
+
+/* Button Title */
+"Login" = "Anmelden";
+
+/* Button Title */
+"← Forgot Password" = "← Passwort vergessen";
+
+/* Button Title */
+"← Login" = "← Anmelden";
+
+/* Button Title */
+"Login →" = "Anmelden →";
+
+/* Button Title */
+"Signup →" = "Registrieren →";
+
+/* Alert Message */
+"No email address found." = "Keine Email-Adresse gefunden.";
+
+/* Alert Title */
+"Password Reset Error" = "Passwort Reset Fehler";
+
+/* Alert Message */
+"Password Reset" = "Passwort Reset";
+
+/* Alert Message */
+"Please check your mailbox, we sent you an email to\n\n%@\n\n with a link to reset your password." = "Bitte überprüfe dein Postfach, wir haben Dir an\n\n%@\n\n eine Email mit einem Link zum Zurücksetzen Deines Passwortes gesendet.";
+
+/* Alert Sub-Message */
+"Unfortunately we found no user with an email address\n\na%@\n\nPlease try again." = "Leider haben wir keinen Benutzer mit der Email-Adresse\n\na%@\n\ngefunden. Bitte überprüfe Deine Eingabe.";
+
+/* No comment provided by engineer. */
+"★ " = "★ ";
+
+/* Paddle Trial Text */
+"Thanks for downloading a trial of %@. I hope you enjoy it!" = "Danke für der Herunterladen einer Probeversion von %@. Viel Spaß damit!";
+
+/* Alert Sub-Message */
+"Unfortunately we found no user with an email address\n\n%@\n\nPlease try again." = "Leider konnte kein Benutzer mit der Email-Adresse\n\n%@\n\ngefunden werden. Bitte versuche es nocheinmal.";
+
+/* Button Label */
+"Activate License" = "Lizenz aktivieren";
+
+/* Button Label */
+"Buy License" = "Lizenz kaufen";
+
+/* Button Label */
+"Continue Trial" = "Weiter Testen";
+
+/* LicenseTrialView Title */
+"Thank you for trying %@" = "Vielen Dank, dass du %@ ausprobierst";
+
+/* LicenseTrialView Days Remaining Message */
+"You have %@ days remaining in your trial period." = "Von deiner Testzeit verbleiben noch %@ Tage.";
+
+/* Currency Label */
+"%@" = "%@";
+
+/* App Author Name Label */
+"by %@" = "von %@";
+
+/* Button Label */
+"Quit %@" = "%@ beenden";
+
+/* Main Menu Item Title */
+"About %@" = "Über %@";
+
+/* Main Menu Item Title */
+"Bring All to Front" = "Alle nach vorne bringen";
+
+/* Main Menu Item Title */
+"Close Window" = "Fenster schließen";
+
+/* Main Menu Item Title */
+"Copy" = "Kopieren";
+
+/* Main Menu Item Title */
+"Cut" = "Ausschneiden";
+
+/* Main Menu Item Title */
+"Delete" = "Löschen";
+
+/* The Edit menu */
+"Edit" = "Bearbeiten";
+
+/* Main Menu Item Title */
+"Enter Full Screen" = "Vollbildmodus";
+
+/* The Help menu
+   nil */
+"Help" = "Hilfe";
+
+/* Main Menu Item Title */
+"Hide Others" = "Andere ausblenden";
+
+/* Main Menu Item Title */
+"Minimize" = "Minimieren";
+
+/* Main Menu Item Title */
+"Select All" = "Alle auswählen";
+
+/* Main Menu Item Title */
+"Services" = "Services";
+
+/* Main Menu Item Title */
+"Show All" = "Alle anzeigen";
+
+/* Main Menu Item Title */
+"Zoom" = "Vergrößern";
+
+/* Main Menu Item Title */
+"%@ Hide" = "%@ ausblenden";
+
+/* Listeners Count: Singular */
+"%@ Listener" = "%@ Zuhörer";
+
+/* Listeners Count: Plural */
+"%@ Listeners" = "%@ Zuhörer";
+
+/* Main Menu Item Title */
+"Podcast Overview" = "Podcast Übersicht";
+
+/* Main Menu Item Title */
+"Find Next" = "Nächsten finden";
+
+/* Main Menu Item Title */
+"Find Previous" = "Vorherigen finden";
+
+/* Main Menu Item Title */
+"Find…" = "Finden...";
+
+/* Main Menu Item Title */
+"Find" = "Finden";
+
+/* Main Menu Item Title */
+"Jump to Selection" = "Springe zur Auswahl";
+
+/* nil */
+"Paste and Match Style" = "Einfügen und Stil beibehalten";
+
+/* Main Menu Item Title */
+"Paste" = "Einfügen";
+
+/* The File menu */
+"Podcasts" = "Podcasts";
+
+/* nil */
+"Spelling" = "Aussprache";
+
+/* Main Menu Item Title */
+"Subscribed Podcasts" = "Podcast Favoriten";
+
+/* Main Menu Item Title */
+"Use Selection for Find" = "Auswahl finden";
+
+/* The View menu */
+"View" = "Ansicht";
+
+/* The Window menu */
+"Window" = "Fenster";
+
+/* followerCountFormatString */
+"%li Follower" = "%li Follower";
+
+/* followerCountFormatString */
+"%li Followers" = "%li Follower";
+
+/* litenerCountSingularFormatString */
+"%li Listener" = "%li Zuhörer";
+
+/* litenerCountPluralFormatString */
+"%li Listeners" = "%li Zuhörer";
+
+/* Preferences ViewController Title */
+"Account" = "Benutzer Konto";
+
+/* Preferences ViewController Title */
+"Appearance" = "Aussehen";
+
+/* Preferences ViewController Title */
+"Audio" = "Audio";
+
+/* Main Menu Item Title */
+"Feedback..." = "Feedback...";
+
+/* Volume Level Selector Item */
+"Globally" = "Global";
+
+/* Volume Level Selector Item */
+"Per Podcast" = "Per Podcast";
+
+/* Volume Level Selector Label */
+"Save Volume Level" = "Speichere die Lautstärke";
+
+/* Application Theme Selector Label */
+"Set Application Theme to" = "Setze das User-Interface auf";
+
+/* Prefs: Volume Level Description */
+"The current volume level of a streaming channel will be saved separately for this channel only.\n\nSwitching to another streaming channel adjusts the volume level automatically." = "Die Lautstärke des aktuell streamenden Podcast wird separat nur für diesen gespeichert.\n\nWird auf einen anderen gerade streamenden Podcast gewechselt, passt sich die Lautstärke für diesen automatisch an.";
+
+/* Prefs: Volume Level Description */
+"The current volume level will be saved globally for all channels." = "Die Lautstärke des aktuell streamenden Podcast wird global auch für alle anderen gespeichert.";
+
+/* Preferences ViewController Title */
+"Interface" = "Interface";
+
+/* No comment provided by engineer. */
+"unfortunately, no favorite live stream..." = "Leider gibt es keinen Favoriten Live-Stream...";
+
+/* No comment provided by engineer. */
+"unfortunately, no live stream..." = "Leider gibt es keinen Live-Stream...";
+
