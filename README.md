@@ -1,6 +1,5 @@
 [![Twitter: @TheCocoaNaut](https://img.shields.io/badge/Twitter-@TheCocoaNaut-c9d840.svg?style=flat)](https://twitter.com/TheCocoaNaut)
 [![Twitter: @PodliveApp](https://img.shields.io/badge/Twitter-@PodliveApp-ca94d4.svg?style=flat)](https://twitter.com/PodliveApp)
-[![Podlive Website](https://img.shields.io/website-up-down-ca94d4-red/http/shields.io.svg?label=Podlive-Website)](https://podlive.io)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://cocoanaut.mit-license.org)
 
 # Podlive for macOS
