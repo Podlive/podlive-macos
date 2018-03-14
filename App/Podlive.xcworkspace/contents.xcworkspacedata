@@ -5,10 +5,10 @@
       location = "group:Podlive.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CNNKit/CCNAppKit/CCNAppKit.xcodeproj">
+      location = "group:CCNKit/CCNAppKit/CCNAppKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CNNKit/CCNFoundation/CCNFoundation.xcodeproj">
+      location = "group:CCNKit/CCNFoundation/CCNFoundation.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
