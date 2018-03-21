@@ -171,6 +171,7 @@
 		FD7129E91ED61723008B779F /* PodliveGUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodliveGUIKit.m; sourceTree = "<group>"; };
 		FD71D4CE1E66FCFD003D6E01 /* NSColor+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Podlive.h"; sourceTree = "<group>"; };
 		FD71D4CF1E66FCFD003D6E01 /* NSColor+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Podlive.m"; sourceTree = "<group>"; };
+		FD76CF62205B347000F55442 /* quite-impressed.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quite-impressed.caf"; sourceTree = "<group>"; };
 		FD7792F41FD5E105006D2D62 /* NSApplication+MainMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSApplication+MainMenu.h"; sourceTree = "<group>"; };
 		FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+MainMenu.m"; sourceTree = "<group>"; };
 		FD7E63281EDF57D20011BE89 /* NSFont+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFont+Podlive.h"; sourceTree = "<group>"; };
@@ -501,14 +502,15 @@
 		FDF6428B1E5CC4870005EA72 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FD634CCB1EF1EDA6006243A4 /* Fonts */,
 				FD0722BE1E5CEB56000A2860 /* Assets.xcassets */,
 				FD9D6D281EA7B2D5005ED568 /* Credits.rtf */,
+				FD634CCB1EF1EDA6006243A4 /* Fonts */,
 				FD1AC74F1E70D7A500C5E692 /* Localizable.strings */,
+				FD0722B61E5CEB35000A2860 /* main.m */,
 				FD547D0D1ED40F4B00456184 /* Podlive-Info.plist */,
 				FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */,
 				FD0722B91E5CEB3D000A2860 /* PrefixHeader.pch */,
-				FD0722B61E5CEB35000A2860 /* main.m */,
+				FD76CF62205B347000F55442 /* quite-impressed.caf */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
