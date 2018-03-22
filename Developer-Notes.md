@@ -41,3 +41,7 @@ let defaults = NSUserDefaults.standardUserDefaults;
 #### 3. Indentation
 
 The project uses `4 spaces`.
+
+#### 4. No Interfacebuilder
+
+This project uses absolutely no (ok, nearly) XIB’s and no Storyboards. The entire UI is prototyped in code. This gives you clarity on what is happening behind the scenes, you avoid mind boggling merge conflicts and last but not least it results in a better sleep at night. It’s that simple! 😉
