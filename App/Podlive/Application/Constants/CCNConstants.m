@@ -44,9 +44,12 @@ static NSString *const CCNParseServerUrl     = @"ParseServerUrl";
 
 + (NSString *)valueForBackendType:(CCNBackendType)backendType withKey:(NSString *)key {
     let parsePlist = [NSBundle.mainBundle pathForResource:@"Parse" ofType:@"plist"];
-    let parseArray = [NSArray arrayWithContentsOfFile:parsePlist];
+    if (parsePlist) {
+        let parseArray = [NSArray arrayWithContentsOfFile:parsePlist];
+        return parseArray[backendType][key];
+    }
 
-    return parseArray[backendType][key];
+    return nil;
 }
 
 @end

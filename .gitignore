@@ -65,3 +65,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 CCNKit/
+Swift/
+Parse.plist
