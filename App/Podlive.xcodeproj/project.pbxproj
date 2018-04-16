@@ -56,6 +56,7 @@
 		FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634CF81EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf */; };
 		FD634D071EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634D061EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf */; };
 		FD634D091EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634D081EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf */; };
+		FD732BBD208550CE00734A48 /* Parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD732BBC208550CE00734A48 /* Parse.plist */; };
 		FD7792F61FD5E105006D2D62 /* NSApplication+MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */; };
 		FD7E632B1EDF57D20011BE89 /* NSFont+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E63291EDF57D20011BE89 /* NSFont+Podlive.m */; };
 		FD88D1411EE80CCF00875AD5 /* CCNApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD88D1401EE80CCF00875AD5 /* CCNApplicationDelegate.m */; };
@@ -169,6 +170,7 @@
 		FD7129E91ED61723008B779F /* PodliveGUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodliveGUIKit.m; sourceTree = "<group>"; };
 		FD71D4CE1E66FCFD003D6E01 /* NSColor+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Podlive.h"; sourceTree = "<group>"; };
 		FD71D4CF1E66FCFD003D6E01 /* NSColor+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Podlive.m"; sourceTree = "<group>"; };
+		FD732BBC208550CE00734A48 /* Parse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Parse.plist; sourceTree = "<group>"; };
 		FD76CF62205B347000F55442 /* quite-impressed.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "quite-impressed.caf"; sourceTree = "<group>"; };
 		FD7792F41FD5E105006D2D62 /* NSApplication+MainMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSApplication+MainMenu.h"; sourceTree = "<group>"; };
 		FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+MainMenu.m"; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 		FDF6428B1E5CC4870005EA72 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD732BBC208550CE00734A48 /* Parse.plist */,
 				FD0722BE1E5CEB56000A2860 /* Assets.xcassets */,
 				FD9D6D281EA7B2D5005ED568 /* Credits.rtf */,
 				FD634CCB1EF1EDA6006243A4 /* Fonts */,
@@ -640,6 +643,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD634D041EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf in Resources */,
+				FD732BBD208550CE00734A48 /* Parse.plist in Resources */,
 				FDD1D67E1F06708D00DED89C /* CCNPreferencesAudio.xib in Resources */,
 				FD634D021EF1F76B006243A4 /* ProximaNova-Light.otf in Resources */,
 				FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */,
