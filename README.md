@@ -11,6 +11,10 @@ Our backend is a [Parse-Server](http://parseplatform.org) which is used to colle
 
 ![](screenshot1.png)
 
+## Podlive in the Mac App Store
+
+If you are not familiar with programming and/or Xcode, you can of course [download the latest release of Podlive in the Mac App Store](https://itunes.apple.com/at/app/podlive/id1210411572?l=en&mt=12).
+
 ## How to contribute?
 The goal to develop this software was a lag of a personal need, at the beginning. It was just a fun and hobby project, and it still is being developed under the same premise.
 
