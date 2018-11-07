@@ -25,14 +25,14 @@ NSString *const CCNChannelFieldTwitterUsername      = @"twitterUsername";
 NSString *const CCNChannelFieldIsEnabled            = @"isEnabled";
 
 
-@interface PFFile (URL)
+@interface PFFileObject (URL)
 @property (nonatomic, readonly) NSURL *tlsURL;
 @end
 
 
-// MARK: - PFFile+URL
+// MARK: - PFFileObject+URL
 
-@implementation PFFile (URL)
+@implementation PFFileObject (URL)
 - (NSURL *)tlsURL {
     return [NSURL URLWithString:[self.url stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"]];
 }
@@ -91,7 +91,7 @@ NSString *const CCNChannelFieldIsEnabled            = @"isEnabled";
 }
 
 - (NSURL *)coverartURL {
-    PFFile *const theFile = self.parseObject[CCNChannelFieldCoverart];
+    PFFileObject *const theFile = self.parseObject[CCNChannelFieldCoverart];
     if (theFile) {
         return theFile.tlsURL;
     }
@@ -99,7 +99,7 @@ NSString *const CCNChannelFieldIsEnabled            = @"isEnabled";
 }
 
 - (NSURL *)coverartThumbnail200URL {
-    PFFile *const theFile = self.parseObject[CCNChannelFieldCoverartThumbnail200];
+    PFFileObject *const theFile = self.parseObject[CCNChannelFieldCoverartThumbnail200];
     if (theFile) {
         return theFile.tlsURL;
     }
@@ -107,7 +107,7 @@ NSString *const CCNChannelFieldIsEnabled            = @"isEnabled";
 }
 
 - (NSURL *)coverartThumbnail800URL {
-    PFFile *const theFile = self.parseObject[CCNChannelFieldCoverartThumbnail800];
+    PFFileObject *const theFile = self.parseObject[CCNChannelFieldCoverartThumbnail800];
     if (theFile) {
         return theFile.tlsURL;
     }

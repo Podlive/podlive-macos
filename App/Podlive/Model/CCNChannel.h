@@ -12,7 +12,8 @@ typedef NS_ENUM(NSInteger, CCNChannelState) {
     CCNChannelStatePostShow  = 2,
     CCNChannelStateOffline   = 3,
     CCNChannelStateOnline    = 4,
-    CCNChannelStateBreak     = 5
+    CCNChannelStateBreak     = 5,
+    CCNChannelStateTest      = 6
 };
 
 typedef NS_ENUM(NSUInteger, CCNStreamingBackend) {
