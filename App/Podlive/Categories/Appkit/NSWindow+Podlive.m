@@ -13,7 +13,7 @@
 
     let styleMask = (NSWindowStyleMaskTitled | NSWindowStyleMaskFullSizeContentView | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable);
     
-    let _window = [[NSWindow alloc] initWithContentRect:windowInitialFrame styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
+    let _window = [[NSWindow alloc] initWithContentRect:windowInitialFrame styleMask:styleMask backing:NSBackingStoreBuffered defer:NO];
     _window.minSize               = windowMinFrame.size;
     _window.maxSize               = NSMakeSize(CGFLOAT_MAX, CGFLOAT_MAX);
     _window.contentViewController = contentViewController;

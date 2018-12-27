@@ -54,10 +54,11 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 }
 
 - (void)viewDidLoad {
-    [self setupUI];
-    [self setupNotifications];
-
     [super viewDidLoad];
+
+    [self setupUI];
+    [self setupConstraints];
+    [self setupNotifications];
 }
 
 - (void)viewWillAppear {
@@ -71,8 +72,6 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 
 - (void)setupUI {
     self.gridViewController = CCNChannelGridViewController.viewController;
-//    self.navigationController = [[CCNNavigationController alloc] initWithRootViewController:self.gridViewController];
-//    self.navigationController.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.gridViewController.view];
 
 
@@ -94,7 +93,7 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 
 // MARK: - Auto Layout
 
-- (void)updateViewConstraints {
+- (void)setupConstraints {
     if (!self.playerViewBottomConstraint) {
         self.playerViewBottomConstraint = [self.playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerViewController.view.superview.bottomAnchor];
         self.playerViewBottomConstraint.constant = kCCNPlayerViewHeight;
@@ -112,8 +111,6 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 
         self.playerViewBottomConstraint
     ]];
-
-    [super updateViewConstraints];
 }
 
 // MARK: - Custom Accessors
