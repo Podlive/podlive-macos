@@ -130,7 +130,7 @@ static unsigned short const CCNEscapeKey = 53;
     self.segmentedControl.action = @selector(segmentedControlAction:);
     self.segmentedControl.identifier = CCNPreferencesToolbarSegmentedControlIdentifier;
 
-    [self.segmentedControl.cell setControlSize:NSRegularControlSize];
+    [self.segmentedControl.cell setControlSize:NSControlSizeRegular];
     [self.segmentedControl.cell setTrackingMode:NSSegmentSwitchTrackingSelectOne];
 
     NSSize segmentSize = [self maxSegmentSizeForCurrentViewControllers];
@@ -225,7 +225,7 @@ static unsigned short const CCNEscapeKey = 53;
     NSSize maxSize = NSMakeSize(42, 0);
     for (NSViewController *vc in self.viewControllers) {
         NSString *title = [vc performSelector:@selector(preferenceTitle)];
-        NSSize titleSize = [title sizeWithAttributes:@{ NSFontAttributeName: [NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:NSRegularControlSize]] }];
+        NSSize titleSize = [title sizeWithAttributes:@{ NSFontAttributeName: [NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:NSControlSizeRegular]] }];
         if (titleSize.width + CCNPreferencesToolbarSegmentedControlItemInset.width > maxSize.width) {
             maxSize = NSMakeSize(ceilf(titleSize.width) + CCNPreferencesToolbarSegmentedControlItemInset.width, ceilf(titleSize.height) + CCNPreferencesToolbarSegmentedControlItemInset.height);
         }
@@ -407,7 +407,7 @@ static unsigned short const CCNEscapeKey = 53;
 
 - (instancetype)init {
     self = [super initWithContentRect:CCNPreferencesDefaultWindowRect
-                            styleMask:(NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSUnifiedTitleAndToolbarWindowMask)
+                            styleMask:(NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskUnifiedTitleAndToolbar)
                               backing:NSBackingStoreBuffered
                                 defer:YES];
     if (self) {
