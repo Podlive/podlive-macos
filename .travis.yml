@@ -1,4 +1,5 @@
 language: objective-c
+os: osx
 xcode_project: 'App/Podlive.xcodeproj'
 xcode_scheme: 'Podlive'
 
