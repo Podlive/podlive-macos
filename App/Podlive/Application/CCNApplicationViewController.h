@@ -6,7 +6,6 @@
 @interface CCNApplicationViewController : NSViewController  <NSWindowDelegate, NSToolbarDelegate>
 
 - (void)showPreferences;
-
 - (void)showAvailablePodcasts;
 - (void)showSubscribedPodcasts;
 

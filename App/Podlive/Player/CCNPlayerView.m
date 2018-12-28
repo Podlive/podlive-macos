@@ -45,6 +45,7 @@
     [self addVibrancyBlendingMode:NSVisualEffectBlendingModeWithinWindow];
 
     [self setupUI];
+    [self setupConstraints];
     [self setupNotifications];
 
     return self;
@@ -109,6 +110,46 @@
     [nc addObserver:self selector:@selector(handlePushNotificationChannelListenerCountUpdated:) name:CCNPushNotificationChannelListenerCountUpdated object:nil];
 }
 
+- (void)setupConstraints {
+    [NSLayoutConstraint activateConstraints:@[
+        [self.coverart.topAnchor constraintEqualToAnchor:self.coverart.superview.topAnchor constant:1],
+        [self.coverart.leftAnchor constraintEqualToAnchor:self.coverart.superview.leftAnchor],
+        [self.coverart.bottomAnchor constraintEqualToAnchor:self.coverart.superview.bottomAnchor],
+        [self.coverart.widthAnchor constraintEqualToAnchor:self.coverart.heightAnchor],
+
+        [self.volumeControl.centerYAnchor constraintEqualToAnchor:self.stopButton.superview.centerYAnchor],
+        [self.volumeControl.rightAnchor constraintEqualToAnchor:self.volumeControl.superview.rightAnchor constant:-kOuterEdgeMargin],
+        [self.volumeControl.widthAnchor constraintEqualToConstant:NSWidth(self.volumeControl.frame)],
+        [self.volumeControl.heightAnchor constraintEqualToConstant:NSHeight(self.volumeControl.frame)],
+
+        [self.stopButton.centerYAnchor constraintEqualToAnchor:self.stopButton.superview.centerYAnchor],
+        [self.stopButton.rightAnchor constraintEqualToAnchor:self.volumeControl.leftAnchor constant:-kInnerEdgeMargin],
+        [self.stopButton.widthAnchor constraintEqualToConstant:self.stopButton.buttonSize.width],
+        [self.stopButton.heightAnchor constraintEqualToAnchor:self.stopButton.widthAnchor],
+
+        [self.playPauseButton.centerYAnchor constraintEqualToAnchor:self.playPauseButton.superview.centerYAnchor],
+        [self.playPauseButton.rightAnchor constraintEqualToAnchor:self.stopButton.leftAnchor constant:-kInnerEdgeMargin],
+        [self.playPauseButton.widthAnchor constraintEqualToConstant:self.playPauseButton.buttonSize.width],
+        [self.playPauseButton.heightAnchor constraintEqualToAnchor:self.playPauseButton.widthAnchor],
+
+        [self.titleTextField.leftAnchor constraintEqualToAnchor:self.coverart.rightAnchor constant:kOuterEdgeMargin/2],
+        [self.titleTextField.rightAnchor constraintEqualToAnchor:self.playPauseButton.leftAnchor constant:-kInnerEdgeMargin],
+        [self.titleTextField.bottomAnchor constraintEqualToAnchor:self.titleTextField.superview.bottomAnchor constant:-kOuterEdgeMargin/2],
+
+        [self.timeIcon.leftAnchor constraintEqualToAnchor:self.coverart.rightAnchor constant:kInnerEdgeDoubleMargin-4],
+        [self.timeIcon.topAnchor constraintEqualToAnchor:self.timeIcon.superview.topAnchor constant:kOuterEdgeMargin/2],
+
+        [self.timeTextField.leftAnchor constraintEqualToAnchor:self.timeIcon.rightAnchor constant:kInnerEdgeMargin/2],
+        [self.timeTextField.centerYAnchor constraintEqualToAnchor:self.timeIcon.centerYAnchor constant:-2.0],
+
+        [self.listenerIcon.centerYAnchor constraintEqualToAnchor:self.timeIcon.centerYAnchor],
+        [self.listenerIcon.leftAnchor constraintEqualToAnchor:self.timeIcon.rightAnchor constant:kOuterEdgeMargin*4],
+
+        [self.listenerTextField.leftAnchor constraintEqualToAnchor:self.listenerIcon.rightAnchor constant:kInnerEdgeMargin/2],
+        [self.listenerTextField.centerYAnchor constraintEqualToAnchor:self.timeTextField.centerYAnchor],
+    ]];
+}
+
 // MARK: - Notifications
 
 - (void)handlePlayerDidStartPlayingNotification:(NSNotification *)note {
@@ -169,50 +210,6 @@
 - (NSString *)listenerCountTextForCount:(NSInteger)listenerCount {
     let formatString = (listenerCount == 1 ? [NSString listenerCountSingularFormatString] : [NSString listenerCountPluralFormatString]);
     return [NSString stringWithFormat:formatString, listenerCount];
-}
-
-// MARK: - Auto Layout
-
-- (void)updateConstraints {
-    [NSLayoutConstraint activateConstraints:@[
-        [self.coverart.topAnchor constraintEqualToAnchor:self.coverart.superview.topAnchor constant:1],
-        [self.coverart.leftAnchor constraintEqualToAnchor:self.coverart.superview.leftAnchor],
-        [self.coverart.bottomAnchor constraintEqualToAnchor:self.coverart.superview.bottomAnchor],
-        [self.coverart.widthAnchor constraintEqualToAnchor:self.coverart.heightAnchor],
-
-        [self.volumeControl.centerYAnchor constraintEqualToAnchor:self.stopButton.superview.centerYAnchor],
-        [self.volumeControl.rightAnchor constraintEqualToAnchor:self.volumeControl.superview.rightAnchor constant:-kOuterEdgeMargin],
-        [self.volumeControl.widthAnchor constraintEqualToConstant:NSWidth(self.volumeControl.frame)],
-        [self.volumeControl.heightAnchor constraintEqualToConstant:NSHeight(self.volumeControl.frame)],
-
-        [self.stopButton.centerYAnchor constraintEqualToAnchor:self.stopButton.superview.centerYAnchor],
-        [self.stopButton.rightAnchor constraintEqualToAnchor:self.volumeControl.leftAnchor constant:-kInnerEdgeMargin],
-        [self.stopButton.widthAnchor constraintEqualToConstant:self.stopButton.buttonSize.width],
-        [self.stopButton.heightAnchor constraintEqualToAnchor:self.stopButton.widthAnchor],
-
-        [self.playPauseButton.centerYAnchor constraintEqualToAnchor:self.playPauseButton.superview.centerYAnchor],
-        [self.playPauseButton.rightAnchor constraintEqualToAnchor:self.stopButton.leftAnchor constant:-kInnerEdgeMargin],
-        [self.playPauseButton.widthAnchor constraintEqualToConstant:self.playPauseButton.buttonSize.width],
-        [self.playPauseButton.heightAnchor constraintEqualToAnchor:self.playPauseButton.widthAnchor],
-
-        [self.titleTextField.leftAnchor constraintEqualToAnchor:self.coverart.rightAnchor constant:kOuterEdgeMargin/2],
-        [self.titleTextField.rightAnchor constraintEqualToAnchor:self.playPauseButton.leftAnchor constant:-kInnerEdgeMargin],
-        [self.titleTextField.bottomAnchor constraintEqualToAnchor:self.titleTextField.superview.bottomAnchor constant:-kOuterEdgeMargin/2],
-
-        [self.timeIcon.leftAnchor constraintEqualToAnchor:self.coverart.rightAnchor constant:kInnerEdgeDoubleMargin-4],
-        [self.timeIcon.topAnchor constraintEqualToAnchor:self.timeIcon.superview.topAnchor constant:kOuterEdgeMargin/2],
-
-        [self.timeTextField.leftAnchor constraintEqualToAnchor:self.timeIcon.rightAnchor constant:kInnerEdgeMargin/2],
-        [self.timeTextField.centerYAnchor constraintEqualToAnchor:self.timeIcon.centerYAnchor constant:-2.0],
-
-        [self.listenerIcon.centerYAnchor constraintEqualToAnchor:self.timeIcon.centerYAnchor],
-        [self.listenerIcon.leftAnchor constraintEqualToAnchor:self.timeIcon.rightAnchor constant:kOuterEdgeMargin*4],
-
-        [self.listenerTextField.leftAnchor constraintEqualToAnchor:self.listenerIcon.rightAnchor constant:kInnerEdgeMargin/2],
-        [self.listenerTextField.centerYAnchor constraintEqualToAnchor:self.timeTextField.centerYAnchor],
-    ]];
-
-    [super updateConstraints];
 }
 
 // MARK: - Custom Accessors

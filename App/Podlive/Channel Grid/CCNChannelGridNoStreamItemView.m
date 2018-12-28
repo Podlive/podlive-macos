@@ -28,6 +28,7 @@ static const NSEdgeInsets kContainerEdgeInsets = {8.0, 8.0, 0.0, 8.0};
     self.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self setupUI];
+    [self setupConstraints];
 
     return self;
 }
@@ -71,7 +72,7 @@ static const NSEdgeInsets kContainerEdgeInsets = {8.0, 8.0, 0.0, 8.0};
 
 // MARK: - Auto Layout
 
-- (void)updateConstraints {
+- (void)setupConstraints {
     var constraints = NSMutableArray.new;
 
     [constraints addObjectsFromArray:@[
@@ -89,8 +90,6 @@ static const NSEdgeInsets kContainerEdgeInsets = {8.0, 8.0, 0.0, 8.0};
 
     [NSLayoutConstraint activateConstraints:constraints];
     constraints = nil;
-
-    [super updateConstraints];
 }
 
 // MARK: - Custom Accessors

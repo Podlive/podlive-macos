@@ -383,12 +383,13 @@
 			path = CCNPreferencesWindowController;
 			sourceTree = "<group>";
 		};
-		FD34551C21D67AFC00014909 /* Vendor */ = {
+		FD34551C21D67AFC00014909 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
 				FD34551D21D67B1C00014909 /* extobjc */,
 			);
-			path = Vendor;
+			name = Submodules;
+			path = ../Submodules;
 			sourceTree = "<group>";
 		};
 		FD34551D21D67B1C00014909 /* extobjc */ = {
@@ -636,7 +637,7 @@
 				FD3385221E6B750F007D0D74 /* Preferences */,
 				FD888C4C1ED0DEDA00A6B8BB /* StyleKit */,
 				FDF6428B1E5CC4870005EA72 /* Supporting Files */,
-				FD34551C21D67AFC00014909 /* Vendor */,
+				FD34551C21D67AFC00014909 /* Submodules */,
 			);
 			path = Podlive;
 			sourceTree = "<group>";

@@ -27,6 +27,7 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
     if (!self) return nil;
 
     [self setupUI];
+    [self setupConstraints];
 
     return self;
 }
@@ -106,7 +107,7 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
 
 // MARK: - Auto Layout
 
-- (void)updateConstraints {
+- (void)setupConstraints {
     [NSLayoutConstraint activateConstraints:@[
         [self.avatar.topAnchor constraintEqualToAnchor:self.avatar.superview.topAnchor constant:kOuterEdgeMargin],
         [self.avatar.centerXAnchor constraintEqualToAnchor:self.avatar.superview.centerXAnchor],
@@ -132,8 +133,6 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
         [self.logoutButton.centerXAnchor constraintEqualToAnchor:self.logoutButton.superview.centerXAnchor],
         [self.logoutButton.bottomAnchor constraintEqualToAnchor:self.logoutButton.superview.bottomAnchor constant:-kOuterEdgeMargin],
     ]];
-
-    [super updateConstraints];
 }
 
 // MARK: - Helper

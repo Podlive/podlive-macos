@@ -48,6 +48,7 @@ typedef void(^CCNChannelGridViewDataSourceUpdatedCompletion)(NSSet<NSIndexPath *
 
 - (void)viewDidLoad {
     [self setupUI];
+    [self setupConstraints];
     [self setupNotifications];
 
     @weakify(self);
@@ -123,17 +124,13 @@ typedef void(^CCNChannelGridViewDataSourceUpdatedCompletion)(NSSet<NSIndexPath *
     [self.view addSubview:self.scrollView];
 }
 
-// MARK: - Auto Layout
-
-- (void)updateViewConstraints {
+- (void)setupConstraints {
     [NSLayoutConstraint activateConstraints:@[
         [self.scrollView.topAnchor constraintEqualToAnchor:self.scrollView.superview.topAnchor constant:38],
         [self.scrollView.bottomAnchor constraintEqualToAnchor:self.scrollView.superview.bottomAnchor],
         [self.scrollView.leftAnchor constraintEqualToAnchor:self.scrollView.superview.leftAnchor],
         [self.scrollView.rightAnchor constraintEqualToAnchor:self.scrollView.superview.rightAnchor],
     ]];
-
-    [super updateViewConstraints];
 }
 
 // MARK: - Helper

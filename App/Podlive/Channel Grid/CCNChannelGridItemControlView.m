@@ -30,6 +30,7 @@ static const CGFloat kOverlayHeight = 55.0;
     self.wantsLayer = YES;
 
     [self setupUI];
+    [self setupConstraints];
     [self setupNotifications];
 
     return self;
@@ -72,7 +73,7 @@ static const CGFloat kOverlayHeight = 55.0;
     [nc addObserver:self selector:@selector(handlePlayerDidChangedChannelNotification:) name:CCNPlayerDidChangedChannelNotification     object:nil];
 }
 
-- (void)updateConstraints {
+- (void)setupConstraints {
     [NSLayoutConstraint activateConstraints:@[
         [self.playPauseButton.centerXAnchor constraintEqualToAnchor:self.playPauseButton.superview.centerXAnchor],
         [self.playPauseButton.centerYAnchor constraintEqualToAnchor:self.playPauseButton.superview.centerYAnchor constant:-kOuterEdgeMargin],
@@ -84,8 +85,6 @@ static const CGFloat kOverlayHeight = 55.0;
         [self.subscribeButton.widthAnchor constraintEqualToConstant:NSWidth(self.subscribeButton.frame)],
         [self.subscribeButton.heightAnchor constraintEqualToAnchor:self.subscribeButton.widthAnchor],
     ]];
-
-    [super updateConstraints];
 }
 
 // MARK: - Notifications

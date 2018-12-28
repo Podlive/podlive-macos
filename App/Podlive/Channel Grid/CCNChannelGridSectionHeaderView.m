@@ -20,6 +20,7 @@
     _headerSection = CCNChannelSectionLive;
 
     [self setupUI];
+    [self setupConstraints];
 
     return self;
 }
@@ -38,13 +39,11 @@
     [self addSubview:self.titleTextField];
 }
 
-- (void)updateConstraints {
+- (void)setupConstraints {
     [NSLayoutConstraint activateConstraints:@[
         [self.titleTextField.leftAnchor constraintEqualToAnchor:self.titleTextField.superview.leftAnchor constant:kOuterEdgeMargin/2],
         [self.titleTextField.centerYAnchor constraintEqualToAnchor:self.titleTextField.superview.centerYAnchor constant:-2],
     ]];
-
-    [super updateConstraints];
 }
 
 // MARK: - Helper

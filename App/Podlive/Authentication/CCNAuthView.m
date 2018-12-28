@@ -127,7 +127,7 @@
     _actionButton.nextKeyView = _username;
 }
 
-- (void)updateConstraints {
+- (void)setupConstraints {
     var constraints = NSMutableArray.new;
 
     [constraints addObjectsFromArray:@[
@@ -206,8 +206,6 @@
     }
     [NSLayoutConstraint activateConstraints:constraints];
     constraints = nil;
-
-    [super updateConstraints];
 }
 
 // MARK: - Custom Accessors
@@ -215,8 +213,9 @@
 - (void)setAuthType:(CCNAuthenticationType)authType {
     _authType = authType;
     [self setupUI];
+    [self setupConstraints];
     [self setNeedsDisplay:YES];
-    [self setNeedsUpdateConstraints:YES];
+//    [self setNeedsUpdateConstraints:YES];
 }
 
 // MARK: - Helper

@@ -192,7 +192,7 @@ static const CGFloat kCCNChannelGridItemArrowWidth = 42.0;
     }
 }
 
-- (void)updateConstraints {
+- (void)setupConstraints {
     var constraints = NSMutableArray.new;
 
     [constraints addObjectsFromArray:@[
@@ -264,8 +264,6 @@ static const CGFloat kCCNChannelGridItemArrowWidth = 42.0;
 
     constraints = nil;
     rightAnchor = nil;
-
-    [super updateConstraints];
 }
 
 // MARK: - Custom Accessors
@@ -288,8 +286,8 @@ static const CGFloat kCCNChannelGridItemArrowWidth = 42.0;
     _channel = channel;
 
     [self setupUI];
+    [self setupConstraints];
     [self setNeedsDisplay:YES];
-    [self setNeedsUpdateConstraints:YES];
 }
 
 // MARK: - Helper

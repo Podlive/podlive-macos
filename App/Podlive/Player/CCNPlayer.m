@@ -29,6 +29,26 @@ const CGFloat kCCNPlayerViewHeight = 65.0;
     return _sharedInstance;
 }
 
+- (instancetype)initSingleton {
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
+
+- (instancetype)init {
+    @throw [[self class] initException];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    @throw [[self class] initException];
+}
+
++ (NSException *)initException {
+    let exceptionMessage = [NSString stringWithFormat:@"'%@' is a Singleton, and you must NOT init manually! Use +sharedInstance instead.", [self className]];
+    return [NSException exceptionWithName:NSInternalInconsistencyException reason:exceptionMessage userInfo:nil];
+}
+
 - (void)setupNotifications {
     let nc = NSNotificationCenter.defaultCenter;
     [nc addObserver:self selector:@selector(handlePlayerItemDidPlayToEndTimeNotification:)      name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
@@ -151,26 +171,6 @@ const CGFloat kCCNPlayerViewHeight = 65.0;
                                                                         @strongify(self);
                                                                         [self.delegate playerCurrentPlayingTime:secondsElapsed];
                                                                     }];
-}
-
-- (instancetype)initSingleton {
-    self = [super init];
-    if (self) {
-    }
-    return self;
-}
-
-- (instancetype)init {
-    @throw [[self class] initException];
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    @throw [[self class] initException];
-}
-
-+ (NSException *)initException {
-    let exceptionMessage = [NSString stringWithFormat:@"'%@' is a Singleton, and you must NOT init manually! Use +sharedInstance instead.", [self className]];
-    return [NSException exceptionWithName:NSInternalInconsistencyException reason:exceptionMessage userInfo:nil];
 }
 
 // MARK: - Audio Control
