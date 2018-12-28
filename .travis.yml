@@ -1,5 +1,15 @@
 language: objective-c
+osx_image: xcode10
 os: osx
+
+cache:
+  directories:
+    - Carthage
+
+before_install:
+  - git submodule update --remote
+  - carthage bootstrap --cache-builds --no-use-binaries --platform macOS
+
 xcode_project: 'App/Podlive.xcodeproj'
 xcode_scheme: 'Podlive'
 
