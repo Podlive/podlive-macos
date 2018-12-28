@@ -47,9 +47,6 @@ First you have to fork this repository into your own account. Then you follow th
 git clone https://github.com/YOURACCOUNT/podlive-macos.git
 cd podlive-macos/App
 pod install
-cd CCNKit
-git submodule init
-git submodule update
 ```
 
 ## Contact
