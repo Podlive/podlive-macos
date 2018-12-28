@@ -89,6 +89,7 @@
 		FDAE071F1EDF0ECE009E5A2D /* PodliveDefaultStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FD888C531ED0E1CB00A6B8BB /* PodliveDefaultStyleKit.m */; };
 		FDAE07211EDF0ED3009E5A2D /* PodliveGUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7129E91ED61723008B779F /* PodliveGUIKit.m */; };
 		FDAE07261EDF0F9D009E5A2D /* CCNConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE07241EDF0F9D009E5A2D /* CCNConstants.m */; };
+		FDB7A53821D6CDFC00CAEBC9 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = FDB7A53721D6CDFC00CAEBC9 /* .travis.yml */; };
 		FDC82DA21FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC82DA11FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m */; };
 		FDD1D6791F0647A200DED89C /* NSSlider+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1D6781F0647A200DED89C /* NSSlider+Podlive.m */; };
 		FDD1D67D1F06708D00DED89C /* CCNPreferencesAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1D67B1F06708D00DED89C /* CCNPreferencesAudio.m */; };
@@ -258,6 +259,7 @@
 		FDAE07241EDF0F9D009E5A2D /* CCNConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNConstants.m; sourceTree = "<group>"; };
 		FDAF0C9C1E8AA66700A7AB63 /* CCNPlayerPlayPauseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerPlayPauseButton.h; sourceTree = "<group>"; };
 		FDAF0C9D1E8AA66700A7AB63 /* CCNPlayerPlayPauseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerPlayPauseButton.m; sourceTree = "<group>"; };
+		FDB7A53721D6CDFC00CAEBC9 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		FDC82DA01FE1118F00197D84 /* CCNChannelGridNoStreamItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridNoStreamItemView.h; sourceTree = "<group>"; };
 		FDC82DA11FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridNoStreamItemView.m; sourceTree = "<group>"; };
 		FDD1D6771F0647A200DED89C /* NSSlider+Podlive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSlider+Podlive.h"; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 				FD34550921D66D0300014909 /* Cartfile */,
 				FD9A90762058636A00B9A5BE /* README.md */,
 				FD9A90782058637700B9A5BE /* .gitignore */,
+				FDB7A53721D6CDFC00CAEBC9 /* .travis.yml */,
 				FDF642AE1E5CC6300005EA72 /* Frameworks */,
 				FDF642871E5CC4870005EA72 /* Podlive */,
 				FDF642861E5CC4870005EA72 /* Products */,
@@ -791,6 +794,7 @@
 				FD634D041EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf in Resources */,
 				FD732BBD208550CE00734A48 /* Parse.plist in Resources */,
 				FD34550A21D66D0300014909 /* Cartfile in Resources */,
+				FDB7A53821D6CDFC00CAEBC9 /* .travis.yml in Resources */,
 				FDD1D67E1F06708D00DED89C /* CCNPreferencesAudio.xib in Resources */,
 				FD634D021EF1F76B006243A4 /* ProximaNova-Light.otf in Resources */,
 				FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */,
