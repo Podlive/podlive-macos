@@ -1,3 +1,0 @@
-[submodule "App/CCNKit"]
-	path = App/CCNKit
-	url = https://github.com/phranck/CCNKit.git

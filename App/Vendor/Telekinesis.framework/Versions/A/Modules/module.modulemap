@@ -1,6 +1,0 @@
-framework module Telekinesis {
-  umbrella header "Telekinesis.h"
-
-  export *
-  module * { export * }
-}

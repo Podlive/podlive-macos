@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4493D674057FA091CD19A5A3 /* libPods-Podlive.a */; };
 		FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */; };
+		FD34550A21D66D0300014909 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FD34550921D66D0300014909 /* Cartfile */; };
 		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
 		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
 		FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */; };
@@ -91,9 +92,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlive.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podlive/Pods-Podlive.release.xcconfig"; sourceTree = "<group>"; };
 		4493D674057FA091CD19A5A3 /* libPods-Podlive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Podlive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podlive/Pods-Podlive.debug.xcconfig"; sourceTree = "<group>"; };
 		FD0526CE1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridSectionHeaderView.h; sourceTree = "<group>"; };
 		FD0526CF1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridSectionHeaderView.m; sourceTree = "<group>"; };
 		FD0722B61E5CEB35000A2860 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +119,7 @@
 		FD3385231E6B7569007D0D74 /* CCNPreferencesGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesGeneral.h; sourceTree = "<group>"; };
 		FD3385241E6B7569007D0D74 /* CCNPreferencesGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesGeneral.m; sourceTree = "<group>"; };
 		FD3385251E6B7569007D0D74 /* CCNPreferencesGeneral.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCNPreferencesGeneral.xib; sourceTree = "<group>"; };
+		FD34550921D66D0300014909 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		FD36B9981E7893F100FB9456 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FD36B99A1E7893FD00FB9456 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podlive.entitlements; sourceTree = "<group>"; };
@@ -266,15 +266,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF382EAA5C4E038B15E192CB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */,
-				3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		FD0F9DC5205827200066E677 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,11 +501,11 @@
 		FDF6427C1E5CC4870005EA72 = {
 			isa = PBXGroup;
 			children = (
+				FD34550921D66D0300014909 /* Cartfile */,
 				FD9A90762058636A00B9A5BE /* README.md */,
 				FD9A90782058637700B9A5BE /* .gitignore */,
 				FDF642AE1E5CC6300005EA72 /* Frameworks */,
 				FDF642871E5CC4870005EA72 /* Podlive */,
-				EF382EAA5C4E038B15E192CB /* Pods */,
 				FDF642861E5CC4870005EA72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -634,11 +625,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD4BF8211EDC1E9B00BC15E9 /* Build configuration list for PBXNativeTarget "Podlive" */;
 			buildPhases = (
-				FD4BF7E41EDC1E9B00BC15E9 /* [CP] Check Pods Manifest.lock */,
 				FD4BF7E51EDC1E9B00BC15E9 /* Sources */,
 				FD4BF80A1EDC1E9B00BC15E9 /* Frameworks */,
 				FD4BF8131EDC1E9B00BC15E9 /* Resources */,
-				FD4BF81F1EDC1E9B00BC15E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -695,6 +684,7 @@
 			files = (
 				FD634D041EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf in Resources */,
 				FD732BBD208550CE00734A48 /* Parse.plist in Resources */,
+				FD34550A21D66D0300014909 /* Cartfile in Resources */,
 				FDD1D67E1F06708D00DED89C /* CCNPreferencesAudio.xib in Resources */,
 				FD634D021EF1F76B006243A4 /* ProximaNova-Light.otf in Resources */,
 				FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */,
@@ -712,45 +702,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FD4BF7E41EDC1E9B00BC15E9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Podlive-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD4BF81F1EDC1E9B00BC15E9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Podlive/Pods-Podlive-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podlive/Pods-Podlive-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD4BF7E51EDC1E9B00BC15E9 /* Sources */ = {
@@ -849,7 +800,6 @@
 /* Begin XCBuildConfiguration section */
 		FD4BF8221EDC1E9B00BC15E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -867,8 +817,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
-					"$(PROJECT_DIR)/Vendor/**",
-					"$(PROJECT_DIR)/Vendor",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -915,7 +863,6 @@
 		};
 		FD4BF8231EDC1E9B00BC15E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -933,8 +880,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
-					"$(PROJECT_DIR)/Vendor/**",
-					"$(PROJECT_DIR)/Vendor",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
