@@ -4,12 +4,11 @@ os: osx
 
 cache:
   directories:
-    - Carthage
+    - App/Carthage
 
 before_install:
   - git submodule update --remote
   - carthage bootstrap --cache-builds --no-use-binaries --platform macOS
 
 xcode_project: 'App/Podlive.xcodeproj'
-xcode_scheme: 'Podlive'
 
