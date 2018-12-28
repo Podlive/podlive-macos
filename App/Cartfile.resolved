@@ -1,0 +1,4 @@
+github "BoltsFramework/Bolts-ObjC" "1.9.0"
+github "facebook/facebook-ios-sdk" "sdk-version-4.39.0"
+github "jspahrsummers/libextobjc" "0.6"
+github "parse-community/Parse-SDK-iOS-OSX" "1.17.2"

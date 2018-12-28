@@ -1,0 +1,3 @@
+[submodule "App/Submodules"]
+	path = App/Submodules
+	url = https://github.com/jspahrsummers/libextobjc

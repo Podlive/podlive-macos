@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4493D674057FA091CD19A5A3 /* libPods-Podlive.a */; };
 		FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */; };
 		FD34550A21D66D0300014909 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FD34550921D66D0300014909 /* Cartfile */; };
+		FD34550F21D6770900014909 /* CCNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34550E21D6770900014909 /* CCNNavigationController.m */; };
+		FD34551521D6771800014909 /* CCNPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34551121D6771800014909 /* CCNPreferencesWindowController.m */; };
+		FD34551921D6782400014909 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34551821D6782400014909 /* Bolts.framework */; };
+		FD34551B21D6784C00014909 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34551A21D6784C00014909 /* Parse.framework */; };
 		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
 		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
 		FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */; };
@@ -92,13 +95,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4493D674057FA091CD19A5A3 /* libPods-Podlive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Podlive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD0526CE1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridSectionHeaderView.h; sourceTree = "<group>"; };
 		FD0526CF1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridSectionHeaderView.m; sourceTree = "<group>"; };
 		FD0722B61E5CEB35000A2860 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD0722B91E5CEB3D000A2860 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FD0722BE1E5CEB56000A2860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FD0F9DC6205827200066E677 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Telekinesis.framework; sourceTree = "<group>"; };
 		FD1041AC1E6F37A2003EA6C9 /* CCNAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNAuthViewController.h; sourceTree = "<group>"; };
 		FD1041AD1E6F37A2003EA6C9 /* CCNAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNAuthViewController.m; sourceTree = "<group>"; };
 		FD10E5811E746EA000560D74 /* NSImage+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Podlive.h"; sourceTree = "<group>"; };
@@ -120,6 +121,13 @@
 		FD3385241E6B7569007D0D74 /* CCNPreferencesGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesGeneral.m; sourceTree = "<group>"; };
 		FD3385251E6B7569007D0D74 /* CCNPreferencesGeneral.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCNPreferencesGeneral.xib; sourceTree = "<group>"; };
 		FD34550921D66D0300014909 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		FD34550D21D6770900014909 /* CCNNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNNavigationController.h; sourceTree = "<group>"; };
+		FD34550E21D6770900014909 /* CCNNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNNavigationController.m; sourceTree = "<group>"; };
+		FD34551121D6771800014909 /* CCNPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesWindowController.m; sourceTree = "<group>"; };
+		FD34551221D6771800014909 /* CCNPreferencesWindowControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowControllerProtocol.h; sourceTree = "<group>"; };
+		FD34551321D6771800014909 /* CCNPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowController.h; sourceTree = "<group>"; };
+		FD34551821D6782400014909 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/Mac/Bolts.framework; sourceTree = "<group>"; };
+		FD34551A21D6784C00014909 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/Mac/Parse.framework; sourceTree = "<group>"; };
 		FD36B9981E7893F100FB9456 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FD36B99A1E7893FD00FB9456 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podlive.entitlements; sourceTree = "<group>"; };
@@ -255,25 +263,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD34551921D6782400014909 /* Bolts.framework in Frameworks */,
 				FD4BF8101EDC1E9B00BC15E9 /* AVFoundation.framework in Frameworks */,
 				FD4BF80C1EDC1E9B00BC15E9 /* IOKit.framework in Frameworks */,
 				FD4BF80B1EDC1E9B00BC15E9 /* QuartzCore.framework in Frameworks */,
+				FD34551B21D6784C00014909 /* Parse.framework in Frameworks */,
 				FD4BF80D1EDC1E9B00BC15E9 /* Security.framework in Frameworks */,
-				B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD0F9DC5205827200066E677 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				FD0F9DC6205827200066E677 /* Telekinesis.framework */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 		FD1041A71E6F356E003EA6C9 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +322,34 @@
 			path = Preferences;
 			sourceTree = "<group>";
 		};
+		FD34550B21D676FB00014909 /* CCNImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C8A8821D6477D00EAF6DD /* CCNImageCache.h */,
+				FD6C8A8921D6477D00EAF6DD /* CCNImageCache.m */,
+			);
+			path = CCNImageCache;
+			sourceTree = "<group>";
+		};
+		FD34550C21D6770900014909 /* CCNNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				FD34550D21D6770900014909 /* CCNNavigationController.h */,
+				FD34550E21D6770900014909 /* CCNNavigationController.m */,
+			);
+			path = CCNNavigationController;
+			sourceTree = "<group>";
+		};
+		FD34551021D6771800014909 /* CCNPreferencesWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				FD34551321D6771800014909 /* CCNPreferencesWindowController.h */,
+				FD34551121D6771800014909 /* CCNPreferencesWindowController.m */,
+				FD34551221D6771800014909 /* CCNPreferencesWindowControllerProtocol.h */,
+			);
+			path = CCNPreferencesWindowController;
+			sourceTree = "<group>";
+		};
 		FD4FD34F1E981EA10081CEA8 /* Core Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,8 +388,9 @@
 		FD6C8A8721D6476400EAF6DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FD6C8A8821D6477D00EAF6DD /* CCNImageCache.h */,
-				FD6C8A8921D6477D00EAF6DD /* CCNImageCache.m */,
+				FD34550B21D676FB00014909 /* CCNImageCache */,
+				FD34550C21D6770900014909 /* CCNNavigationController */,
+				FD34551021D6771800014909 /* CCNPreferencesWindowController */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -583,14 +613,14 @@
 			isa = PBXGroup;
 			children = (
 				FD95F2321E85635A00F5B394 /* AVFoundation.framework */,
+				FD34551821D6782400014909 /* Bolts.framework */,
 				FD4C67301E8111E2001F012E /* CoreVideo.framework */,
 				FD36B99A1E7893FD00FB9456 /* IOKit.framework */,
-				4493D674057FA091CD19A5A3 /* libPods-Podlive.a */,
 				FD1868511E6B9843008BF3D4 /* libsqlite3.tbd */,
 				FD95F2421E85812200F5B394 /* NotificationCenter.framework */,
+				FD34551A21D6784C00014909 /* Parse.framework */,
 				FD4C672E1E81105E001F012E /* QuartzCore.framework */,
 				FD36B9981E7893F100FB9456 /* Security.framework */,
-				FD0F9DC5205827200066E677 /* Vendor */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -628,6 +658,7 @@
 				FD4BF7E51EDC1E9B00BC15E9 /* Sources */,
 				FD4BF80A1EDC1E9B00BC15E9 /* Frameworks */,
 				FD4BF8131EDC1E9B00BC15E9 /* Resources */,
+				FD34551721D6779F00014909 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -703,6 +734,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FD34551721D6779F00014909 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Bolts.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Realm.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD4BF7E51EDC1E9B00BC15E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -731,6 +785,7 @@
 				FDC82DA21FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m in Sources */,
 				FD4BF7F11EDC1E9B00BC15E9 /* CCNChannelGridFlowLayout.m in Sources */,
 				FD4BF7F21EDC1E9B00BC15E9 /* CCNPlayerStopButton.m in Sources */,
+				FD34551521D6771800014909 /* CCNPreferencesWindowController.m in Sources */,
 				FD4BF7F31EDC1E9B00BC15E9 /* CCNPlayerPlayPauseButton.m in Sources */,
 				FD7792F61FD5E105006D2D62 /* NSApplication+MainMenu.m in Sources */,
 				FDAE07171EDF0E23009E5A2D /* CCNChannelManager.m in Sources */,
@@ -760,6 +815,7 @@
 				FDAE071B1EDF0EA3009E5A2D /* CCNChannel.m in Sources */,
 				FD88D1411EE80CCF00875AD5 /* CCNApplicationDelegate.m in Sources */,
 				FDAE071F1EDF0ECE009E5A2D /* PodliveDefaultStyleKit.m in Sources */,
+				FD34550F21D6770900014909 /* CCNNavigationController.m in Sources */,
 				FDAE07111EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m in Sources */,
 				FD7E632B1EDF57D20011BE89 /* NSFont+Podlive.m in Sources */,
 				FDD1D6861F06732400DED89C /* CCNPreferencesBase.m in Sources */,
@@ -818,6 +874,7 @@
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Podlive/Supporting Files/PrefixHeader.pch";
@@ -881,6 +938,7 @@
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Podlive/Supporting Files/PrefixHeader.pch";
