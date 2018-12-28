@@ -5,12 +5,6 @@
       location = "group:Podlive.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CCNKit/CCNAppKit/CCNAppKit.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:CCNKit/CCNFoundation/CCNFoundation.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

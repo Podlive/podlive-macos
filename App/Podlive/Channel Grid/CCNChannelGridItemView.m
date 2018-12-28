@@ -14,6 +14,7 @@
 #import "CCNPlayerPlayPauseButton.h"
 
 #import "NSFont+Podlive.h"
+#import "NSView+Podlive.h"
 
 
 static const CGFloat kImageCornerRadius = 5.0;

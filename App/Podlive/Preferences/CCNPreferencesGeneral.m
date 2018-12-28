@@ -5,6 +5,7 @@
 
 #import "CCNPreferencesGeneral.h"
 #import "CCNPreferencesWindowControllerProtocol.h"
+#import "NSAppearance+Podlive.h"
 
 @interface CCNPreferencesGeneral () <CCNPreferencesWindowControllerProtocol>
 @property (weak) IBOutlet NSTextField *applicationAppearanceTextField;

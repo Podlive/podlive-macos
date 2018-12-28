@@ -16,9 +16,13 @@
 #import "CCNPreferencesAudio.h"
 #import "CCNPreferencesSync.h"
 
+#import "NSAppearance+Podlive.h"
 #import "NSApplication+MainMenu.h"
+#import "NSApplication+Tools.h"
 #import "NSColor+Podlive.h"
 #import "NSImage+Podlive.h"
+#import "NSImage+Tools.h"
+#import "NSViewController+Podlive.h"
 
 #import "PFUser+Podlive.h"
 
@@ -188,10 +192,7 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     static dispatch_once_t _onceToken;
     static CCNLoginLogoutButton *_button = nil;
 
-    @weakify(self);
     dispatch_once(&_onceToken, ^{
-        @strongify(self);
-
         let user = PFUser.currentUser;
         let avatarImage = [[NSImage anonymousAvatarWithSize:NSMakeSize(25.0, 25.0)] imageTintedWithColor:NSColor.userLoggedOutStatusColor];
 

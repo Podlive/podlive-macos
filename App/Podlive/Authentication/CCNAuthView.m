@@ -5,6 +5,7 @@
 
 #import "CCNAuthView.h"
 #import "NSImage+Podlive.h"
+#import "NSButton+Tools.h"
 
 @interface CCNAuthView ()
 @property(nonatomic, strong) NSImageView *appIcon;

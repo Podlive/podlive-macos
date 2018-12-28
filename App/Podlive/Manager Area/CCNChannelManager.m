@@ -5,6 +5,7 @@
 
 #import "CCNChannelManager.h"
 #import "CCNChannel.h"
+#import "CCNImageCache.h"
 
 #import "PFUser+Podlive.h"
 #import "NSUserDefaults+Podlive.h"

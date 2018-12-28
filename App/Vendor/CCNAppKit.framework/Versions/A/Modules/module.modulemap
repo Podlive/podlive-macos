@@ -1,6 +1,0 @@
-framework module CCNAppKit {
-  umbrella header "CCNAppKit.h"
-
-  export *
-  module * { export * }
-}

@@ -4,6 +4,8 @@
 //
 
 #import "NSWindow+Podlive.h"
+#import "NSAppearance+Podlive.h"
+#import "NSApplication+Tools.h"
 
 @implementation NSWindow (Podlive)
 

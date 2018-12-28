@@ -4,6 +4,8 @@
 //
 
 #import "CCNUserManager.h"
+#import "NSString+Tools.h"
+#import "CCNImageCache.h"
 
 @interface CCNUserManager ()
 @property (assign, getter=isSaveOperationInProgress) BOOL saveOperationInProgress;

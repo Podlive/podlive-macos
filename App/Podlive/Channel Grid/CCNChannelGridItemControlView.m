@@ -6,7 +6,11 @@
 #import "CCNChannelGridItemControlView.h"
 #import "CCNPlayerPlayPauseButton.h"
 #import "CCNChannel.h"
+
+#import "NSButton+Tools.h"
 #import "NSColor+Podlive.h"
+#import "NSImage+Tools.h"
+#import "NSView+Podlive.h"
 
 static const CGFloat kOverlayHeight = 55.0;
 

@@ -10,10 +10,12 @@
 #import "CCNChannelGridItem.h"
 #import "CCNChannelGridFlowLayout.h"
 #import "CCNChannel.h"
+#import "CCNImageCache.h"
 
 #import "CCNChannel+Convenience.h"
 #import "NSDictionary+Podlive.h"
 #import "NSImage+Podlive.h"
+#import "NSView+Podlive.h"
 
 #import "PFUser+Podlive.h"
 

@@ -15,6 +15,7 @@
 #import "CCNPlayerViewController.h"
 #import "CCNPlayerPlayPauseButton.h"
 
+#import "NSButton+Tools.h"
 #import "NSColor+Podlive.h"
 #import "NSFont+Podlive.h"
 #import "NSString+Podlive.h"

@@ -10,11 +10,15 @@
 #import "CCNPlayerStopButton.h"
 #import "CCNPlayerVolumeControl.h"
 #import "CCNPlayerImageView.h"
+#import "CCNImageCache.h"
 
 #import "NSColor+Podlive.h"
 #import "NSFont+Podlive.h"
 #import "NSImage+Podlive.h"
+#import "NSImageView+Podlive.h"
 #import "NSString+Podlive.h"
+#import "NSTextField+Tools.h"
+#import "NSView+Podlive.h"
 
 
 @interface CCNPlayerView ()

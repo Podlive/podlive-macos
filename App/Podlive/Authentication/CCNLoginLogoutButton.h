@@ -4,6 +4,7 @@
 //
 //  http://en.gravatar.com/site/implement/images/
 
+#import "NSButton+Tools.h"
 
 @interface CCNLoginLogoutButton : NSButton
 

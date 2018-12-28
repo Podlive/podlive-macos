@@ -6,6 +6,8 @@
 #import "CCNChannelGridNoStreamItemView.h"
 #import "NSColor+Podlive.h"
 #import "NSFont+Podlive.h"
+#import "NSImage+Tools.h"
+#import "NSView+Podlive.h"
 
 static const CGFloat kViewCornerRadius = 5.0;
 static const NSEdgeInsets kContainerEdgeInsets = {8.0, 8.0, 0.0, 8.0};

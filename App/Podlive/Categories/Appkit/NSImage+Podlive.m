@@ -4,6 +4,7 @@
 //
 
 #import "NSImage+Podlive.h"
+#import "NSImage+Tools.h"
 #import "NSColor+Podlive.h"
 
 @implementation NSImage (Podlive)

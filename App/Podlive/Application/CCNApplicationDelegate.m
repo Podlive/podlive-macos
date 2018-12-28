@@ -8,6 +8,7 @@
 #import "CCNNotificationCoordinator.h"
 
 #import "NSApplication+MainMenu.h"
+#import "NSViewController+Podlive.h"
 #import "NSWindow+Podlive.h"
 
 @interface CCNApplicationDelegate () <NSUserNotificationCenterDelegate>

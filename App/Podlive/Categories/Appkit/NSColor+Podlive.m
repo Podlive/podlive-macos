@@ -4,6 +4,7 @@
 //
 
 #import "NSColor+Podlive.h"
+#import "NSAppearance+Podlive.h"
 
 @implementation NSColor (Podlive)
 

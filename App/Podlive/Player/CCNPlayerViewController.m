@@ -12,7 +12,9 @@
 #import "CCNPlayerVolumeControl.h"
 #import "CCNChannel.h"
 
+#import "NSAppearance+Podlive.h"
 #import "NSSlider+Podlive.h"
+#import "NSString+Tools.h"
 #import "NSUserDefaults+Podlive.h"
 
 

@@ -5,6 +5,7 @@
 
 #import "CCNPreferencesSync.h"
 #import "CCNPreferencesWindowControllerProtocol.h"
+#import "NSApplication+Tools.h"
 
 @interface CCNPreferencesSync () <CCNPreferencesWindowControllerProtocol>
 @property (weak) IBOutlet NSTextField *loggedInUserLabel;

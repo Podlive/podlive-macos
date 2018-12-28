@@ -5,6 +5,8 @@
 
 #import "CCNPlayerVolumeControl.h"
 #import "NSColor+Podlive.h"
+#import "NSImage+Tools.h"
+#import "NSView+Podlive.h"
 
 static const CGFloat kCCNPlayerVolumeSliderIconEdgeLength = 18.0;
 

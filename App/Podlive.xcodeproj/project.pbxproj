@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4493D674057FA091CD19A5A3 /* libPods-Podlive.a */; };
-		FD0F9DCE205827A70066E677 /* CCNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */; };
-		FD0F9DCF205827A70066E677 /* CCNAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FD0F9DD0205827AA0066E677 /* CCNFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */; };
-		FD0F9DD1205827AA0066E677 /* CCNFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */; };
 		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
 		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
@@ -56,6 +52,12 @@
 		FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634CF81EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf */; };
 		FD634D071EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634D061EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf */; };
 		FD634D091EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD634D081EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf */; };
+		FD6C8A8621D6452600EAF6DD /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A8421D6452600EAF6DD /* NSString+Tools.m */; };
+		FD6C8A8A21D6477D00EAF6DD /* CCNImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A8921D6477D00EAF6DD /* CCNImageCache.m */; };
+		FD6C8A8D21D6489500EAF6DD /* NSButton+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A8B21D6489500EAF6DD /* NSButton+Tools.m */; };
+		FD6C8A9021D649DE00EAF6DD /* NSTextField+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A8F21D649DE00EAF6DD /* NSTextField+Tools.m */; };
+		FD6C8A9321D64A5800EAF6DD /* NSImageView+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A9221D64A5800EAF6DD /* NSImageView+Podlive.m */; };
+		FD6C8A9621D64BCB00EAF6DD /* NSString+UILabels.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A9521D64BCB00EAF6DD /* NSString+UILabels.m */; };
 		FD732BBD208550CE00734A48 /* Parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD732BBC208550CE00734A48 /* Parse.plist */; };
 		FD7792F61FD5E105006D2D62 /* NSApplication+MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */; };
 		FD7E632B1EDF57D20011BE89 /* NSFont+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E63291EDF57D20011BE89 /* NSFont+Podlive.m */; };
@@ -81,22 +83,12 @@
 		FDD1D6821F0672B000DED89C /* CCNPreferencesSync.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1D6801F0672B000DED89C /* CCNPreferencesSync.m */; };
 		FDD1D6831F0672B000DED89C /* CCNPreferencesSync.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD1D6811F0672B000DED89C /* CCNPreferencesSync.xib */; };
 		FDD1D6861F06732400DED89C /* CCNPreferencesBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1D6851F06732400DED89C /* CCNPreferencesBase.m */; };
+		FDD41EB021D640A0007F4C8D /* NSApplication+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD41EAF21D640A0007F4C8D /* NSApplication+Tools.m */; };
+		FDD41EB321D6410D007F4C8D /* NSViewController+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD41EB121D6410C007F4C8D /* NSViewController+Podlive.m */; };
+		FDD41EB621D64194007F4C8D /* NSView+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD41EB521D64194007F4C8D /* NSView+Podlive.m */; };
+		FDD41EB921D641FC007F4C8D /* NSImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD41EB721D641FB007F4C8D /* NSImage+Tools.m */; };
+		FDD41EBC21D64256007F4C8D /* NSAppearance+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD41EBA21D64256007F4C8D /* NSAppearance+Podlive.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FD0F9DA72058244D0066E677 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FD0F9DD1205827AA0066E677 /* CCNFoundation.framework in Embed Frameworks */,
-				FD0F9DCF205827A70066E677 /* CCNAppKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlive.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podlive/Pods-Podlive.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,8 +100,6 @@
 		FD0722B91E5CEB3D000A2860 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FD0722BE1E5CEB56000A2860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD0F9DC6205827200066E677 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Telekinesis.framework; sourceTree = "<group>"; };
-		FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CCNAppKit.framework; sourceTree = "<group>"; };
-		FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CCNFoundation.framework; sourceTree = "<group>"; };
 		FD1041AC1E6F37A2003EA6C9 /* CCNAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNAuthViewController.h; sourceTree = "<group>"; };
 		FD1041AD1E6F37A2003EA6C9 /* CCNAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNAuthViewController.m; sourceTree = "<group>"; };
 		FD10E5811E746EA000560D74 /* NSImage+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Podlive.h"; sourceTree = "<group>"; };
@@ -166,6 +156,19 @@
 		FD6482381E656B3000657124 /* CCNChannelGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridViewController.m; sourceTree = "<group>"; };
 		FD64823B1E65787400657124 /* CCNChannelGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridItem.h; sourceTree = "<group>"; };
 		FD64823C1E65787400657124 /* CCNChannelGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridItem.m; sourceTree = "<group>"; };
+		FD6C8A8321D644A100EAF6DD /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		FD6C8A8421D6452600EAF6DD /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tools.m"; sourceTree = "<group>"; };
+		FD6C8A8521D6452600EAF6DD /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Tools.h"; sourceTree = "<group>"; };
+		FD6C8A8821D6477D00EAF6DD /* CCNImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNImageCache.h; sourceTree = "<group>"; };
+		FD6C8A8921D6477D00EAF6DD /* CCNImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNImageCache.m; sourceTree = "<group>"; };
+		FD6C8A8B21D6489500EAF6DD /* NSButton+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+Tools.m"; sourceTree = "<group>"; };
+		FD6C8A8C21D6489500EAF6DD /* NSButton+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+Tools.h"; sourceTree = "<group>"; };
+		FD6C8A8E21D649DE00EAF6DD /* NSTextField+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextField+Tools.h"; sourceTree = "<group>"; };
+		FD6C8A8F21D649DE00EAF6DD /* NSTextField+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextField+Tools.m"; sourceTree = "<group>"; };
+		FD6C8A9121D64A5700EAF6DD /* NSImageView+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImageView+Podlive.h"; sourceTree = "<group>"; };
+		FD6C8A9221D64A5800EAF6DD /* NSImageView+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+Podlive.m"; sourceTree = "<group>"; };
+		FD6C8A9421D64BCB00EAF6DD /* NSString+UILabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UILabels.h"; sourceTree = "<group>"; };
+		FD6C8A9521D64BCB00EAF6DD /* NSString+UILabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UILabels.m"; sourceTree = "<group>"; };
 		FD7129E81ED61723008B779F /* PodliveGUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodliveGUIKit.h; sourceTree = "<group>"; };
 		FD7129E91ED61723008B779F /* PodliveGUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodliveGUIKit.m; sourceTree = "<group>"; };
 		FD71D4CE1E66FCFD003D6E01 /* NSColor+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Podlive.h"; sourceTree = "<group>"; };
@@ -226,6 +229,16 @@
 		FDD1D6811F0672B000DED89C /* CCNPreferencesSync.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CCNPreferencesSync.xib; sourceTree = "<group>"; };
 		FDD1D6841F06732400DED89C /* CCNPreferencesBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesBase.h; sourceTree = "<group>"; };
 		FDD1D6851F06732400DED89C /* CCNPreferencesBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesBase.m; sourceTree = "<group>"; };
+		FDD41EAE21D6409F007F4C8D /* NSApplication+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+Tools.h"; sourceTree = "<group>"; };
+		FDD41EAF21D640A0007F4C8D /* NSApplication+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+Tools.m"; sourceTree = "<group>"; };
+		FDD41EB121D6410C007F4C8D /* NSViewController+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+Podlive.m"; sourceTree = "<group>"; };
+		FDD41EB221D6410D007F4C8D /* NSViewController+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+Podlive.h"; sourceTree = "<group>"; };
+		FDD41EB421D64194007F4C8D /* NSView+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Podlive.h"; sourceTree = "<group>"; };
+		FDD41EB521D64194007F4C8D /* NSView+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Podlive.m"; sourceTree = "<group>"; };
+		FDD41EB721D641FB007F4C8D /* NSImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Tools.m"; sourceTree = "<group>"; };
+		FDD41EB821D641FC007F4C8D /* NSImage+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Tools.h"; sourceTree = "<group>"; };
+		FDD41EBA21D64256007F4C8D /* NSAppearance+Podlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAppearance+Podlive.m"; sourceTree = "<group>"; };
+		FDD41EBB21D64256007F4C8D /* NSAppearance+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAppearance+Podlive.h"; sourceTree = "<group>"; };
 		FDE9F01A1E79E15100D27FF6 /* CCNPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerViewController.h; sourceTree = "<group>"; };
 		FDE9F01B1E79E15100D27FF6 /* CCNPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerViewController.m; sourceTree = "<group>"; };
 		FDE9F01F1E79E18400D27FF6 /* CCNPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerView.h; sourceTree = "<group>"; };
@@ -246,9 +259,7 @@
 				FD4BF80C1EDC1E9B00BC15E9 /* IOKit.framework in Frameworks */,
 				FD4BF80B1EDC1E9B00BC15E9 /* QuartzCore.framework in Frameworks */,
 				FD4BF80D1EDC1E9B00BC15E9 /* Security.framework in Frameworks */,
-				FD0F9DCE205827A70066E677 /* CCNAppKit.framework in Frameworks */,
 				B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */,
-				FD0F9DD0205827AA0066E677 /* CCNFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +278,6 @@
 		FD0F9DC5205827200066E677 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				FD0F9DCA2058275C0066E677 /* CCNAppKit.framework */,
-				FD0F9DCD2058278E0066E677 /* CCNFoundation.framework */,
 				FD0F9DC6205827200066E677 /* Telekinesis.framework */,
 			);
 			path = Vendor;
@@ -348,17 +357,50 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		FD6C8A8221D6448F00EAF6DD /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C8A8321D644A100EAF6DD /* Macros.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		FD6C8A8721D6476400EAF6DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C8A8821D6477D00EAF6DD /* CCNImageCache.h */,
+				FD6C8A8921D6477D00EAF6DD /* CCNImageCache.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		FD71D4D21E66FDD4003D6E01 /* Appkit */ = {
 			isa = PBXGroup;
 			children = (
+				FDD41EBB21D64256007F4C8D /* NSAppearance+Podlive.h */,
+				FDD41EBA21D64256007F4C8D /* NSAppearance+Podlive.m */,
 				FD7792F41FD5E105006D2D62 /* NSApplication+MainMenu.h */,
 				FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */,
+				FDD41EAE21D6409F007F4C8D /* NSApplication+Tools.h */,
+				FDD41EAF21D640A0007F4C8D /* NSApplication+Tools.m */,
+				FD6C8A8C21D6489500EAF6DD /* NSButton+Tools.h */,
+				FD6C8A8B21D6489500EAF6DD /* NSButton+Tools.m */,
 				FD71D4CE1E66FCFD003D6E01 /* NSColor+Podlive.h */,
 				FD71D4CF1E66FCFD003D6E01 /* NSColor+Podlive.m */,
 				FD10E5811E746EA000560D74 /* NSImage+Podlive.h */,
 				FD10E5821E746EA000560D74 /* NSImage+Podlive.m */,
+				FDD41EB821D641FC007F4C8D /* NSImage+Tools.h */,
+				FDD41EB721D641FB007F4C8D /* NSImage+Tools.m */,
+				FD6C8A9121D64A5700EAF6DD /* NSImageView+Podlive.h */,
+				FD6C8A9221D64A5800EAF6DD /* NSImageView+Podlive.m */,
 				FDD1D6771F0647A200DED89C /* NSSlider+Podlive.h */,
 				FDD1D6781F0647A200DED89C /* NSSlider+Podlive.m */,
+				FD6C8A8E21D649DE00EAF6DD /* NSTextField+Tools.h */,
+				FD6C8A8F21D649DE00EAF6DD /* NSTextField+Tools.m */,
+				FDD41EB421D64194007F4C8D /* NSView+Podlive.h */,
+				FDD41EB521D64194007F4C8D /* NSView+Podlive.m */,
+				FDD41EB221D6410D007F4C8D /* NSViewController+Podlive.h */,
+				FDD41EB121D6410C007F4C8D /* NSViewController+Podlive.m */,
 				FD47A2061ED219AD00EFCBB9 /* NSWindow+Podlive.h */,
 				FD47A2071ED219AD00EFCBB9 /* NSWindow+Podlive.m */,
 			);
@@ -413,6 +455,10 @@
 				FD7E63291EDF57D20011BE89 /* NSFont+Podlive.m */,
 				FDAE07081EDF0DDE009E5A2D /* NSString+Podlive.h */,
 				FDAE07091EDF0DDE009E5A2D /* NSString+Podlive.m */,
+				FD6C8A8521D6452600EAF6DD /* NSString+Tools.h */,
+				FD6C8A8421D6452600EAF6DD /* NSString+Tools.m */,
+				FD6C8A9421D64BCB00EAF6DD /* NSString+UILabels.h */,
+				FD6C8A9521D64BCB00EAF6DD /* NSString+UILabels.m */,
 				FDAE070A1EDF0DDE009E5A2D /* NSUserDefaults+Podlive.h */,
 				FDAE070B1EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m */,
 			);
@@ -488,6 +534,8 @@
 				FD1041A71E6F356E003EA6C9 /* Authentication */,
 				FDF6429A1E5CC4DA0005EA72 /* Categories */,
 				FDF642B11E5CCCF50005EA72 /* Channel Grid */,
+				FD6C8A8721D6476400EAF6DD /* Classes */,
+				FD6C8A8221D6448F00EAF6DD /* Macros */,
 				FDEFB89B1E858EB9000AD128 /* Manager Area */,
 				FD95F2781E8582E500F5B394 /* Model */,
 				FDE9F01E1E79E15500D27FF6 /* Player */,
@@ -587,12 +635,10 @@
 			buildConfigurationList = FD4BF8211EDC1E9B00BC15E9 /* Build configuration list for PBXNativeTarget "Podlive" */;
 			buildPhases = (
 				FD4BF7E41EDC1E9B00BC15E9 /* [CP] Check Pods Manifest.lock */,
-				FD4BF7E31EDC1E9B00BC15E9 /* Update Build Number */,
 				FD4BF7E51EDC1E9B00BC15E9 /* Sources */,
 				FD4BF80A1EDC1E9B00BC15E9 /* Frameworks */,
 				FD4BF8131EDC1E9B00BC15E9 /* Resources */,
 				FD4BF81F1EDC1E9B00BC15E9 /* [CP] Copy Pods Resources */,
-				FD0F9DA72058244D0066E677 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -615,6 +661,11 @@
 				TargetAttributes = {
 					FD4BF7E01EDC1E9B00BC15E9 = {
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -663,21 +714,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FD4BF7E31EDC1E9B00BC15E9 /* Update Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Update Build Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/bash;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FD4BF7E41EDC1E9B00BC15E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -724,10 +760,16 @@
 				FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */,
 				FDAE070F1EDF0DDE009E5A2D /* NSString+Podlive.m in Sources */,
 				FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */,
+				FD6C8A9621D64BCB00EAF6DD /* NSString+UILabels.m in Sources */,
 				FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */,
 				FD4BF7E91EDC1E9B00BC15E9 /* CCNUserInfoViewController.m in Sources */,
 				FDAE07211EDF0ED3009E5A2D /* PodliveGUIKit.m in Sources */,
+				FDD41EB021D640A0007F4C8D /* NSApplication+Tools.m in Sources */,
+				FD6C8A9021D649DE00EAF6DD /* NSTextField+Tools.m in Sources */,
 				FDD1D67D1F06708D00DED89C /* CCNPreferencesAudio.m in Sources */,
+				FD6C8A9321D64A5800EAF6DD /* NSImageView+Podlive.m in Sources */,
+				FD6C8A8A21D6477D00EAF6DD /* CCNImageCache.m in Sources */,
+				FD6C8A8621D6452600EAF6DD /* NSString+Tools.m in Sources */,
 				FD4BF7EA1EDC1E9B00BC15E9 /* CCNNotificationCoordinator.m in Sources */,
 				FD4BF7ED1EDC1E9B00BC15E9 /* CCNChannelGridItemControlView.m in Sources */,
 				FDAE07191EDF0E26009E5A2D /* CCNUserManager.m in Sources */,
@@ -742,6 +784,7 @@
 				FD7792F61FD5E105006D2D62 /* NSApplication+MainMenu.m in Sources */,
 				FDAE07171EDF0E23009E5A2D /* CCNChannelManager.m in Sources */,
 				FD4BF7F41EDC1E9B00BC15E9 /* CCNApplicationViewController.m in Sources */,
+				FD6C8A8D21D6489500EAF6DD /* NSButton+Tools.m in Sources */,
 				FD4BF7F51EDC1E9B00BC15E9 /* NSImage+Podlive.m in Sources */,
 				FD4BF7F61EDC1E9B00BC15E9 /* CCNAuthView.m in Sources */,
 				FDD1D6821F0672B000DED89C /* CCNPreferencesSync.m in Sources */,
@@ -751,9 +794,11 @@
 				FD4BF7FB1EDC1E9B00BC15E9 /* NSBKeyframeAnimation+Animations.m in Sources */,
 				FD4BF7FD1EDC1E9B00BC15E9 /* CCNChannelGridViewController.m in Sources */,
 				FDAE07161EDF0DE6009E5A2D /* PFUser+Podlive.m in Sources */,
+				FDD41EB321D6410D007F4C8D /* NSViewController+Podlive.m in Sources */,
 				FDAE071D1EDF0EAA009E5A2D /* CCNChannel+Convenience.m in Sources */,
 				FD4BF7FE1EDC1E9B00BC15E9 /* CCNChannelGridSectionHeaderView.m in Sources */,
 				FD4BF7FF1EDC1E9B00BC15E9 /* CCNChannelGridItem.m in Sources */,
+				FDD41EBC21D64256007F4C8D /* NSAppearance+Podlive.m in Sources */,
 				FD4BF8011EDC1E9B00BC15E9 /* CCNPlayerViewController.m in Sources */,
 				FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */,
 				FD4BF8021EDC1E9B00BC15E9 /* NSColor+Podlive.m in Sources */,
@@ -767,7 +812,9 @@
 				FDAE07111EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m in Sources */,
 				FD7E632B1EDF57D20011BE89 /* NSFont+Podlive.m in Sources */,
 				FDD1D6861F06732400DED89C /* CCNPreferencesBase.m in Sources */,
+				FDD41EB921D641FC007F4C8D /* NSImage+Tools.m in Sources */,
 				FD4BF8071EDC1E9B00BC15E9 /* CCNPlayerView.m in Sources */,
+				FDD41EB621D64194007F4C8D /* NSView+Podlive.m in Sources */,
 				FD4BF8081EDC1E9B00BC15E9 /* main.m in Sources */,
 				FD88DB3D1F02A4B300B0215A /* CCNChannelGridItemView.m in Sources */,
 				FDD1D6791F0647A200DED89C /* NSSlider+Podlive.m in Sources */,
@@ -816,6 +863,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = R8XXQFTA4C;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
@@ -881,6 +929,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = R8XXQFTA4C;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",

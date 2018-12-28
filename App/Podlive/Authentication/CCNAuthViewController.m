@@ -5,7 +5,14 @@
 
 #import "CCNAuthViewController.h"
 #import <Parse/PFConstants.h>
+
+#import "NSAppearance+Podlive.h"
+#import "NSApplication+Tools.h"
+#import "NSButton+Tools.h"
 #import "NSImage+Podlive.h"
+#import "NSString+Tools.h"
+#import "NSString+UILabels.h"
+#import "NSViewController+Podlive.h"
 
 @interface CCNAuthViewController ()
 @property (nonatomic, readonly) BOOL hasValidLoginData;
