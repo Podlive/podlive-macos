@@ -6,13 +6,16 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-
-#import <libextobjc/EXTScope.h>
 #import <Parse/Parse.h>
+
+#import "extobjc.h"
 
 #import "Macros.h"
 #import "PodliveDefaultStyleKit.h"
 #import "PodliveGUIKit.h"
+
+#import "CCNPreferencesWindowController.h"
+#import "CCNNavigationController.h"
 
 #import "CCNConstants.h"
 #import "CCNChannelManager.h"

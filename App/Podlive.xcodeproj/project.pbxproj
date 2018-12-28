@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4493D674057FA091CD19A5A3 /* libPods-Podlive.a */; };
 		FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */; };
+		FD34550A21D66D0300014909 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FD34550921D66D0300014909 /* Cartfile */; };
+		FD34550F21D6770900014909 /* CCNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34550E21D6770900014909 /* CCNNavigationController.m */; };
+		FD34551521D6771800014909 /* CCNPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34551121D6771800014909 /* CCNPreferencesWindowController.m */; };
+		FD34551921D6782400014909 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34551821D6782400014909 /* Bolts.framework */; };
+		FD34551B21D6784C00014909 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34551A21D6784C00014909 /* Parse.framework */; };
+		FD34553621D67B1C00014909 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552121D67B1C00014909 /* EXTSelectorChecking.m */; };
+		FD34553721D67B1C00014909 /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552421D67B1C00014909 /* EXTConcreteProtocol.m */; };
+		FD34553821D67B1C00014909 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552921D67B1C00014909 /* EXTScope.m */; };
+		FD34553921D67B1C00014909 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552A21D67B1C00014909 /* EXTRuntimeExtensions.m */; };
+		FD34553A21D67B1C00014909 /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552B21D67B1C00014909 /* EXTADT.m */; };
+		FD34553B21D67B1C00014909 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552C21D67B1C00014909 /* NSInvocation+EXT.m */; };
+		FD34553C21D67B1C00014909 /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552D21D67B1C00014909 /* EXTSafeCategory.m */; };
+		FD34553D21D67B1C00014909 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552F21D67B1C00014909 /* NSMethodSignature+EXT.m */; };
+		FD34553E21D67B1C00014909 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34553321D67B1C00014909 /* EXTNil.m */; };
 		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
 		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
 		FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */; };
@@ -91,15 +104,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlive.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podlive/Pods-Podlive.release.xcconfig"; sourceTree = "<group>"; };
-		4493D674057FA091CD19A5A3 /* libPods-Podlive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Podlive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podlive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podlive/Pods-Podlive.debug.xcconfig"; sourceTree = "<group>"; };
 		FD0526CE1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNChannelGridSectionHeaderView.h; sourceTree = "<group>"; };
 		FD0526CF1E6A216E00941EC0 /* CCNChannelGridSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNChannelGridSectionHeaderView.m; sourceTree = "<group>"; };
 		FD0722B61E5CEB35000A2860 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FD0722B91E5CEB3D000A2860 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FD0722BE1E5CEB56000A2860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FD0F9DC6205827200066E677 /* Telekinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Telekinesis.framework; sourceTree = "<group>"; };
 		FD1041AC1E6F37A2003EA6C9 /* CCNAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNAuthViewController.h; sourceTree = "<group>"; };
 		FD1041AD1E6F37A2003EA6C9 /* CCNAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNAuthViewController.m; sourceTree = "<group>"; };
 		FD10E5811E746EA000560D74 /* NSImage+Podlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Podlive.h"; sourceTree = "<group>"; };
@@ -120,6 +129,38 @@
 		FD3385231E6B7569007D0D74 /* CCNPreferencesGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesGeneral.h; sourceTree = "<group>"; };
 		FD3385241E6B7569007D0D74 /* CCNPreferencesGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesGeneral.m; sourceTree = "<group>"; };
 		FD3385251E6B7569007D0D74 /* CCNPreferencesGeneral.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCNPreferencesGeneral.xib; sourceTree = "<group>"; };
+		FD34550921D66D0300014909 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		FD34550D21D6770900014909 /* CCNNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNNavigationController.h; sourceTree = "<group>"; };
+		FD34550E21D6770900014909 /* CCNNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNNavigationController.m; sourceTree = "<group>"; };
+		FD34551121D6771800014909 /* CCNPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesWindowController.m; sourceTree = "<group>"; };
+		FD34551221D6771800014909 /* CCNPreferencesWindowControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowControllerProtocol.h; sourceTree = "<group>"; };
+		FD34551321D6771800014909 /* CCNPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowController.h; sourceTree = "<group>"; };
+		FD34551821D6782400014909 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/Mac/Bolts.framework; sourceTree = "<group>"; };
+		FD34551A21D6784C00014909 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/Mac/Parse.framework; sourceTree = "<group>"; };
+		FD34551E21D67B1C00014909 /* NSInvocation+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+EXT.h"; sourceTree = "<group>"; };
+		FD34551F21D67B1C00014909 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		FD34552021D67B1C00014909 /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
+		FD34552121D67B1C00014909 /* EXTSelectorChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSelectorChecking.m; sourceTree = "<group>"; };
+		FD34552221D67B1C00014909 /* NSMethodSignature+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+EXT.h"; sourceTree = "<group>"; };
+		FD34552321D67B1C00014909 /* EXTSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSafeCategory.h; sourceTree = "<group>"; };
+		FD34552421D67B1C00014909 /* EXTConcreteProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTConcreteProtocol.m; sourceTree = "<group>"; };
+		FD34552521D67B1C00014909 /* extobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extobjc.h; sourceTree = "<group>"; };
+		FD34552621D67B1C00014909 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		FD34552721D67B1C00014909 /* extobjc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extobjc_Prefix.pch; sourceTree = "<group>"; };
+		FD34552821D67B1C00014909 /* EXTNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTNil.h; sourceTree = "<group>"; };
+		FD34552921D67B1C00014909 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		FD34552A21D67B1C00014909 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		FD34552B21D67B1C00014909 /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
+		FD34552C21D67B1C00014909 /* NSInvocation+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+EXT.m"; sourceTree = "<group>"; };
+		FD34552D21D67B1C00014909 /* EXTSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSafeCategory.m; sourceTree = "<group>"; };
+		FD34552E21D67B1C00014909 /* EXTSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSynthesize.h; sourceTree = "<group>"; };
+		FD34552F21D67B1C00014909 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
+		FD34553021D67B1C00014909 /* EXTSelectorChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSelectorChecking.h; sourceTree = "<group>"; };
+		FD34553121D67B1C00014909 /* EXTConcreteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTConcreteProtocol.h; sourceTree = "<group>"; };
+		FD34553221D67B1C00014909 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		FD34553321D67B1C00014909 /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTNil.m; sourceTree = "<group>"; };
+		FD34553421D67B1C00014909 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
+		FD34553521D67B1C00014909 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTCoroutine.h; sourceTree = "<group>"; };
 		FD36B9981E7893F100FB9456 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FD36B99A1E7893FD00FB9456 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podlive.entitlements; sourceTree = "<group>"; };
@@ -255,34 +296,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD34551921D6782400014909 /* Bolts.framework in Frameworks */,
 				FD4BF8101EDC1E9B00BC15E9 /* AVFoundation.framework in Frameworks */,
 				FD4BF80C1EDC1E9B00BC15E9 /* IOKit.framework in Frameworks */,
 				FD4BF80B1EDC1E9B00BC15E9 /* QuartzCore.framework in Frameworks */,
+				FD34551B21D6784C00014909 /* Parse.framework in Frameworks */,
 				FD4BF80D1EDC1E9B00BC15E9 /* Security.framework in Frameworks */,
-				B686DDECAC82C2468168C852 /* libPods-Podlive.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF382EAA5C4E038B15E192CB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */,
-				3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FD0F9DC5205827200066E677 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				FD0F9DC6205827200066E677 /* Telekinesis.framework */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 		FD1041A71E6F356E003EA6C9 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +355,74 @@
 			path = Preferences;
 			sourceTree = "<group>";
 		};
+		FD34550B21D676FB00014909 /* CCNImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C8A8821D6477D00EAF6DD /* CCNImageCache.h */,
+				FD6C8A8921D6477D00EAF6DD /* CCNImageCache.m */,
+			);
+			path = CCNImageCache;
+			sourceTree = "<group>";
+		};
+		FD34550C21D6770900014909 /* CCNNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				FD34550D21D6770900014909 /* CCNNavigationController.h */,
+				FD34550E21D6770900014909 /* CCNNavigationController.m */,
+			);
+			path = CCNNavigationController;
+			sourceTree = "<group>";
+		};
+		FD34551021D6771800014909 /* CCNPreferencesWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				FD34551321D6771800014909 /* CCNPreferencesWindowController.h */,
+				FD34551121D6771800014909 /* CCNPreferencesWindowController.m */,
+				FD34551221D6771800014909 /* CCNPreferencesWindowControllerProtocol.h */,
+			);
+			path = CCNPreferencesWindowController;
+			sourceTree = "<group>";
+		};
+		FD34551C21D67AFC00014909 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				FD34551D21D67B1C00014909 /* extobjc */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FD34551D21D67B1C00014909 /* extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				FD34552021D67B1C00014909 /* EXTADT.h */,
+				FD34552B21D67B1C00014909 /* EXTADT.m */,
+				FD34553121D67B1C00014909 /* EXTConcreteProtocol.h */,
+				FD34552421D67B1C00014909 /* EXTConcreteProtocol.m */,
+				FD34553521D67B1C00014909 /* EXTCoroutine.h */,
+				FD34553421D67B1C00014909 /* EXTKeyPathCoding.h */,
+				FD34552821D67B1C00014909 /* EXTNil.h */,
+				FD34553321D67B1C00014909 /* EXTNil.m */,
+				FD34552721D67B1C00014909 /* extobjc_Prefix.pch */,
+				FD34552521D67B1C00014909 /* extobjc.h */,
+				FD34551F21D67B1C00014909 /* EXTRuntimeExtensions.h */,
+				FD34552A21D67B1C00014909 /* EXTRuntimeExtensions.m */,
+				FD34552321D67B1C00014909 /* EXTSafeCategory.h */,
+				FD34552D21D67B1C00014909 /* EXTSafeCategory.m */,
+				FD34553221D67B1C00014909 /* EXTScope.h */,
+				FD34552921D67B1C00014909 /* EXTScope.m */,
+				FD34553021D67B1C00014909 /* EXTSelectorChecking.h */,
+				FD34552121D67B1C00014909 /* EXTSelectorChecking.m */,
+				FD34552E21D67B1C00014909 /* EXTSynthesize.h */,
+				FD34552621D67B1C00014909 /* metamacros.h */,
+				FD34551E21D67B1C00014909 /* NSInvocation+EXT.h */,
+				FD34552C21D67B1C00014909 /* NSInvocation+EXT.m */,
+				FD34552221D67B1C00014909 /* NSMethodSignature+EXT.h */,
+				FD34552F21D67B1C00014909 /* NSMethodSignature+EXT.m */,
+			);
+			name = extobjc;
+			path = Submodules/extobjc;
+			sourceTree = SOURCE_ROOT;
+		};
 		FD4FD34F1E981EA10081CEA8 /* Core Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,8 +461,9 @@
 		FD6C8A8721D6476400EAF6DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FD6C8A8821D6477D00EAF6DD /* CCNImageCache.h */,
-				FD6C8A8921D6477D00EAF6DD /* CCNImageCache.m */,
+				FD34550B21D676FB00014909 /* CCNImageCache */,
+				FD34550C21D6770900014909 /* CCNNavigationController */,
+				FD34551021D6771800014909 /* CCNPreferencesWindowController */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -510,11 +604,11 @@
 		FDF6427C1E5CC4870005EA72 = {
 			isa = PBXGroup;
 			children = (
+				FD34550921D66D0300014909 /* Cartfile */,
 				FD9A90762058636A00B9A5BE /* README.md */,
 				FD9A90782058637700B9A5BE /* .gitignore */,
 				FDF642AE1E5CC6300005EA72 /* Frameworks */,
 				FDF642871E5CC4870005EA72 /* Podlive */,
-				EF382EAA5C4E038B15E192CB /* Pods */,
 				FDF642861E5CC4870005EA72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -542,6 +636,7 @@
 				FD3385221E6B750F007D0D74 /* Preferences */,
 				FD888C4C1ED0DEDA00A6B8BB /* StyleKit */,
 				FDF6428B1E5CC4870005EA72 /* Supporting Files */,
+				FD34551C21D67AFC00014909 /* Vendor */,
 			);
 			path = Podlive;
 			sourceTree = "<group>";
@@ -592,14 +687,14 @@
 			isa = PBXGroup;
 			children = (
 				FD95F2321E85635A00F5B394 /* AVFoundation.framework */,
+				FD34551821D6782400014909 /* Bolts.framework */,
 				FD4C67301E8111E2001F012E /* CoreVideo.framework */,
 				FD36B99A1E7893FD00FB9456 /* IOKit.framework */,
-				4493D674057FA091CD19A5A3 /* libPods-Podlive.a */,
 				FD1868511E6B9843008BF3D4 /* libsqlite3.tbd */,
 				FD95F2421E85812200F5B394 /* NotificationCenter.framework */,
+				FD34551A21D6784C00014909 /* Parse.framework */,
 				FD4C672E1E81105E001F012E /* QuartzCore.framework */,
 				FD36B9981E7893F100FB9456 /* Security.framework */,
-				FD0F9DC5205827200066E677 /* Vendor */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -634,11 +729,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD4BF8211EDC1E9B00BC15E9 /* Build configuration list for PBXNativeTarget "Podlive" */;
 			buildPhases = (
-				FD4BF7E41EDC1E9B00BC15E9 /* [CP] Check Pods Manifest.lock */,
 				FD4BF7E51EDC1E9B00BC15E9 /* Sources */,
 				FD4BF80A1EDC1E9B00BC15E9 /* Frameworks */,
 				FD4BF8131EDC1E9B00BC15E9 /* Resources */,
-				FD4BF81F1EDC1E9B00BC15E9 /* [CP] Copy Pods Resources */,
+				FD34551721D6779F00014909 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -695,6 +789,7 @@
 			files = (
 				FD634D041EF1F76B006243A4 /* ProximaNovaSoft-Bold.ttf in Resources */,
 				FD732BBD208550CE00734A48 /* Parse.plist in Resources */,
+				FD34550A21D66D0300014909 /* Cartfile in Resources */,
 				FDD1D67E1F06708D00DED89C /* CCNPreferencesAudio.xib in Resources */,
 				FD634D021EF1F76B006243A4 /* ProximaNova-Light.otf in Resources */,
 				FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */,
@@ -714,41 +809,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FD4BF7E41EDC1E9B00BC15E9 /* [CP] Check Pods Manifest.lock */ = {
+		FD34551721D6779F00014909 /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+			inputFileListPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Bolts.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Parse.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Podlive-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD4BF81F1EDC1E9B00BC15E9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Podlive/Pods-Podlive-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podlive/Pods-Podlive-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -776,10 +855,13 @@
 				FDAE070D1EDF0DDE009E5A2D /* NSDictionary+Podlive.m in Sources */,
 				FD4BF7EE1EDC1E9B00BC15E9 /* CCNUserInfoView.m in Sources */,
 				FD4BF7EF1EDC1E9B00BC15E9 /* CCNPlayer.m in Sources */,
+				FD34553921D67B1C00014909 /* EXTRuntimeExtensions.m in Sources */,
 				FD4BF7F01EDC1E9B00BC15E9 /* NSWindow+Podlive.m in Sources */,
+				FD34553721D67B1C00014909 /* EXTConcreteProtocol.m in Sources */,
 				FDC82DA21FE1118F00197D84 /* CCNChannelGridNoStreamItemView.m in Sources */,
 				FD4BF7F11EDC1E9B00BC15E9 /* CCNChannelGridFlowLayout.m in Sources */,
 				FD4BF7F21EDC1E9B00BC15E9 /* CCNPlayerStopButton.m in Sources */,
+				FD34551521D6771800014909 /* CCNPreferencesWindowController.m in Sources */,
 				FD4BF7F31EDC1E9B00BC15E9 /* CCNPlayerPlayPauseButton.m in Sources */,
 				FD7792F61FD5E105006D2D62 /* NSApplication+MainMenu.m in Sources */,
 				FDAE07171EDF0E23009E5A2D /* CCNChannelManager.m in Sources */,
@@ -788,6 +870,7 @@
 				FD4BF7F51EDC1E9B00BC15E9 /* NSImage+Podlive.m in Sources */,
 				FD4BF7F61EDC1E9B00BC15E9 /* CCNAuthView.m in Sources */,
 				FDD1D6821F0672B000DED89C /* CCNPreferencesSync.m in Sources */,
+				FD34553C21D67B1C00014909 /* EXTSafeCategory.m in Sources */,
 				FD4BF7F71EDC1E9B00BC15E9 /* CCNAuthViewController.m in Sources */,
 				FD4BF7F81EDC1E9B00BC15E9 /* CCNPreferencesGeneral.m in Sources */,
 				FD4BF7F91EDC1E9B00BC15E9 /* CCNPlayerVolumeSlider.m in Sources */,
@@ -800,6 +883,7 @@
 				FD4BF7FF1EDC1E9B00BC15E9 /* CCNChannelGridItem.m in Sources */,
 				FDD41EBC21D64256007F4C8D /* NSAppearance+Podlive.m in Sources */,
 				FD4BF8011EDC1E9B00BC15E9 /* CCNPlayerViewController.m in Sources */,
+				FD34553E21D67B1C00014909 /* EXTNil.m in Sources */,
 				FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */,
 				FD4BF8021EDC1E9B00BC15E9 /* NSColor+Podlive.m in Sources */,
 				FD4BF8031EDC1E9B00BC15E9 /* CCNBaseButton.m in Sources */,
@@ -809,6 +893,9 @@
 				FDAE071B1EDF0EA3009E5A2D /* CCNChannel.m in Sources */,
 				FD88D1411EE80CCF00875AD5 /* CCNApplicationDelegate.m in Sources */,
 				FDAE071F1EDF0ECE009E5A2D /* PodliveDefaultStyleKit.m in Sources */,
+				FD34553821D67B1C00014909 /* EXTScope.m in Sources */,
+				FD34550F21D6770900014909 /* CCNNavigationController.m in Sources */,
+				FD34553A21D67B1C00014909 /* EXTADT.m in Sources */,
 				FDAE07111EDF0DDE009E5A2D /* NSUserDefaults+Podlive.m in Sources */,
 				FD7E632B1EDF57D20011BE89 /* NSFont+Podlive.m in Sources */,
 				FDD1D6861F06732400DED89C /* CCNPreferencesBase.m in Sources */,
@@ -816,8 +903,11 @@
 				FD4BF8071EDC1E9B00BC15E9 /* CCNPlayerView.m in Sources */,
 				FDD41EB621D64194007F4C8D /* NSView+Podlive.m in Sources */,
 				FD4BF8081EDC1E9B00BC15E9 /* main.m in Sources */,
+				FD34553D21D67B1C00014909 /* NSMethodSignature+EXT.m in Sources */,
 				FD88DB3D1F02A4B300B0215A /* CCNChannelGridItemView.m in Sources */,
+				FD34553621D67B1C00014909 /* EXTSelectorChecking.m in Sources */,
 				FDD1D6791F0647A200DED89C /* NSSlider+Podlive.m in Sources */,
+				FD34553B21D67B1C00014909 /* NSInvocation+EXT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,7 +939,6 @@
 /* Begin XCBuildConfiguration section */
 		FD4BF8221EDC1E9B00BC15E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D64F6ACF7D012065F331B609 /* Pods-Podlive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -867,9 +956,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
-					"$(PROJECT_DIR)/Vendor/**",
-					"$(PROJECT_DIR)/Vendor",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Podlive/Supporting Files/PrefixHeader.pch";
@@ -885,8 +973,6 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"CCNNavigationController\"",
-					"-l\"CCNPreferencesWindowController\"",
 					"-l\"sqlite3\"",
 					"-l\"z\"",
 					"-framework",
@@ -915,7 +1001,6 @@
 		};
 		FD4BF8231EDC1E9B00BC15E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FBD48E4FDE90FD19F5B9AC9 /* Pods-Podlive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -933,9 +1018,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
-					"$(PROJECT_DIR)/Vendor/**",
-					"$(PROJECT_DIR)/Vendor",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Podlive/Supporting Files/PrefixHeader.pch";
@@ -951,8 +1035,6 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"CCNNavigationController\"",
-					"-l\"CCNPreferencesWindowController\"",
 					"-l\"sqlite3\"",
 					"-l\"z\"",
 					"-framework",
