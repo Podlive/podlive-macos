@@ -29,15 +29,10 @@ In order to test your code you have to use our test-backend. This requires acces
 
 > **NOTE: To use these keys please send a request to our [email address](mailto:mail@podlive.io?Subject=Parse-Server-Key-Request)**.
 
-
 ## Developer Notes
 Podlive uses GitFlow. There are two branches, `master` and `develop`. The `develop` branch is our default branch. To make your (changes|fixes|additions) you just have to create your working branch with `develop` as parent. If you’re done, open a pull request.
 
 For more detailed code guidelines please have look at the [Developer Notes](Developer-Notes.md) document.
-
-## Dependencies
-
-This project uses [CCNKit](https://github.com/phranck/CCNKit) (it containes two frameworks, `CCNAppKit` and `CCNFoundation`) as a submodule. If you want do develop for Podlive, you have to keep that in mind and eventually update this submodule first.
 
 ## Work on Podlive
 
