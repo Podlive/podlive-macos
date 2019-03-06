@@ -21,7 +21,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.10</string>
 	<key>CFBundleVersion</key>
-	<string>187</string>
+	<string>188</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>
@@ -39,7 +39,7 @@
 	<string>NSApplication</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ProximaNova-SoftRegular.ttf</string>
+		<string>ProximaNovaSoft-Regular.ttf</string>
 		<string>ProximaNovaSoft-Bold.ttf</string>
 		<string>ProximaNovaSoft-Medium.ttf</string>
 		<string>ProximaNovaSoft-SemiBold.ttf</string>
