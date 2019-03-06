@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1053A922300E6900A00C20 /* quite-impressed.caf in Resources */ = {isa = PBXBuildFile; fileRef = FD76CF62205B347000F55442 /* quite-impressed.caf */; };
 		FD1BAC6E1EF04EE700FC7F1B /* CCNPlayerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BAC6D1EF04EE700FC7F1B /* CCNPlayerImageView.m */; };
 		FD34550A21D66D0300014909 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FD34550921D66D0300014909 /* Cartfile */; };
 		FD34550F21D6770900014909 /* CCNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34550E21D6770900014909 /* CCNNavigationController.m */; };
@@ -799,6 +800,7 @@
 				FD634D021EF1F76B006243A4 /* ProximaNova-Light.otf in Resources */,
 				FD634D051EF1F76B006243A4 /* ProximaNovaSoft-Regular.ttf in Resources */,
 				FD4BF8141EDC1E9B00BC15E9 /* Localizable.strings in Resources */,
+				FD1053A922300E6900A00C20 /* quite-impressed.caf in Resources */,
 				FDD1D6831F0672B000DED89C /* CCNPreferencesSync.xib in Resources */,
 				FD634D071EF1F7E3006243A4 /* ProximaNovaSoft-Medium.ttf in Resources */,
 				FD634D091EF1FAAD006243A4 /* ProximaNovaSoft-SemiBold.ttf in Resources */,
