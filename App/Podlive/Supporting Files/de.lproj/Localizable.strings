@@ -2,19 +2,6 @@
    @DIRECTORY Podlive/Supporting Files 
    @FILE Podlive/Supporting Files/Localizable.strings */
 
-/* Parse Push Notifications */
-"channel_state_live" = "Öffnen";
-
-"channel_state_title_live" = "Neuer Live-Stream";
-
-"channel_state_message_live" = "'%@' ist jetzt live.";
-
-"channel_state_preshow" = "Öffnen";
-
-"channel_state_title_preshow" = "Neue Preshow";
-
-"channel_state_message_preshow" = "'%@' hat die Preshow gestartet.";
-
 /* Application Theme Selector Label */
 "Application Theme" = "Application Theme";
 
@@ -328,3 +315,8 @@
 /* No comment provided by engineer. */
 "unfortunately, no live stream..." = "Leider gibt es keinen Live-Stream...";
 
+/* Parse Push Notifications */
+"channel_state_title_live" = "Neuer Live-Stream";
+"channel_state_message_live" = "'%@' ist jetzt live.";
+"channel_state_title_preshow" = "Neue Preshow";
+"channel_state_message_preshow" = "'%@' hat die Preshow gestartet.";

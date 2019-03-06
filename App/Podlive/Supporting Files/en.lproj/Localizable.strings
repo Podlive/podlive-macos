@@ -2,19 +2,6 @@
    @DIRECTORY Podlive/Supporting Files 
    @FILE Podlive/Supporting Files/Localizable.strings */
 
-/* Parse Push Notifications */
-"channel_state_live" = "Open";
-
-"channel_state_title_live" = "New Live Stream";
-
-"channel_state_message_live" = "'%@' has started live stream.";
-
-"channel_state_preshow" = "Open";
-
-"channel_state_title_preshow" = "New Preshow";
-
-"channel_state_message_preshow" = "'%@' has started preshow.";
-
 /* Application Theme Selector Label */
 "Application Theme" = "Application Theme";
 
@@ -358,3 +345,20 @@
 /* No comment provided by engineer. */
 "unfortunately, no live stream..." = "unfortunately, no live stream...";
 
+/* Button Label */
+"Abort" = "Abort";
+
+/* Button Label */
+"Next" = "Next";
+
+/* Button Label */
+"OK" = "OK";
+
+/* Button Label */
+"Previous" = "Previous";
+
+/* Parse Push Notifications */
+"channel_state_title_live" = "New Live Stream";
+"channel_state_message_live" = "'%@' has started live stream.";
+"channel_state_title_preshow" = "New Preshow";
+"channel_state_message_preshow" = "'%@' has started preshow.";
