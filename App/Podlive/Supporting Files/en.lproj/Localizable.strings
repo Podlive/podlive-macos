@@ -24,7 +24,7 @@
 "Password" = "Password";
 
 /* Preferences ViewController Title */
-"Preferences" = "Preferences";
+"Preferences…" = "Preferences…";
 
 /* Login Window Headline */
 "%@ Login" = "%@ Login";

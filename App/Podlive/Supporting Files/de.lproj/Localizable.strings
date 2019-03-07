@@ -24,7 +24,7 @@
 "Password" = "Passwort";
 
 /* Preferences ViewController Title */
-"Preferences" = "Einstellungen";
+"Preferences…" = "Einstellungen…";
 
 /* Login Window Headline */
 "%@ Login" = "%@ Anmeldung";
@@ -232,7 +232,7 @@
 "Find Previous" = "Vorherigen finden";
 
 /* Main Menu Item Title */
-"Find…" = "Finden...";
+"Find…" = "Finden…";
 
 /* Main Menu Item Title */
 "Find" = "Finden";
