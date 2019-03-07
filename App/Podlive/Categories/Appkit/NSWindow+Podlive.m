@@ -14,7 +14,7 @@
     let windowInitialFrame = NSMakeRect(0, 0, 880.0, 700.0);
 
     let styleMask = (NSWindowStyleMaskTitled | NSWindowStyleMaskFullSizeContentView | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable);
-    
+
     let _window = [[NSWindow alloc] initWithContentRect:windowInitialFrame styleMask:styleMask backing:NSBackingStoreBuffered defer:NO];
     _window.minSize               = windowMinFrame.size;
     _window.maxSize               = NSMakeSize(CGFLOAT_MAX, CGFLOAT_MAX);
@@ -38,7 +38,7 @@
     }
 
     let toolbar = [[NSToolbar alloc] initWithIdentifier:@"mainToolBar"];
-    toolbar.displayMode = NSToolbarDisplayModeIconOnly;
+    toolbar.displayMode = NSToolbarDisplayModeDefault;
     toolbar.delegate = contentViewController;
     toolbar.allowsUserCustomization = NO;
 
@@ -46,7 +46,6 @@
     _window.appearance = [NSAppearance appearanceNamed:NSAppearance.applicationAppearanceName];
 
     [_window makeKeyAndOrderFront:nil];
-    [_window makeMainWindow];
 
     return _window;
 }
