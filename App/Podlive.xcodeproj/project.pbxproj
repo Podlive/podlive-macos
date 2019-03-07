@@ -659,7 +659,6 @@
 				FD9D6D281EA7B2D5005ED568 /* Credits.rtf */,
 				FD634CCB1EF1EDA6006243A4 /* Fonts */,
 				FD1AC74F1E70D7A500C5E692 /* Localizable.strings */,
-				FD0722B61E5CEB35000A2860 /* main.m */,
 				FD547D0D1ED40F4B00456184 /* Podlive-Info.plist */,
 				FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */,
 				FD0722B91E5CEB3D000A2860 /* PrefixHeader.pch */,
@@ -677,6 +676,7 @@
 				FDF642B61E5CCD260005EA72 /* CCNApplicationViewController.m */,
 				FD29587C1EAA473300B564CB /* CCNNotificationCoordinator.h */,
 				FD29587D1EAA473300B564CB /* CCNNotificationCoordinator.m */,
+				FD0722B61E5CEB35000A2860 /* main.m */,
 				FDAE07271EDF0FD8009E5A2D /* Constants */,
 			);
 			path = Application;
