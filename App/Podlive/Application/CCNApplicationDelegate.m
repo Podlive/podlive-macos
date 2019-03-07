@@ -120,7 +120,7 @@
         configuration.applicationId = CCNConstants.parseApplicationId;
         configuration.clientKey     = CCNConstants.parseClientKey;
         configuration.server        = CCNConstants.parseServerUrl;
-        NSLog(@"using parse server: %@", configuration.server);
+        CCNLog(@"using parse server: %@", configuration.server);
     }];
     [Parse initializeWithConfiguration:parseConfiguration];
 
