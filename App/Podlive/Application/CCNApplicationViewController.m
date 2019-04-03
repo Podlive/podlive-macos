@@ -326,12 +326,18 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 }
 
 - (void)showAvailablePodcasts {
+    if (CCNChannelManager.sharedManager.channelFilterCriteria == CCNChannelFilterCriteriaAvailable) {
+        return;
+    }
     self.segmentedControl.selectedSegment = CCNChannelFilterCriteriaAvailable;
     CCNChannelManager.sharedManager.channelFilterCriteria = self.segmentedControl.selectedSegment;
 }
 
 - (void)showSubscribedPodcasts {
     if (PFUser.currentUser.hasSubscribedChannels) {
+        if (CCNChannelManager.sharedManager.channelFilterCriteria == CCNChannelFilterCriteriaSubscribed) {
+            return;
+        }
         self.segmentedControl.selectedSegment = CCNChannelFilterCriteriaSubscribed;
         CCNChannelManager.sharedManager.channelFilterCriteria = self.segmentedControl.selectedSegment;
     }

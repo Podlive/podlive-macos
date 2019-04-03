@@ -11,6 +11,8 @@ Our backend is a [Parse-Server](http://parseplatform.org) which is used to colle
 
 ![](screenshot1.png)
 
+<a href="https://www.patreon.com/bePatron?u=4853802" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
 ## Podlive in the Mac App Store
 
 If you are not familiar with programming and/or Xcode, you can of course [download the latest release of Podlive in the Mac App Store](https://itunes.apple.com/at/app/podlive/id1210411572?l=en&mt=12).
