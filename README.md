@@ -11,7 +11,11 @@ Our backend is a [Parse-Server](http://parseplatform.org) which is used to colle
 
 ![](screenshot1.png)
 
-<a href="https://www.patreon.com/bePatron?u=4853802" data-patreon-widget-type="become-patron-button"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"></a>
+## Support me on Patreon
+
+If you like this little app and/or if you are using it, please be a kind person and support me on Patreon. I really, really appreciate it! 😍
+
+<div align="center"><a href="https://www.patreon.com/bePatron?u=4853802" data-patreon-widget-type="become-patron-button"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160"></a></div>
 
 ## Podlive in the Mac App Store
 
