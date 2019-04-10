@@ -28,6 +28,7 @@ FOUNDATION_EXPORT const CGFloat kInnerEdgeDoubleMargin;
 
 // Notifications
 FOUNDATION_EXPORT NSString *const CCNUserUpdatedNotification;
+FOUNDATION_EXPORT NSString *const CCNRealtimeNotifications;
 FOUNDATION_EXPORT NSString *const CCNPushNotificationChannelStateUpdated;
 FOUNDATION_EXPORT NSString *const CCNChannelSubscriptionUpdatedNotification;
 FOUNDATION_EXPORT NSString *const CCNPushNotificationChannelListenerCountUpdated;
@@ -37,6 +38,10 @@ FOUNDATION_EXPORT NSString *const CCNLogInFailureNotification;
 FOUNDATION_EXPORT NSString *const CCNSignUpSuccessNotification;
 FOUNDATION_EXPORT NSString *const CCNSignUpFailureNotification;
 FOUNDATION_EXPORT NSString *const CCNLogOutNotification;
+
+
+// Parse Notifications
+FOUNDATION_EXPORT NSString *const CCNParseRealtimeNotifications;
 
 
 // NSUserDefaults

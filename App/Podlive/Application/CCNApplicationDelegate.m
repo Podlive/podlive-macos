@@ -45,7 +45,7 @@
     [self populateMainWindow];
 
     [CCNUserManager.sharedManager startListening];
-    [PFPush subscribeToChannelInBackground:@"realtimeNotifications"];
+    [PFPush subscribeToChannelInBackground:CCNParseRealtimeNotifications];
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
@@ -63,8 +63,7 @@
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
-    [PFPush unsubscribeFromChannelInBackground:@"realtimeNotifications"];
+    [PFPush unsubscribeFromChannelInBackground:CCNParseRealtimeNotifications];
     
     let isAnonynousUser = [PFAnonymousUtils isLinkedWithUser:PFUser.currentUser];
     if (isAnonynousUser) {

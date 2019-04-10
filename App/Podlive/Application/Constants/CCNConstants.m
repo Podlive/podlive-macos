@@ -83,6 +83,10 @@ NSString *const CCNSignUpFailureNotification                   = @"CCNSignUpFail
 NSString *const CCNLogOutNotification                          = @"CCNLogOutNotification";
 
 
+// Parse Notifications
+NSString *const CCNParseRealtimeNotifications                       = @"realtimeNotifications";
+
+
 // NSUserDefaults
 NSString *const CCNCurrentAppearance                       = @"CCNCurrentAppearance";
 
