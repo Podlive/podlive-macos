@@ -775,7 +775,7 @@
 			};
 			buildConfigurationList = FDF642801E5CC4870005EA72 /* Build configuration list for PBXProject "Podlive" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
