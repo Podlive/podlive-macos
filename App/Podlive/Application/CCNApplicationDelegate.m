@@ -45,6 +45,7 @@
     [self populateMainWindow];
 
     [CCNUserManager.sharedManager startListening];
+    [PFPush subscribeToChannelInBackground:@"realtimeNotifications"];
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
@@ -63,6 +64,8 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+    [PFPush unsubscribeFromChannelInBackground:@"realtimeNotifications"];
+    
     let isAnonynousUser = [PFAnonymousUtils isLinkedWithUser:PFUser.currentUser];
     if (isAnonynousUser) {
         // if the user isn't logged in (anonymous) we have to keep the
@@ -82,8 +85,6 @@
             CCNLog(@"registration for push notifications failed: %@", error);
         }
         [CCNUserManager.sharedManager saveAnonymousUser];
-
-        [PFPush subscribeToChannelInBackground:@"realtimeNotifications"];
     }];
 }
 
