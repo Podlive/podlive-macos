@@ -7,7 +7,7 @@ cache:
 
 before_install:
   - git submodule update --remote
-  - carthage bootstrap --cache-builds --no-use-binaries --platform macOS
+  - cd App && carthage bootstrap --cache-builds --no-use-binaries --platform macOS
 
 xcode_project: 'App/Podlive.xcodeproj'
 
