@@ -11,7 +11,7 @@ Our backend is a [Parse-Server](http://parseplatform.org) which is used to colle
 
 ![](screenshot1.png)
 
-## Support me on Patreon
+## Support the Developer
 
 If you like this little app and/or if you are using it, please be a kind person and support me on Patreon. I really, really appreciate it! 😍
 
