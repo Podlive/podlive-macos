@@ -49,21 +49,22 @@
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
-    [PFUser.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            [PFInstallation.currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [PFPush unsubscribeFromChannelInBackground:CCNParseRealtimeNotifications block:^(BOOL succeeded, NSError * _Nullable error) {
+        [PFUser.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                [PFInstallation.currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    [NSApp replyToApplicationShouldTerminate:YES];
+                }];
+            }
+            else {
                 [NSApp replyToApplicationShouldTerminate:YES];
-            }];
-        }
-        else {
-            [NSApp replyToApplicationShouldTerminate:YES];
-        }
+            }
+        }];
     }];
     return NSTerminateLater;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    [PFPush unsubscribeFromChannelInBackground:CCNParseRealtimeNotifications];
     
     let isAnonynousUser = [PFAnonymousUtils isLinkedWithUser:PFUser.currentUser];
     if (isAnonynousUser) {
