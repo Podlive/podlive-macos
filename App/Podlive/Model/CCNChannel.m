@@ -3,9 +3,9 @@
 //  Copyright © 2017 cocoa:naut. All rights reserved.
 //
 
-#import <CCNFoundation/NSString+CCNAdditions.h>
 #import "CCNChannel.h"
 #import "CCNChannel+Convenience.h"
+#import "NSString+Tools.h"
 
 NSString *const CCNChannelFieldCoverart             = @"coverart";
 NSString *const CCNChannelFieldCoverartThumbnail200 = @"coverartThumbnail200";
