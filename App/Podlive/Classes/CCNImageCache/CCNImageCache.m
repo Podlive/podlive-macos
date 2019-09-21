@@ -6,6 +6,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
 #import "CCNImageCache.h"
+#import "NSString+Tools.h"
 
 
 // MARK: - NSImage+AsyncLoading
@@ -80,26 +81,6 @@
                                                 }];
         [task resume];
     });
-}
-
-@end
-
-
-// MARK: - NSString+Crypto
-
-@implementation NSString (Crypto)
-
-- (NSString *_Nullable)SHA1String {
-    unsigned char digest[CC_SHA1_DIGEST_LENGTH];
-    NSData *stringBytes = [self dataUsingEncoding:NSUTF8StringEncoding];
-    if (CC_SHA1([stringBytes bytes], (CC_LONG)[stringBytes length], digest)) {
-        NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
-        for (int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++) {
-            [output appendFormat:@"%02x", digest[i]];
-        }
-        return output;
-    }
-    return nil;
 }
 
 @end

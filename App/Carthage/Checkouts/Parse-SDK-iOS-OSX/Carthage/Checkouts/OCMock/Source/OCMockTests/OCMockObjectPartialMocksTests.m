@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2013-2016 Erik Doernenburg and contributors
+ *  Copyright (c) 2013-2018 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -304,6 +304,41 @@ static NSUInteger initializeCallCount = 0;
     id partialMock = OCMPartialMock(realObject);
     XCTAssertNotNil(partialMock);
 }
+
+- (void)testSettingUpSecondPartialMockForSameClassDoesNotAffectInstanceMethods
+{
+	TestClassWithSimpleMethod *object1 = [[TestClassWithSimpleMethod alloc] init];
+	TestClassWithSimpleMethod *object2 = [[TestClassWithSimpleMethod alloc] init];
+
+	TestClassWithSimpleMethod *mock1 = OCMPartialMock(object1);
+	XCTAssertEqualObjects(@"Foo", [object1 foo]);
+
+	TestClassWithSimpleMethod *mock2 = OCMPartialMock(object2);
+	XCTAssertEqualObjects(@"Foo", [object1 foo]);
+	XCTAssertEqualObjects(@"Foo", [object2 foo]);
+
+	XCTAssertEqualObjects(@"Foo", [mock1 foo]);
+	XCTAssertEqualObjects(@"Foo", [mock2 foo]);
+}
+
+- (void)testSettingUpSecondPartialMockForSameClassDoesNotAffectStubs
+{
+	TestClassWithSimpleMethod *object1 = [[TestClassWithSimpleMethod alloc] init];
+	TestClassWithSimpleMethod *object2 = [[TestClassWithSimpleMethod alloc] init];
+
+	TestClassWithSimpleMethod *mock1 = OCMPartialMock(object1);
+	XCTAssertEqualObjects(@"Foo", [object1 foo]);
+	OCMStub([mock1 foo]).andReturn(@"Bar");
+	XCTAssertEqualObjects(@"Bar", [object1 foo]);
+
+	TestClassWithSimpleMethod *mock2 = OCMPartialMock(object2);
+	XCTAssertEqualObjects(@"Bar", [object1 foo]);
+	XCTAssertEqualObjects(@"Foo", [object2 foo]);
+
+	XCTAssertEqualObjects(@"Bar", [mock1 foo]);
+	XCTAssertEqualObjects(@"Foo", [mock2 foo]);
+}
+
 
 #pragma mark   Tests for Core Data interaction with mocks
 

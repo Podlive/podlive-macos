@@ -15,12 +15,6 @@ typedef void (^CCNImageAsyncLoadCompletion)(NSImage *_Nullable fetchedImage, BOO
 + (void)cacheImageInBackgroundWithURL:(NSURL *_Nonnull)imageURL;
 @end
 
-// MARK: - NSString+Crypto
-@interface NSString (Crypto)
-- (NSString *_Nullable)SHA1String;
-@end
-
-
 // MARK: - CCNImageCache
 @interface CCNImageCache : NSObject
 

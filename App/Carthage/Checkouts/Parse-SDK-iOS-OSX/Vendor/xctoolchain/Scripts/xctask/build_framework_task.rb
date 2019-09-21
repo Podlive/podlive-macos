@@ -102,7 +102,7 @@ module XCTask
     def build_watchos_framework
       framework_paths = []
       framework_paths << build_framework('watchos')
-      framework_paths << build_framework('watchsimulator', '"platform=watchOS Simulator,name=Apple Watch - 42mm"')
+      framework_paths << build_framework('watchsimulator', '"platform=watchOS Simulator,OS=5.2,name=Apple Watch Series 3 - 42mm"')
       final_path = final_framework_path
 
       system("rm -rf #{final_path} && cp -R #{framework_paths[0]} #{final_path}")
@@ -127,7 +127,7 @@ module XCTask
     def build_tvos_framework
       framework_paths = []
       framework_paths << build_framework('appletvos')
-      framework_paths << build_framework('appletvsimulator', '"platform=tvOS Simulator,OS:11.2,name=Apple TV 1080p"')
+      framework_paths << build_framework('appletvsimulator', '"platform=tvOS Simulator,OS=12.2,name=Apple TV 4K"')
       final_path = final_framework_path
 
       system("rm -rf #{final_path} && cp -R #{framework_paths[0]} #{final_path}")
