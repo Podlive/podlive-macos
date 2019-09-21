@@ -3,8 +3,8 @@
 //  Copyright © 2017 cocoa:naut. All rights reserved.
 //
 
-@import CCNAppKit;
 #import "NSApplication+MainMenu.h"
+#import "NSApplication+Tools.h"
 #import "CCNApplicationDelegate.h"
 #import "NSBundle+Localization.h"
 
