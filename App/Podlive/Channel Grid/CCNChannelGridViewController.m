@@ -266,15 +266,8 @@ typedef void(^CCNChannelGridViewDataSourceUpdatedCompletion)(NSSet<NSIndexPath *
                 [ctx invalidateSupplementaryElementsOfKind:CCNCollectionElementKindItemDetail atIndexPaths:indexPaths];
                 [layout invalidateLayoutWithContext:ctx];
 
-                [self.collectionView.animator performBatchUpdates:^{
-                    @strongify(self);
-                    [self.collectionView moveItemAtIndexPath:channelIndexPathOld toIndexPath:channelIndexPathNew];
-                    [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-
-                } completionHandler:^(BOOL finished) {
-                    @strongify(self);
-                    [self updateHeaderViews];
-                }];
+                [self.collectionView.animator moveItemAtIndexPath:channelIndexPathOld toIndexPath:channelIndexPathNew];
+                [self updateHeaderViews];
             };
 
             dispatch_async(dispatch_get_main_queue(), ^{
