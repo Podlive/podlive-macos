@@ -158,7 +158,6 @@ NSString *const CCNDidChangeChannelFilterCriteriaNotification = @"CCNDidChangeCh
             for (PFObject *theObject in objects) {
                 let theChannel = [CCNChannel channelWithObject:theObject];
                 [NSImage cacheImageInBackgroundWithURL:theChannel.coverartThumbnail200URL];
-                [NSImage cacheImageInBackgroundWithURL:theChannel.coverartThumbnail800URL];
 
                 if (theChannel.isOnline) {
                     [liveChannels addObject:theChannel];
