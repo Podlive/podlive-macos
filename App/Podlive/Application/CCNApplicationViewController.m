@@ -9,6 +9,7 @@
 #import "CCNPlayerViewController.h"
 #import "CCNUserInfoViewController.h"
 #import "CCNAuthViewController.h"
+#import "CCNSearchViewController.h"
 #import "CCNLoginLogoutButton.h"
 
 #import "CCNPreferencesWindowController.h"
@@ -47,6 +48,8 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 
 @property (nonatomic, strong) NSPopover *userInfoPopover;
 @property (nonatomic, strong) CCNUserInfoViewController *userInfoViewController;
+
+@property (nonatomic, strong) CCNSearchViewController *searchViewController;
 @end
 
 @implementation CCNApplicationViewController
@@ -82,6 +85,10 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     self.playerViewController = CCNPlayerViewController.viewController;
     [self addChildViewController:self.playerViewController];
     [self.view addSubview:self.playerViewController.view];
+    
+    self.searchViewController = CCNSearchViewController.viewController;
+    [self addChildViewController:self.searchViewController];
+    [self.view addSubview:self.searchViewController.view];
 }
 
 - (void)setupNotifications {
@@ -321,28 +328,6 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     }
 }
 
-- (void)showPreferences {
-    [self.preferences showPreferencesWindow];
-}
-
-- (void)showAvailablePodcasts {
-    if (CCNChannelManager.sharedManager.channelFilterCriteria == CCNChannelFilterCriteriaAvailable) {
-        return;
-    }
-    self.segmentedControl.selectedSegment = CCNChannelFilterCriteriaAvailable;
-    CCNChannelManager.sharedManager.channelFilterCriteria = self.segmentedControl.selectedSegment;
-}
-
-- (void)showSubscribedPodcasts {
-    if (PFUser.currentUser.hasSubscribedChannels) {
-        if (CCNChannelManager.sharedManager.channelFilterCriteria == CCNChannelFilterCriteriaSubscribed) {
-            return;
-        }
-        self.segmentedControl.selectedSegment = CCNChannelFilterCriteriaSubscribed;
-        CCNChannelManager.sharedManager.channelFilterCriteria = self.segmentedControl.selectedSegment;
-    }
-}
-
 - (void)showLoginSignupSheet {
     let loginViewController = CCNAuthViewController.viewController;
     loginViewController.authType = CCNAuthenticationTypeLogin;
@@ -423,6 +408,30 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
         return PFUser.currentUser.hasSubscribedChannels;
     }
     return YES;
+}
+
+// MARK: - Public API
+
+- (void)showPreferences {
+    [self.preferences showPreferencesWindow];
+}
+
+- (void)showAvailablePodcasts {
+    if (CCNChannelManager.sharedManager.channelFilterCriteria == CCNChannelFilterCriteriaAvailable) {
+        return;
+    }
+    self.segmentedControl.selectedSegment = CCNChannelFilterCriteriaAvailable;
+    CCNChannelManager.sharedManager.channelFilterCriteria = self.segmentedControl.selectedSegment;
+}
+
+- (void)showSubscribedPodcasts {
+    if (PFUser.currentUser.hasSubscribedChannels) {
+        if (CCNChannelManager.sharedManager.channelFilterCriteria == CCNChannelFilterCriteriaSubscribed) {
+            return;
+        }
+        self.segmentedControl.selectedSegment = CCNChannelFilterCriteriaSubscribed;
+        CCNChannelManager.sharedManager.channelFilterCriteria = self.segmentedControl.selectedSegment;
+    }
 }
 
 @end

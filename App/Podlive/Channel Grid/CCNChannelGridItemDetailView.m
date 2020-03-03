@@ -3,6 +3,8 @@
 //  Copyright © 2017 cocoa:naut. All rights reserved.
 //
 
+@import Carbon;
+
 #import "CCNChannelGridItemDetailView.h"
 #import "CCNChannelGridItem.h"
 #import "CCNChannel.h"
@@ -46,7 +48,7 @@ static const CGFloat kCCNChannelGridItemArrowWidth = 42.0;
 }
 
 - (BOOL)performKeyEquivalent:(NSEvent *)event {
-    if (event.keyCode == CCNEscapeKeyCode) {
+    if (event.keyCode == kVK_Escape) {
         if ([self.delegate respondsToSelector:@selector(gridItemDetailViewShouldClose:)]) {
             [self.delegate gridItemDetailViewShouldClose:self];
         }

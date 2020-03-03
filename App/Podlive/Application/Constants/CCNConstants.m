@@ -55,10 +55,6 @@ static NSString *const CCNParseServerUrl     = @"ParseServerUrl";
 @end
 
 
-// NSEvent keyCode's
-unsigned short CCNReturnKeyCode = 13;
-unsigned short CCNEscapeKeyCode = 53;
-
 
 // Autolayout
 const CGFloat kOuterEdgeMargin       = 20.0;

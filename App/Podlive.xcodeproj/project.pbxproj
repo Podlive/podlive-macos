@@ -23,6 +23,7 @@
 		FD34553C21D67B1C00014909 /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552D21D67B1C00014909 /* EXTSafeCategory.m */; };
 		FD34553D21D67B1C00014909 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552F21D67B1C00014909 /* NSMethodSignature+EXT.m */; };
 		FD34553E21D67B1C00014909 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34553321D67B1C00014909 /* EXTNil.m */; };
+		FD3476F3240EF8D1006A19F6 /* CCNSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */; };
 		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
 		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
 		FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */; };
@@ -163,6 +164,8 @@
 		FD34553321D67B1C00014909 /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTNil.m; sourceTree = "<group>"; };
 		FD34553421D67B1C00014909 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		FD34553521D67B1C00014909 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTCoroutine.h; sourceTree = "<group>"; };
+		FD3476F1240EF8D1006A19F6 /* CCNSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNSearchViewController.h; sourceTree = "<group>"; };
+		FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNSearchViewController.m; sourceTree = "<group>"; };
 		FD36B9981E7893F100FB9456 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FD36B99A1E7893FD00FB9456 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podlive.entitlements; sourceTree = "<group>"; };
@@ -428,6 +431,15 @@
 			path = Submodules/extobjc;
 			sourceTree = SOURCE_ROOT;
 		};
+		FD3476F0240EF892006A19F6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				FD3476F1240EF8D1006A19F6 /* CCNSearchViewController.h */,
+				FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		FD4FD34F1E981EA10081CEA8 /* Core Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,9 +653,10 @@
 				FD95F2781E8582E500F5B394 /* Model */,
 				FDE9F01E1E79E15500D27FF6 /* Player */,
 				FD3385221E6B750F007D0D74 /* Preferences */,
+				FD3476F0240EF892006A19F6 /* Search */,
 				FD888C4C1ED0DEDA00A6B8BB /* StyleKit */,
-				FDF6428B1E5CC4870005EA72 /* Supporting Files */,
 				FD34551C21D67AFC00014909 /* Submodules */,
+				FDF6428B1E5CC4870005EA72 /* Supporting Files */,
 			);
 			path = Podlive;
 			sourceTree = "<group>";
@@ -901,6 +914,7 @@
 				FDAE07261EDF0F9D009E5A2D /* CCNConstants.m in Sources */,
 				FDAE071B1EDF0EA3009E5A2D /* CCNChannel.m in Sources */,
 				FD88D1411EE80CCF00875AD5 /* CCNApplicationDelegate.m in Sources */,
+				FD3476F3240EF8D1006A19F6 /* CCNSearchViewController.m in Sources */,
 				FDAE071F1EDF0ECE009E5A2D /* PodliveDefaultStyleKit.m in Sources */,
 				FD34553821D67B1C00014909 /* EXTScope.m in Sources */,
 				FD34550F21D6770900014909 /* CCNNavigationController.m in Sources */,

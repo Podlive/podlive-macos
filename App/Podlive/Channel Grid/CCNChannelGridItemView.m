@@ -3,7 +3,10 @@
 //  Copyright © 2017 cocoa:naut. All rights reserved.
 //
 
+@import Carbon;
+
 #import "CCNApplicationDelegate.h"
+#import "CCNApplicationViewController.h"
 #import "CCNChannelGridItemView.h"
 #import "CCNChannelGridItemControlView.h"
 #import "CCNChannel.h"
@@ -12,6 +15,8 @@
 #import "CCNPlayerView.h"
 #import "CCNPlayerViewController.h"
 #import "CCNPlayerPlayPauseButton.h"
+
+#import "CCNSearchViewController.h"
 
 #import "NSFont+Podlive.h"
 #import "NSView+Podlive.h"
@@ -98,6 +103,26 @@ static const CGFloat kLabelTopConstraintConstant = 2.0;
 
 - (void)setupNotifications {
 
+}
+
+// MARK: - Handle Keyboard Events
+
+- (BOOL)performKeyEquivalent:(NSEvent *)event {
+    let flags = event.modifierFlags & NSEventModifierFlagDeviceIndependentFlagsMask;
+    let keyCode = event.keyCode;
+    
+    if (kVK_Escape == keyCode) {
+        
+    }
+    
+    // Search triggered: command+F
+    if (NSEventModifierFlagCommand == flags && kVK_ANSI_F == keyCode) {
+        let appDelegate = (CCNApplicationDelegate *)NSApp.delegate;
+        [appDelegate.appViewController.searchViewController populateSearch];
+        return YES;
+    }
+    
+    return NO;
 }
 
 // MARK: - Auto Layout

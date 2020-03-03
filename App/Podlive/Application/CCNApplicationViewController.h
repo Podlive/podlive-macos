@@ -3,10 +3,14 @@
 //  Copyright © 2016 cocoa:naut. All rights reserved.
 //
 
+@class CCNSearchViewController;
+
 @interface CCNApplicationViewController : NSViewController  <NSWindowDelegate, NSToolbarDelegate>
 
 - (void)showPreferences;
 - (void)showAvailablePodcasts;
 - (void)showSubscribedPodcasts;
+
+@property (nonatomic, readonly) CCNSearchViewController *searchViewController;
 
 @end

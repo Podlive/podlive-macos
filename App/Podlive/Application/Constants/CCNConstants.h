@@ -16,11 +16,6 @@
 
 
 
-// NSEvent keyCode's
-FOUNDATION_EXPORT unsigned short CCNReturnKeyCode;
-FOUNDATION_EXPORT unsigned short CCNEscapeKeyCode;
-
-
 // Autolayout
 FOUNDATION_EXPORT const CGFloat kOuterEdgeMargin;
 FOUNDATION_EXPORT const CGFloat kInnerEdgeMargin;
