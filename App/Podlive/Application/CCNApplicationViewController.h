@@ -11,6 +11,7 @@
 - (void)showAvailablePodcasts;
 - (void)showSubscribedPodcasts;
 
-@property (nonatomic, readonly) CCNSearchViewController *searchViewController;
+- (void)populateSearch;
+- (void)dismissSearch;
 
 @end

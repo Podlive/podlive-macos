@@ -4,8 +4,11 @@
 //
 
 #import "CCNSearchViewController.h"
+#import "CCNSearchView.h"
 
 #import "NSView+Podlive.h"
+
+const CGFloat kCCNSearchViewHeight = 42.0;
 
 @interface CCNSearchViewController ()
 
@@ -14,22 +17,12 @@
 @implementation CCNSearchViewController
 
 - (void)loadView {
-    self.view = NSView.new;
-    self.view.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addVibrancyBlendingMode:NSVisualEffectBlendingModeBehindWindow];
+    self.view = CCNSearchView.new;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-}
-
-- (void)populateSearch {
-    CCNLogInfo(@"** Show Search");
-}
-
-- (void)dismissSearch {
-    CCNLogInfo(@"** Hide Search");
 }
 
 @end

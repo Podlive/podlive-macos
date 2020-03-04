@@ -118,7 +118,7 @@ static const CGFloat kLabelTopConstraintConstant = 2.0;
     // Search triggered: command+F
     if (NSEventModifierFlagCommand == flags && kVK_ANSI_F == keyCode) {
         let appDelegate = (CCNApplicationDelegate *)NSApp.delegate;
-        [appDelegate.appViewController.searchViewController populateSearch];
+        [appDelegate.appViewController populateSearch];
         return YES;
     }
     

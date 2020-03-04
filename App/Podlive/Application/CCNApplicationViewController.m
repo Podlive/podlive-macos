@@ -50,6 +50,7 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 @property (nonatomic, strong) CCNUserInfoViewController *userInfoViewController;
 
 @property (nonatomic, strong) CCNSearchViewController *searchViewController;
+@property (nonatomic, strong) NSLayoutConstraint *searchViewTopConstraint;
 @end
 
 @implementation CCNApplicationViewController
@@ -108,6 +109,11 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     if (!self.playerViewBottomConstraint) {
         self.playerViewBottomConstraint = [self.playerViewController.view.bottomAnchor constraintEqualToAnchor:self.playerViewController.view.superview.bottomAnchor];
         self.playerViewBottomConstraint.constant = kCCNPlayerViewHeight;
+    }
+
+    if (!self.searchViewTopConstraint) {
+        self.searchViewTopConstraint = [self.searchViewController.view.topAnchor constraintEqualToAnchor:self.searchViewController.view.superview.topAnchor];
+        self.searchViewTopConstraint.constant = kCCNSearchViewHeight;
     }
 
     [NSLayoutConstraint activateConstraints:@[
@@ -432,6 +438,27 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
         self.segmentedControl.selectedSegment = CCNChannelFilterCriteriaSubscribed;
         CCNChannelManager.sharedManager.channelFilterCriteria = self.segmentedControl.selectedSegment;
     }
+}
+
+- (void)populateSearch {
+    let newConstant = (self.searchViewTopConstraint.constant > 0 ? 0 : kCCNSearchViewHeight);
+    var contentInsets = self.gridViewController.scrollView.contentInsets;
+    contentInsets.top = kCCNSearchViewHeight;
+
+    @weakify(self);
+    [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+        context.duration = 0.25;
+        context.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+
+        @strongify(self);
+        self.searchViewTopConstraint.animator.constant = newConstant;
+        self.gridViewController.scrollView.animator.contentInsets = contentInsets;
+
+    } completionHandler:nil];
+}
+
+- (void)dismissSearch {
+    CCNLogInfo(@"** Hide Search");
 }
 
 @end

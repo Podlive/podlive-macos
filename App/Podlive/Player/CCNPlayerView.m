@@ -102,11 +102,11 @@
 
 - (void)setupNotifications {
     let nc = NSNotificationCenter.defaultCenter;
-    [nc addObserver:self selector:@selector(handlePlayerDidStartPlayingNotification:)       name:CCNPlayerDidStartPlayingNotification object:nil];
-    [nc addObserver:self selector:@selector(handlePlayerDidResumePlayingNotification:)      name:CCNPlayerDidResumePlayingNotification object:nil];
-    [nc addObserver:self selector:@selector(handlePlayerDidPausePlayingNotification:)       name:CCNPlayerDidPausePlayingNotification object:nil];
-    [nc addObserver:self selector:@selector(handlePlayerDidStopPlayingNotification:)        name:CCNPlayerDidStopPlayingNotification object:nil];
-    [nc addObserver:self selector:@selector(handlePlayerDidChangedChannelNotification:)     name:CCNPlayerDidChangedChannelNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidStartPlayingNotification:)           name:CCNPlayerDidStartPlayingNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidResumePlayingNotification:)          name:CCNPlayerDidResumePlayingNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidPausePlayingNotification:)           name:CCNPlayerDidPausePlayingNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidStopPlayingNotification:)            name:CCNPlayerDidStopPlayingNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidChangedChannelNotification:)         name:CCNPlayerDidChangedChannelNotification object:nil];
     [nc addObserver:self selector:@selector(handlePushNotificationChannelListenerCountUpdated:) name:CCNPushNotificationChannelListenerCountUpdated object:nil];
 }
 

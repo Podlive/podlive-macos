@@ -3,8 +3,12 @@
 //  Copyright © 2020 cocoa:naut. All rights reserved.
 //
 
-@interface CCNSearchViewController : NSViewController
+#import <Cocoa/Cocoa.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface CCNSearchView : NSView
 
 @end
 
-FOUNDATION_EXTERN const CGFloat kCCNSearchViewHeight;
+NS_ASSUME_NONNULL_END

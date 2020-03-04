@@ -24,6 +24,7 @@
 		FD34553D21D67B1C00014909 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552F21D67B1C00014909 /* NSMethodSignature+EXT.m */; };
 		FD34553E21D67B1C00014909 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34553321D67B1C00014909 /* EXTNil.m */; };
 		FD3476F3240EF8D1006A19F6 /* CCNSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */; };
+		FD3476F6240EFF0C006A19F6 /* CCNSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3476F5240EFF0C006A19F6 /* CCNSearchView.m */; };
 		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
 		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
 		FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */; };
@@ -166,6 +167,8 @@
 		FD34553521D67B1C00014909 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTCoroutine.h; sourceTree = "<group>"; };
 		FD3476F1240EF8D1006A19F6 /* CCNSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNSearchViewController.h; sourceTree = "<group>"; };
 		FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNSearchViewController.m; sourceTree = "<group>"; };
+		FD3476F4240EFF0C006A19F6 /* CCNSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNSearchView.h; sourceTree = "<group>"; };
+		FD3476F5240EFF0C006A19F6 /* CCNSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNSearchView.m; sourceTree = "<group>"; };
 		FD36B9981E7893F100FB9456 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FD36B99A1E7893FD00FB9456 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podlive.entitlements; sourceTree = "<group>"; };
@@ -434,6 +437,8 @@
 		FD3476F0240EF892006A19F6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				FD3476F4240EFF0C006A19F6 /* CCNSearchView.h */,
+				FD3476F5240EFF0C006A19F6 /* CCNSearchView.m */,
 				FD3476F1240EF8D1006A19F6 /* CCNSearchViewController.h */,
 				FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */,
 			);
@@ -900,6 +905,7 @@
 				FD4BF7FD1EDC1E9B00BC15E9 /* CCNChannelGridViewController.m in Sources */,
 				FDAE07161EDF0DE6009E5A2D /* PFUser+Podlive.m in Sources */,
 				FDD41EB321D6410D007F4C8D /* NSViewController+Podlive.m in Sources */,
+				FD3476F6240EFF0C006A19F6 /* CCNSearchView.m in Sources */,
 				FDAE071D1EDF0EAA009E5A2D /* CCNChannel+Convenience.m in Sources */,
 				FD4BF7FE1EDC1E9B00BC15E9 /* CCNChannelGridSectionHeaderView.m in Sources */,
 				FD4BF7FF1EDC1E9B00BC15E9 /* CCNChannelGridItem.m in Sources */,
