@@ -5,6 +5,8 @@
 
 @interface CCNSearchViewController : NSViewController
 
+@property (nonatomic, readonly) BOOL isVisible;
+
 @end
 
 FOUNDATION_EXTERN const CGFloat kCCNSearchViewHeight;

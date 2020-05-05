@@ -50,4 +50,9 @@
     return _window;
 }
 
+- (CGFloat)titlebarHeight {
+    CGFloat contentHeight = [self contentRectForFrameRect: self.frame].size.height;
+    return self.frame.size.height - contentHeight;
+}
+
 @end

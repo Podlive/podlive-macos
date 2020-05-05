@@ -25,7 +25,6 @@
 }
 
 - (void)setupUI {
-    self.backgroundColor = NSColor.greenColor;
 }
 
 - (void)setupNotifications {

@@ -4,20 +4,21 @@
 //
 
 #import "CCNSearchViewController.h"
+#import "CCNSearchViewController_Private.h"
 #import "CCNSearchView.h"
 
 #import "NSView+Podlive.h"
 
-const CGFloat kCCNSearchViewHeight = 42.0;
+const CGFloat kCCNSearchViewHeight = 56.0;
 
 @interface CCNSearchViewController ()
-
 @end
 
 @implementation CCNSearchViewController
 
 - (void)loadView {
     self.view = CCNSearchView.new;
+    self.isVisible = NO;
 }
 
 - (void)viewDidLoad {

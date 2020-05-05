@@ -295,6 +295,7 @@
 		FDE9F01F1E79E18400D27FF6 /* CCNPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerView.h; sourceTree = "<group>"; };
 		FDE9F0201E79E18400D27FF6 /* CCNPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerView.m; sourceTree = "<group>"; };
 		FDEB0BFB1E7A86A20008EDD3 /* CCNPlayerView_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerView_Private.h; sourceTree = "<group>"; };
+		FDEE15722410337700A414AB /* CCNSearchViewController_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNSearchViewController_Private.h; sourceTree = "<group>"; };
 		FDEFB89C1E858EB9000AD128 /* CCNUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNUserManager.h; sourceTree = "<group>"; };
 		FDEFB89D1E858EB9000AD128 /* CCNUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNUserManager.m; sourceTree = "<group>"; };
 		FDF642B51E5CCD260005EA72 /* CCNApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNApplicationViewController.h; sourceTree = "<group>"; };
@@ -439,6 +440,7 @@
 			children = (
 				FD3476F4240EFF0C006A19F6 /* CCNSearchView.h */,
 				FD3476F5240EFF0C006A19F6 /* CCNSearchView.m */,
+				FDEE15722410337700A414AB /* CCNSearchViewController_Private.h */,
 				FD3476F1240EF8D1006A19F6 /* CCNSearchViewController.h */,
 				FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */,
 			);

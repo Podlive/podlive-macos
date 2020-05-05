@@ -49,10 +49,10 @@
     if (actionHandler) {
         self.target = self;
         self.action = @selector(handleButtonAction:);
-        objc_setAssociatedObject(self, @selector(actionHandler), actionHandler, OBJC_ASSOCIATION_COPY_NONATOMIC);
+        objc_setAssociatedObject(self, @selector(actionHandler), actionHandler, OBJC_ASSOCIATION_COPY);
     }
     else {
-        objc_setAssociatedObject(self, @selector(actionHandler), NULL, OBJC_ASSOCIATION_COPY_NONATOMIC);
+        objc_setAssociatedObject(self, @selector(actionHandler), NULL, OBJC_ASSOCIATION_COPY);
     }
 }
 

@@ -13,8 +13,7 @@
 
 
 
-typedef enum : NSInteger
-{
+typedef enum : NSInteger {
     PodliveGUIKitResizingBehaviorAspectFit, //!< The content is proportionally resized to fit into the target rectangle.
     PodliveGUIKitResizingBehaviorAspectFill, //!< The content is proportionally resized to completely fill the target rectangle.
     PodliveGUIKitResizingBehaviorStretch, //!< The content is stretched to match the entire target rectangle.

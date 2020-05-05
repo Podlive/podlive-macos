@@ -94,6 +94,8 @@ NSString *const CCNPlayerDidPausePlayingNotification       = @"CCNPlayerDidPause
 NSString *const CCNPlayerDidStopPlayingNotification        = @"CCNPlayerDidStopPlayingNotification";
 NSString *const CCNPlayerDidResumePlayingNotification      = @"CCNPlayerDidResumePlayingNotification";
 NSString *const CCNPlayerErrorPlayingNotification          = @"CCNPlayerErrorPlayingNotification";
+NSString *const CCNSearchViewShouldAppearNotification      = @"CCNSearchViewShouldAppearNotification";
+NSString *const CCNSearchViewShouldDisappearNotification   = @"CCNSearchViewShouldDisappearNotification";
 
 
 

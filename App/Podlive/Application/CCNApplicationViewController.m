@@ -10,6 +10,7 @@
 #import "CCNUserInfoViewController.h"
 #import "CCNAuthViewController.h"
 #import "CCNSearchViewController.h"
+#import "CCNSearchViewController_Private.h"
 #import "CCNLoginLogoutButton.h"
 
 #import "CCNPreferencesWindowController.h"
@@ -24,6 +25,7 @@
 #import "NSImage+Podlive.h"
 #import "NSImage+Tools.h"
 #import "NSViewController+Podlive.h"
+#import "NSWindow+Podlive.h"
 
 #import "PFUser+Podlive.h"
 
@@ -82,7 +84,6 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     self.gridViewController = CCNChannelGridViewController.viewController;
     [self.view addSubview:self.gridViewController.view];
 
-
     self.playerViewController = CCNPlayerViewController.viewController;
     [self addChildViewController:self.playerViewController];
     [self.view addSubview:self.playerViewController.view];
@@ -101,6 +102,8 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     [nc addObserver:self selector:@selector(handleChannelSubscriptionUpdatedNotification:)  name:CCNChannelSubscriptionUpdatedNotification  object:nil];
     [nc addObserver:self selector:@selector(handlePlayerDidStartPlayingNotification:)       name:CCNPlayerDidStartPlayingNotification       object:nil];
     [nc addObserver:self selector:@selector(handlePlayerDidStopPlayingNotification:)        name:CCNPlayerDidStopPlayingNotification        object:nil];
+    [nc addObserver:self selector:@selector(handleSearchViewShouldAppearNotification:)      name:CCNSearchViewShouldAppearNotification      object:nil];
+    [nc addObserver:self selector:@selector(handleSearchViewShouldDisappearNotification:)   name:CCNSearchViewShouldDisappearNotification   object:nil];
 }
 
 // MARK: - Auto Layout
@@ -112,8 +115,8 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     }
 
     if (!self.searchViewTopConstraint) {
-        self.searchViewTopConstraint = [self.searchViewController.view.topAnchor constraintEqualToAnchor:self.searchViewController.view.superview.topAnchor];
-        self.searchViewTopConstraint.constant = kCCNSearchViewHeight;
+        self.searchViewTopConstraint = [self.searchViewController.view.topAnchor constraintEqualToAnchor:self.gridViewController.view.topAnchor];
+        self.searchViewTopConstraint.constant = -kCCNSearchViewHeight;
     }
 
     [NSLayoutConstraint activateConstraints:@[
@@ -121,12 +124,17 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
         [self.gridViewController.view.leftAnchor constraintEqualToAnchor:self.gridViewController.view.superview.leftAnchor],
         [self.gridViewController.view.rightAnchor constraintEqualToAnchor:self.gridViewController.view.superview.rightAnchor],
         [self.gridViewController.view.bottomAnchor constraintEqualToAnchor:self.gridViewController.view.superview.bottomAnchor],
-
+        
         [self.playerViewController.view.leftAnchor constraintEqualToAnchor:self.playerViewController.view.superview.leftAnchor],
         [self.playerViewController.view.rightAnchor constraintEqualToAnchor:self.playerViewController.view.superview.rightAnchor],
         [self.playerViewController.view.heightAnchor constraintEqualToConstant:kCCNPlayerViewHeight],
+        
+        [self.searchViewController.view.leftAnchor constraintEqualToAnchor:self.searchViewController.view.superview.leftAnchor],
+        [self.searchViewController.view.rightAnchor constraintEqualToAnchor:self.searchViewController.view.superview.rightAnchor],
+        [self.searchViewController.view.heightAnchor constraintEqualToConstant:kCCNSearchViewHeight],
 
-        self.playerViewBottomConstraint
+        self.playerViewBottomConstraint,
+        self.searchViewTopConstraint
     ]];
 }
 
@@ -299,7 +307,7 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     @weakify(self);
     [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
         context.duration = 0.25;
-        context.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+        context.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 
         @strongify(self);
         self.playerViewBottomConstraint.animator.constant = newConstant;
@@ -315,13 +323,43 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     @weakify(self);
     [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
         context.duration = 0.25;
-        context.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        context.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 
         @strongify(self);
         self.playerViewBottomConstraint.animator.constant = kCCNPlayerViewHeight;
         self.gridViewController.scrollView.animator.contentInsets = contentInsets;
 
     } completionHandler:nil];
+}
+
+- (void)handleSearchViewShouldAppearNotification:(NSNotification *)note {
+    if (self.searchViewController.isVisible) {
+        return;
+    }
+    self.searchViewController.isVisible = YES;
+
+    let newConstant = (self.searchViewTopConstraint.constant > 0 ? -kCCNSearchViewHeight : 0);
+    var contentInsets = self.gridViewController.scrollView.contentInsets;
+    contentInsets.top = kCCNSearchViewHeight;
+    
+//    self.window = [NSWindow mainWindowWithContentViewController:self.appViewController];
+    double titleBarHeight = self.view.window.titlebarHeight;
+    NSLog(@"titleBarHeight: %f", titleBarHeight);
+
+    @weakify(self);
+    [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+        context.duration = 0.25;
+        context.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+
+        @strongify(self);
+        self.searchViewTopConstraint.animator.constant = newConstant;
+        self.gridViewController.scrollView.animator.contentInsets = contentInsets;
+
+    } completionHandler:nil];
+}
+
+- (void)handleSearchViewShouldDisappearNotification:(NSNotification *)note {
+    CCNLogInfo(@"** Hide Search");
 }
 
 // MARK: - Actions
@@ -438,27 +476,6 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
         self.segmentedControl.selectedSegment = CCNChannelFilterCriteriaSubscribed;
         CCNChannelManager.sharedManager.channelFilterCriteria = self.segmentedControl.selectedSegment;
     }
-}
-
-- (void)populateSearch {
-    let newConstant = (self.searchViewTopConstraint.constant > 0 ? 0 : kCCNSearchViewHeight);
-    var contentInsets = self.gridViewController.scrollView.contentInsets;
-    contentInsets.top = kCCNSearchViewHeight;
-
-    @weakify(self);
-    [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
-        context.duration = 0.25;
-        context.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-
-        @strongify(self);
-        self.searchViewTopConstraint.animator.constant = newConstant;
-        self.gridViewController.scrollView.animator.contentInsets = contentInsets;
-
-    } completionHandler:nil];
-}
-
-- (void)dismissSearch {
-    CCNLogInfo(@"** Hide Search");
 }
 
 @end

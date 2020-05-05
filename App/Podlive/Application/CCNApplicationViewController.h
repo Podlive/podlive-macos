@@ -11,7 +11,4 @@
 - (void)showAvailablePodcasts;
 - (void)showSubscribedPodcasts;
 
-- (void)populateSearch;
-- (void)dismissSearch;
-
 @end

@@ -50,6 +50,8 @@ FOUNDATION_EXPORT NSString *const CCNPlayerDidPausePlayingNotification;     // n
 FOUNDATION_EXPORT NSString *const CCNPlayerDidStopPlayingNotification;      // notification object is nil, userInfo dictionary contains the stopped channel, identified with kChannelKeyPath
 FOUNDATION_EXPORT NSString *const CCNPlayerDidResumePlayingNotification;    // notification object is nil, userInfo dictionary contains the current playing channel, identified with kChannelKeyPath
 FOUNDATION_EXPORT NSString *const CCNPlayerErrorPlayingNotification;
+FOUNDATION_EXPORT NSString *const CCNSearchViewShouldAppearNotification;
+FOUNDATION_EXPORT NSString *const CCNSearchViewShouldDisappearNotification;
 
 typedef NS_ENUM(NSInteger, CCNPlayerVolumeLevelPersistenceBehaviour) {
     CCNPlayerVolumeLevelPersistenceBehaviourGlobal,

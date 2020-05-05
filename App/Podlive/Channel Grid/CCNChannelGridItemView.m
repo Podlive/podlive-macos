@@ -16,8 +16,6 @@
 #import "CCNPlayerViewController.h"
 #import "CCNPlayerPlayPauseButton.h"
 
-#import "CCNSearchViewController.h"
-
 #import "NSFont+Podlive.h"
 #import "NSView+Podlive.h"
 
@@ -117,8 +115,7 @@ static const CGFloat kLabelTopConstraintConstant = 2.0;
     
     // Search triggered: command+F
     if (NSEventModifierFlagCommand == flags && kVK_ANSI_F == keyCode) {
-        let appDelegate = (CCNApplicationDelegate *)NSApp.delegate;
-        [appDelegate.appViewController populateSearch];
+        [NSNotificationCenter.defaultCenter postNotificationName:CCNSearchViewShouldAppearNotification object:nil];
         return YES;
     }
     

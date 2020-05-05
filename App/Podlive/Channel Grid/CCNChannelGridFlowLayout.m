@@ -178,10 +178,10 @@ NSCollectionViewSupplementaryElementKind const CCNSelectedItemFrameKeyPath      
 
 - (void)_performAnimationForPush:(BOOL)push {
     self.pushAnimation = push;
-    self.animatableHeightValues = [NSBKeyframeAnimation calculatePositionValuesForFunction:(push ? AnimationTypeEaseOutCubic : AnimationTypeEaseInCubic)
+    self.animatableHeightValues = [NSBKeyframeAnimation calculatePositionValuesForFunction:(push ? AnimationTypeEaseOutBounce : AnimationTypeEaseInCubic)
                                                                                 startValue:kCollapsedHeight
                                                                                   endValue:kDetailViewExpandedHeight
-                                                                              withDuration:0.32];
+                                                                              withDuration:0.45];
     self.currentStep = (push ? 0 : self.animatableHeightValues.count-1);
 
     if (!self.animating)
