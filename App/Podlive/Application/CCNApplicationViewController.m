@@ -30,9 +30,6 @@
 #import "PFUser+Podlive.h"
 
 
-static NSString *const kCCNChannelFilterSegmentControlIdentifier = @"ChannelFilterSegmentControlIdentifier";
-static NSString *const kCCNToolbarLoginButtonIdentifier = @"ToolbarLoginButtonIdentifier";
-
 typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 
 @interface CCNApplicationViewController () <NSPopoverDelegate, NSToolbarDelegate, CCNUserInfoViewDelegate>
@@ -178,7 +175,7 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     
     dispatch_once(&_onceToken, ^{
         _segmentControlIdentifier = @[
-            NSToolbarSpaceItemIdentifier,
+            NSToolbarFlexibleSpaceItemIdentifier,
             kCCNChannelFilterSegmentControlIdentifier,
             NSToolbarFlexibleSpaceItemIdentifier,
             kCCNToolbarLoginButtonIdentifier,

@@ -98,7 +98,6 @@ NSString *const CCNSearchViewShouldAppearNotification      = @"CCNSearchViewShou
 NSString *const CCNSearchViewShouldDisappearNotification   = @"CCNSearchViewShouldDisappearNotification";
 
 
-
 // KVO KeyPath's
 NSString *const kChannelKeyPath                            = @"channel";
 NSString *const kChannelsKeyPath                           = @"channels";
@@ -112,3 +111,9 @@ NSString *const kUserInfoReplacedChannelKey                = @"replacedChannel";
 NSString *const kUserInfoChannelStateId                    = @"channelId";
 NSString *const kUserInfoChannelStateOld                   = @"oldState";
 NSString *const kUserInfoChannelStateNew                   = @"newState";
+
+
+// main windiw toolbar item identifiers
+NSString *const kCCNChannelFilterSegmentControlIdentifier = @"ChannelFilterSegmentControlIdentifier";
+NSString *const kCCNToolbarLoginButtonIdentifier = @"ToolbarLoginButtonIdentifier";
+

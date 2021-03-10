@@ -72,3 +72,8 @@ FOUNDATION_EXPORT NSString *const kUserInfoReplacedChannelKey;
 FOUNDATION_EXPORT NSString *const kUserInfoChannelStateId;
 FOUNDATION_EXPORT NSString *const kUserInfoChannelStateOld;
 FOUNDATION_EXPORT NSString *const kUserInfoChannelStateNew;
+
+
+// main windiw toolbar item identifiers
+FOUNDATION_EXPORT NSString *const kCCNChannelFilterSegmentControlIdentifier;
+FOUNDATION_EXPORT NSString *const kCCNToolbarLoginButtonIdentifier;

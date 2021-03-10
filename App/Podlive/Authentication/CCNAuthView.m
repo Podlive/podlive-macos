@@ -111,7 +111,7 @@
     authProgress.translatesAutoresizingMaskIntoConstraints = NO;
     authProgress.wantsLayer = YES;
     authProgress.indeterminate = YES;
-    authProgress.style = NSProgressIndicatorSpinningStyle;
+    authProgress.style = NSProgressIndicatorStyleSpinning;
     authProgress.displayedWhenStopped = NO;
     authProgress.frame = NSMakeRect(0, 0, 16, 16);
     authProgress.controlSize = NSControlSizeSmall;
@@ -245,7 +245,7 @@
     _button.wantsLayer = YES;
     _button.controlSize = NSControlSizeRegular;
     _button.font = [NSFont systemFontOfSize:NSFont.systemFontSize];
-    _button.state = NSOffState;
+    _button.state = NSControlStateValueOff;
 
     return _button;
 }

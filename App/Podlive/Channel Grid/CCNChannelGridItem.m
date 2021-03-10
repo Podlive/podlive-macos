@@ -214,8 +214,8 @@
 
         let controlView = CCNChannelGridItemControlView.new;
         controlView.channel = self.channel;
-        controlView.playPauseButton.state = NSOffState;
-        controlView.playPauseButton.state = (channelIsPlaying ? NSOnState : NSOffState);
+        controlView.playPauseButton.state = NSControlStateValueOff;
+        controlView.playPauseButton.state = (channelIsPlaying ? NSControlStateValueOn : NSControlStateValueOff);
         controlView.playPauseButton.actionHandler = ^(__kindof CCNBaseButton *actionButton) {
             @strongify(self);
             if ([self.delegate respondsToSelector:@selector(handlePlayPauseActionForGridItem:)]) {

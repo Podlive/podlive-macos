@@ -6,6 +6,7 @@
 #import "NSWindow+Podlive.h"
 #import "NSAppearance+Podlive.h"
 #import "NSApplication+Tools.h"
+#import "CCNConstants.h"
 
 @implementation NSWindow (Podlive)
 
@@ -41,6 +42,7 @@
     toolbar.displayMode = NSToolbarDisplayModeIconOnly;
     toolbar.delegate = contentViewController;
     toolbar.allowsUserCustomization = NO;
+    toolbar.centeredItemIdentifier = kCCNChannelFilterSegmentControlIdentifier;
 
     _window.toolbar = toolbar;
     _window.appearance = [NSAppearance appearanceNamed:NSAppearance.applicationAppearanceName];
