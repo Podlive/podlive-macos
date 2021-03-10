@@ -35,12 +35,13 @@ static NSString *const kCCNToolbarLoginButtonIdentifier = @"ToolbarLoginButtonId
 
 typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 
-@interface CCNApplicationViewController () <NSPopoverDelegate, CCNUserInfoViewDelegate>
+@interface CCNApplicationViewController () <NSPopoverDelegate, NSToolbarDelegate, CCNUserInfoViewDelegate>
 @property (nonatomic, strong) CCNPlayerViewController *playerViewController;
 @property (nonatomic, strong) NSLayoutConstraint *playerViewBottomConstraint;
 @property (nonatomic, strong) CCNChannelGridViewController *gridViewController;
 
-@property (nonatomic, readonly) NSArray<NSString *> *segmentControlIdentifier;
+@property (nonatomic, readonly) NSArray<NSString *> *defaultToolbarItemIdentifiers;
+@property (nonatomic, readonly) NSArray<NSString *> *selectableToolbarItemIdentifiers;
 @property (nonatomic, readonly) CCNPreferencesWindowController *preferences;
 
 @property (nonatomic, readonly) CCNLoginLogoutButton *authenticateButton;
@@ -171,20 +172,33 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     return _segmentedControl;
 }
 
-- (NSArray<NSString *> *)segmentControlIdentifier {
+- (NSArray<NSString *> *)defaultToolbarItemIdentifiers {
     static dispatch_once_t _onceToken;
     static NSArray<NSString *> *_segmentControlIdentifier = nil;
-
+    
     dispatch_once(&_onceToken, ^{
         _segmentControlIdentifier = @[
             NSToolbarSpaceItemIdentifier,
-            NSToolbarFlexibleSpaceItemIdentifier,
             kCCNChannelFilterSegmentControlIdentifier,
             NSToolbarFlexibleSpaceItemIdentifier,
             kCCNToolbarLoginButtonIdentifier,
         ];
     });
+    
+    return _segmentControlIdentifier;
+}
 
+- (NSArray<NSString *> *)selectableToolbarItemIdentifiers {
+    static dispatch_once_t _onceToken;
+    static NSArray<NSString *> *_segmentControlIdentifier = nil;
+    
+    dispatch_once(&_onceToken, ^{
+        _segmentControlIdentifier = @[
+            kCCNChannelFilterSegmentControlIdentifier,
+            kCCNToolbarLoginButtonIdentifier,
+        ];
+    });
+    
     return _segmentControlIdentifier;
 }
 
@@ -403,19 +417,15 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
 // MARK: - NSToolbarDelegate
 
 - (NSArray<NSString *> *)toolbarDefaultItemIdentifiers:(NSToolbar *)toolbar {
-    return self.segmentControlIdentifier;
+    return self.defaultToolbarItemIdentifiers;
 }
 
 - (NSArray<NSString *> *)toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar {
-    return self.segmentControlIdentifier;
+    return self.defaultToolbarItemIdentifiers;
 }
 
 - (NSArray<NSString *> *)toolbarSelectableItemIdentifiers:(NSToolbar *)toolbar {
-    return self.segmentControlIdentifier;
-}
-
-- (BOOL)validateToolbarItem:(NSToolbarItem *)toolbarItem {
-    return YES;
+    return self.selectableToolbarItemIdentifiers;
 }
 
 - (NSToolbarItem *)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag {

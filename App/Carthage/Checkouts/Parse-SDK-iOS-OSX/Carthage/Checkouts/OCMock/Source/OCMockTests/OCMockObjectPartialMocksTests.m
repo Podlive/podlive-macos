@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2013-2018 Erik Doernenburg and contributors
+ *  Copyright (c) 2013-2020 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -17,7 +17,6 @@
 #import <CoreData/CoreData.h>
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
-#import <objc/runtime.h>
 #import "TestClassWithCustomReferenceCounting.h"
 
 #if TARGET_OS_IPHONE
@@ -32,6 +31,7 @@
 @interface TestClassWithSimpleMethod : NSObject
 + (NSUInteger)initializeCallCount;
 - (NSString *)foo;
+- (void)bar:(id)someArgument;
 @end
 
 @implementation TestClassWithSimpleMethod
@@ -51,6 +51,48 @@ static NSUInteger initializeCallCount = 0;
 - (NSString *)foo
 {
     return @"Foo";
+}
+
+- (void)bar:(id)someArgument // maybe we should make it explicit that the arg is retainable
+{
+
+}
+
+@end
+
+@interface TestClassThatObservesFoo : NSObject
+{
+    @public
+    id observedObject;
+}
+@end
+
+@implementation TestClassThatObservesFoo
+
+- (instancetype)initWithObject:(id)object
+{
+    if((self = [super init]))
+        observedObject = object;
+    return self;
+}
+
+- (void)dealloc
+{
+    [self stopObserving];
+}
+
+- (void)startObserving
+{
+    [observedObject addObserver:self forKeyPath:@"foo" options:0 context:NULL];
+}
+
+- (void)stopObserving
+{
+    if(observedObject != nil)
+    {
+        [observedObject removeObserver:self forKeyPath:@"foo" context:NULL];
+        observedObject = nil;
+    }
 }
 
 @end
@@ -167,6 +209,13 @@ static NSUInteger initializeCallCount = 0;
 @end
 
 @implementation OCMockObjectPartialMocksTests
+
+- (void)testDescription
+{
+    TestClassWithSimpleMethod *object = [[TestClassWithSimpleMethod alloc] init];
+    id mock = [OCMockObject partialMockForObject:object];
+    XCTAssertEqualObjects([mock description], @"OCPartialMockObject(TestClassWithSimpleMethod)");
+}
 
 #pragma mark   Tests for stubbing with partial mocks
 
@@ -503,6 +552,20 @@ static NSUInteger initializeCallCount = 0;
 	XCTAssertEqualObjects(@"Foo", [realObject foo], @"Should have 'unstubbed' method.");
 }
 
+- (void)testArgumentsGetReleasedAfterStopMocking
+{
+    __weak id weakArgument;
+    TestClassWithSimpleMethod *realObject = [[TestClassWithSimpleMethod alloc] init];
+    id mock = OCMPartialMock(realObject);
+    @autoreleasepool {
+        NSObject *argument = [NSObject new];
+        weakArgument = argument;
+        [mock bar:argument];
+        [mock stopMocking];
+    }
+    XCTAssertNil(weakArgument);
+}
+
 
 #pragma mark   Tests for explicit forward to real object with partial mocks
 
@@ -581,5 +644,68 @@ static NSUInteger initializeCallCount = 0;
 	XCTAssertNoThrow([foo method1], @"Should have worked.");
 }
 
+
+#pragma mark	Tests for exception messages
+
+- (void)testVerifyFailureIncludesHintForPartialMockMethodsThatDontGetForwarderInstalled
+{
+	TestClassThatCallsSelf *realObject = [[TestClassThatCallsSelf alloc] init];
+	id mock = [OCMockObject partialMockForObject:realObject];
+	[realObject categoryMethod];
+    @try
+    {
+        [[mock verify] categoryMethod];
+        XCTFail(@"An exception should have been thrown.");
+    }
+    @catch(NSException *e)
+    {
+        XCTAssertTrue([[e reason] containsString:@"Adding a stub"]);
+    }
+}
+
+- (void)testDoesNotIncludeHintWhenMockIsNotPartialMock
+{
+	id mock = [OCMockObject niceMockForClass:[TestClassThatCallsSelf class]];
+	@try
+	{
+		[[mock verify] categoryMethod];
+		XCTFail(@"An exception should have been thrown.");
+	}
+	@catch(NSException *e)
+	{
+		XCTAssertFalse([[e reason] containsString:@"Adding a stub"]);
+	}
+
+}
+
+- (void)testDoesNotIncludeHintWhenStubbingIsNotGoingToHelp
+{
+    TestClassThatCallsSelf *realObject = [[TestClassThatCallsSelf alloc] init];
+    id mock = [OCMockObject partialMockForObject:realObject];
+    @try
+    {
+        [[mock verify] method2];
+        XCTFail(@"An exception should have been thrown.");
+
+    }
+    @catch(NSException *e)
+    {
+        XCTAssertFalse([[e reason] containsString:@"Adding a stub"]);
+    }
+}
+
+- (void)testThrowsExceptionWhenAttemptingToTearDownWrongClass
+{
+    TestClassWithSimpleMethod *realObject = [[TestClassWithSimpleMethod alloc] init];
+    TestClassThatObservesFoo *observer = [[TestClassThatObservesFoo alloc] initWithObject:realObject];
+    id mock = [OCMockObject partialMockForObject:realObject];
+    [observer startObserving];
+    
+    // If we invoked stopObserving here, then stopMocking would work; but we want to test the error case.
+    XCTAssertThrowsSpecificNamed([mock stopMocking], NSException, NSInvalidArgumentException);
+    
+    // Must reset the object here to avoid any attempt to remove the observer, which would fail.
+    observer->observedObject = nil;
+}
 
 @end

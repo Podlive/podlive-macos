@@ -5,7 +5,7 @@
 
 @class CCNSearchViewController;
 
-@interface CCNApplicationViewController : NSViewController  <NSWindowDelegate, NSToolbarDelegate>
+@interface CCNApplicationViewController : NSViewController  <NSWindowDelegate>
 
 - (void)showPreferences;
 - (void)showAvailablePodcasts;

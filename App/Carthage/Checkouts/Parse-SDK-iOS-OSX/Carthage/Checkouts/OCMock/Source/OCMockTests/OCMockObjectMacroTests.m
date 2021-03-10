@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2014-2018 Erik Doernenburg and contributors
+ *  Copyright (c) 2014-2020 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -49,6 +49,22 @@
 }
 
 @end
+
+@interface TestClassWithClassReturnMethod : NSObject
+
+- (Class)method;
+
+@end
+
+@implementation TestClassWithClassReturnMethod
+
+- (Class)method
+{
+    return [self class];
+}
+
+@end
+
 
 
 // implemented in OCMockObjectClassMethodMockingTests
@@ -177,11 +193,22 @@
 
 - (void)testSetsUpStubReturningNilForIdReturnType
 {
-    id mock = OCMClassMock([NSString class]);
+    id mock = OCMPartialMock([NSArray arrayWithObject:@"Foo"]);
 
-    OCMStub([mock lowercaseString]).andReturn(nil);
+    OCMStub([mock lastObject]).andReturn(nil);
+    XCTAssertNil([mock lastObject], @"Should have returned stubbed value");
+}
 
-    XCTAssertNil([mock lowercaseString], @"Should have returned stubbed value");
+- (void)testSetsUpStubReturningNilForClassReturnType
+{
+    id mock = OCMPartialMock([[TestClassWithClassReturnMethod alloc] init]);
+
+    OCMStub([mock method]).andReturn(Nil);
+    XCTAssertNil([mock method], @"Should have returned stubbed value");
+
+    // sometimes nil is used where Nil should be used
+    OCMStub([mock method]).andReturn(nil);
+    XCTAssertNil([mock method], @"Should have returned stubbed value");
 }
 
 - (void)testSetsUpExceptionThrowing
@@ -291,6 +318,11 @@
     XCTAssertThrows([mock verify], @"Should have complained about rejected method being invoked");
 }
 
+- (void)testThrowsWhenTryingToAddActionToReject
+{
+    id mock = OCMClassMock([TestClassForMacroTesting class]);
+    XCTAssertThrows(OCMReject([mock stringValue]).andReturn(@"Foo"));
+}
 
 - (void)testShouldNotReportErrorWhenMethodWasInvoked
 {
@@ -327,9 +359,67 @@
     // have not found a way to report the error; it seems we must throw an
     // exception to get out of the forwarding machinery
     XCTAssertThrowsSpecificNamed(OCMVerify([mock arrayByAddingObject:@"foo"]),
-                    NSException,
-                    NSInvalidArgumentException,
-                    @"should throw NSInvalidArgumentException exception");
+            NSException, NSInvalidArgumentException, @"should throw NSInvalidArgumentException exception");
+}
+
+
+- (void)testShouldThrowExceptionWhenNotUsingMockInMacroThatRequiresMock
+{
+    id realObject = [NSMutableArray array];
+
+    XCTAssertThrowsSpecificNamed(OCMStub([realObject addObject:@"foo"]), NSException, NSInternalInconsistencyException);
+    XCTAssertThrowsSpecificNamed(OCMExpect([realObject addObject:@"foo"]), NSException, NSInternalInconsistencyException);
+    XCTAssertThrowsSpecificNamed(OCMReject([realObject addObject:@"foo"]), NSException, NSInternalInconsistencyException);
+    XCTAssertThrowsSpecificNamed(OCMVerify([realObject addObject:@"foo"]), NSException, NSInternalInconsistencyException);
+}
+
+- (void)testShouldHintAtPossibleReasonWhenNotUsingMockInMacroThatRequiresMock
+{
+    @try
+	{
+        id realObject = [NSMutableArray array];
+		OCMStub([realObject addObject:@"foo"]);
+	}
+	@catch (NSException *e)
+	{
+		XCTAssertTrue([[e reason] containsString:@"The receiver is not a mock object."]);
+	}
+}
+
+- (void)testShouldThrowExceptionWhenMockingMethodThatCannotBeMocked
+{
+    id mock = OCMClassMock([NSString class]);
+
+    XCTAssertThrowsSpecificNamed(OCMStub([mock description]), NSException, NSInternalInconsistencyException);
+    XCTAssertThrowsSpecificNamed(OCMExpect([mock description]), NSException, NSInternalInconsistencyException);
+    XCTAssertThrowsSpecificNamed(OCMReject([mock description]), NSException, NSInternalInconsistencyException);
+    XCTAssertThrowsSpecificNamed(OCMVerify([mock description]), NSException, NSInternalInconsistencyException);
+}
+
+- (void)testShouldHintAtPossibleReasonWhenMockingMethodThatCannotBeMocked
+{
+	@try
+	{
+        id mock = OCMClassMock([NSString class]);
+		OCMStub([mock description]);
+	}
+	@catch (NSException *e)
+	{
+		XCTAssertTrue([[e reason] containsString:@"The selector conflicts with a selector implemented by OCMStubRecorder/OCMExpectationRecorder."]);
+	}
+}
+
+- (void)testShouldHintAtPossibleReasonWhenVerifyingMethodThatCannotBeMocked
+{
+    @try
+    {
+        id mock = OCMClassMock([NSString class]);
+        OCMVerify([mock description]);
+    }
+    @catch (NSException *e)
+    {
+        XCTAssertTrue([[e reason] containsString:@"The selector conflicts with a selector implemented by OCMVerifier."]);
+    }
 }
 
 
@@ -394,8 +484,104 @@
 - (void)testCanUseMacroToStubMethodWithDecimalReturnValue
 {
     id mock = OCMClassMock([TestClassWithDecimalReturnMethod class]);
+
     OCMStub([mock method]).andReturn([NSDecimalNumber decimalNumberWithDecimal:[@0 decimalValue]]);
+
     XCTAssertEqualObjects([mock method], [NSDecimalNumber decimalNumberWithDecimal:[@0 decimalValue]]);
+}
+
+
+- (void)testCanUseMacroToStubMethodWithAnyNonObjectArgument
+{
+    id mock = OCMStrictClassMock([NSString class]);
+
+    OCMStub([mock commonPrefixWithString:@"foo" options:0]).ignoringNonObjectArgs();
+
+    XCTAssertNoThrow([mock commonPrefixWithString:@"foo" options:NSCaseInsensitiveSearch]);
+}
+
+- (void)testCanUseMacroToStubMethodWithAnyNonObjectArgumentChainedWithOCMStubRecorder
+{
+    id mock = OCMClassMock([NSString class]);
+
+    OCMStub([mock commonPrefixWithString:@"foo" options:0]).ignoringNonObjectArgs().andReturn(@"f");
+
+    XCTAssertEqualObjects(@"f", [mock commonPrefixWithString:@"foo" options:NSCaseInsensitiveSearch]);
+}
+
+- (void)testReturnsCorrectObjectFromInitMethodCalledOnRecorderInsideMacro
+{
+    // Because of the way the macros work, you can call recorder methods on the mock and they will
+    // work correctly. Technically these are a mix of old syntax and new.
+    //
+    // There are no assertions here, the tests will crash with an incorrect implementation.
+    //
+    // Note that the andReturn:nil has to be first because this is the stub that will actually be
+    // used and we're now making sure that a return value is specified for init methods.
+    id mock = OCMClassMock([NSString class]);
+    OCMStub([[mock andReturn:nil] initWithString:OCMOCK_ANY]);
+    OCMStub([[mock ignoringNonObjectArgs] initWithString:OCMOCK_ANY]);
+    OCMStub([[mock andReturnValue:nil] initWithString:OCMOCK_ANY]);
+    OCMStub([[mock andThrow:nil] initWithString:OCMOCK_ANY]);
+    OCMStub([[mock andPost:nil] initWithString:OCMOCK_ANY]);
+    OCMStub([[mock andCall:nil onObject:nil] initWithString:OCMOCK_ANY]);
+    OCMStub([[mock andDo:nil] initWithString:OCMOCK_ANY]);
+    OCMStub([[mock andForwardToRealObject] initWithString:OCMOCK_ANY]);
+    OCMExpect([[mock never] initWithString:OCMOCK_ANY]);
+    __unused id value = [mock initWithString:@"hello"];
+    _OCMVerify([(id)[mock withQuantifier:nil] initWithString:OCMOCK_ANY]);
+
+    // Test multiple levels of recorder methods.
+    OCMStub([[[[mock ignoringNonObjectArgs] andReturn:nil] andThrow:nil] initWithString:OCMOCK_ANY]);
+}
+
+- (void)testStubMacroPassesExceptionThrough
+{
+    id mock = OCMClassMock([TestClassForMacroTesting class]);
+    @try
+    {
+        OCMStub([mock init]).andReturn(mock);
+        XCTFail(@"An exception should have been thrown.");
+    }
+    @catch(NSException *exception)
+    {
+        XCTAssertEqualObjects(exception.name, NSInternalInconsistencyException);
+        XCTAssertTrue([exception.reason containsString:@"Method init invoked twice on stub recorder"]);
+    }
+}
+
+- (void)testExpectMacroPassesExceptionThrough
+{
+    id mock = OCMClassMock([TestClassForMacroTesting class]);
+    @try
+    {
+        OCMExpect([mock init]).andReturn(mock);
+        XCTFail(@"An exception should have been thrown.");
+    }
+    @catch(NSException *exception)
+    {
+        XCTAssertEqualObjects(exception.name, NSInternalInconsistencyException);
+        XCTAssertTrue([exception.reason containsString:@"Method init invoked twice on stub recorder"]);
+    }
+}
+
+- (void)testVerifyMacroPassExceptionsThrough
+{
+    id mock = OCMClassMock([TestClassForMacroTesting class]);
+    @try
+    {
+        // The -Wunused-value is a workaround for https://bugs.llvm.org/show_bug.cgi?id=45245
+        _Pragma("clang diagnostic push")
+        _Pragma("clang diagnostic ignored \"-Wunused-value\"")
+        OCMVerify([mock init]);
+        _Pragma("clang diagnostic pop")
+        XCTFail(@"An exception should have been thrown.");
+    }
+    @catch(NSException *exception)
+    {
+        XCTAssertEqualObjects(exception.name, NSInternalInconsistencyException);
+        XCTAssertTrue([exception.reason containsString:@"Method init invoked twice on verifier"]);
+    }
 }
 
 @end

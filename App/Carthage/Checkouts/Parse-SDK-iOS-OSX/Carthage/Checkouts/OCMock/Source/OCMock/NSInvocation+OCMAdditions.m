@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2006-2018 Erik Doernenburg and contributors
+ *  Copyright (c) 2006-2020 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -88,14 +88,28 @@ static NSString *const OCMRetainedObjectArgumentsKey = @"OCMRetainedObjectArgume
             {
                 if(OCMIsBlockType(argumentType))
                 {
-                    // block types need to be copied in case they're stack blocks
-                    id blockArgument = [argument copy];
-                    [retainedArguments addObject:blockArgument];
-                    [blockArgument release];
+                    // Block types need to be copied because they could be stack blocks.
+                    // However, non-escaping blocks have a lifetime that is stack-based and they
+                    // treat copy/release as a no-op. For details see:
+                    // https://reviews.llvm.org/rGdbfa453e4138bb977644929c69d1c71e5e8b4bee
+                    // If we keep a reference to a non-escaping block in retainedArguments, it
+                    // will end up as dangling pointer, resulting in a crash later.
+                    if(OCMIsNonEscapingBlock(argument) == NO)
+                    {
+                        id blockArgument = [argument copy];
+                        [retainedArguments addObject:blockArgument];
+                        [blockArgument release];
+                    }
+                }
+                else if(OCMIsClassType(argumentType) && object_isClass(argument))
+                {
+                    // The argument's type is class and the passed argument is a class. In this
+                    // case do not retain the argument. Note: Even though the type is class the
+                    // argument could be a non-class, e.g. an instance of OCMArg.
                 }
                 else
                 {
-                    [retainedArguments addObject:argument];
+                	[retainedArguments addObject:argument];
                 }
             }
         }
@@ -110,9 +124,13 @@ static NSString *const OCMRetainedObjectArgumentsKey = @"OCMRetainedObjectArgume
         {
             if(OCMIsBlockType(returnType))
             {
-                id blockReturnValue = [returnValue copy];
-                [retainedArguments addObject:blockReturnValue];
-                [blockReturnValue release];
+                // See above for an explanation
+                if(OCMIsNonEscapingBlock(returnValue) == NO)
+                {
+                    id blockReturnValue = [returnValue copy];
+                    [retainedArguments addObject:blockReturnValue];
+                    [blockReturnValue release];
+                }
             }
             else
             {
@@ -527,5 +545,60 @@ static NSString *const OCMRetainedObjectArgumentsKey = @"OCMRetainedObjectArgume
 	[self getArgument:&selectorValue atIndex:anInt];
 	return [NSString stringWithFormat:@"@selector(%@)", NSStringFromSelector(selectorValue)];
 }
+
+
+- (BOOL)isMethodFamily:(NSString *)family
+{
+	// Definitions here: https://clang.llvm.org/docs/AutomaticReferenceCounting.html#method-families
+
+	NSMethodSignature *signature = [self methodSignature];
+	if(OCMIsObjectType(signature.methodReturnType) == NO)
+	{
+		return NO;
+	}
+
+	NSString *selString = NSStringFromSelector([self selector]);
+	NSRange underscoreRange = [selString rangeOfString:@"^_*" options:NSRegularExpressionSearch];
+	selString = [selString substringFromIndex:NSMaxRange(underscoreRange)];
+
+	if([selString hasPrefix:family] == NO)
+	{
+		return NO;
+	}
+	NSUInteger familyLength = [family length];
+	if(([selString length] > familyLength) &&
+			([[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:[selString characterAtIndex:familyLength]]))
+	{
+		return NO;
+	}
+	return YES;
+}
+
+
+- (BOOL)methodIsInInitFamily
+{
+	return [self isMethodFamily:@"init"];
+}
+
+- (BOOL)methodIsInAllocFamily
+{
+	return [self isMethodFamily:@"alloc"];
+}
+
+- (BOOL)methodIsInCopyFamily
+{
+	return [self isMethodFamily:@"copy"];
+}
+
+- (BOOL)methodIsInMutableCopyFamily
+{
+	return [self isMethodFamily:@"mutableCopy"];
+}
+
+- (BOOL)methodIsInNewFamily
+{
+	return [self isMethodFamily:@"new"];
+}
+
 
 @end

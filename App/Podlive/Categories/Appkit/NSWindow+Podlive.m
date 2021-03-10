@@ -38,7 +38,7 @@
     }
 
     let toolbar = [[NSToolbar alloc] initWithIdentifier:@"mainToolBar"];
-    toolbar.displayMode = NSToolbarDisplayModeDefault;
+    toolbar.displayMode = NSToolbarDisplayModeIconOnly;
     toolbar.delegate = contentViewController;
     toolbar.allowsUserCustomization = NO;
 

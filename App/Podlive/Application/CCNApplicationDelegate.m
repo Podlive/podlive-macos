@@ -66,8 +66,8 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     
-    let isAnonynousUser = [PFAnonymousUtils isLinkedWithUser:PFUser.currentUser];
-    if (isAnonynousUser) {
+    let isAnonymousUser = [PFAnonymousUtils isLinkedWithUser:PFUser.currentUser];
+    if (isAnonymousUser) {
         // if the user isn't logged in (anonymous) we have to keep the
         // last selected filter criteria in user defaults set to CCNGridViewFilterCriteriaAvailable
         CCNChannelManager.sharedManager.channelFilterCriteria = CCNChannelFilterCriteriaAvailable;
