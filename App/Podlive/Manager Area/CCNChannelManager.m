@@ -130,7 +130,7 @@ NSString *const CCNDidChangeChannelFilterCriteriaNotification = @"CCNDidChangeCh
         [_query orderByDescending:@"followerCount"];
         [_query addAscendingOrder:@"name"];
         // hide channels with no activity in the last months
-        NSDate *pastDate = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitMonth value:-6 toDate:[NSDate date] options: nil];
+        NSDate *pastDate = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitMonth value:-6 toDate:[NSDate date] options: 0];
         [_query whereKey:@"lastActivityAt" greaterThan:pastDate];
         _query.cachePolicy = kPFCachePolicyNetworkOnly;
         _query.limit = 1000;
