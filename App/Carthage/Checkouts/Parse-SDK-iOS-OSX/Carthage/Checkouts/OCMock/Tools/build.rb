@@ -13,7 +13,7 @@ class Builder
       copySource
       buildModules
       signFrameworks "erik@doernenburg.com"
-      createPackage "ocmock-3.4.3.dmg", "OCMock 3.4.3"
+      createPackage "ocmock-3.7.dmg", "OCMock 3.7"
       sanityCheck
       openPackageDir
     end
@@ -43,45 +43,54 @@ class Builder
         @worker.chdir("#{@env.sourcedir}/Source")
         
         @worker.run("xcodebuild -project OCMock.xcodeproj -target OCMock OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
-        osxproductdir = "#{@env.productdir}/OSX"                                        
+        osxproductdir = "#{@env.productdir}/macOS"                                        
         @worker.run("mkdir -p #{osxproductdir}")
         @worker.run("cp -R #{@env.symroot}/Release/OCMock.framework #{osxproductdir}")
-        
-        @worker.run("xcodebuild -project OCMock.xcodeproj -target OCMockLib -sdk iphoneos12.1 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
-        @worker.run("xcodebuild -project OCMock.xcodeproj -target OCMockLib -sdk iphonesimulator12.1 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
+
+        @worker.run("xcodebuild -project OCMock.xcodeproj -target OCMockLib -sdk iphoneos13.5 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
+        @worker.run("xcodebuild -project OCMock.xcodeproj -target OCMockLib -sdk iphonesimulator13.5 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
         ioslibproductdir = "#{@env.productdir}/iOS\\ library"                                           
         @worker.run("mkdir -p #{ioslibproductdir}")
         @worker.run("cp -R #{@env.symroot}/Release-iphoneos/OCMock #{ioslibproductdir}")
         @worker.run("lipo -create -output #{ioslibproductdir}/libOCMock.a #{@env.symroot}/Release-iphoneos/libOCMock.a #{@env.symroot}/Release-iphonesimulator/libOCMock.a")
         
-        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock iOS' -sdk iphoneos12.1 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
-        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock iOS' -sdk iphonesimulator12.1 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
+        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock iOS' -sdk iphoneos13.5 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
+        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock iOS' -sdk iphonesimulator13.5 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
         iosproductdir = "#{@env.productdir}/iOS\\ framework"                                           
         @worker.run("mkdir -p #{iosproductdir}")
         @worker.run("cp -R #{@env.symroot}/Release-iphoneos/OCMock.framework #{iosproductdir}")
         @worker.run("lipo -create -output #{iosproductdir}/OCMock.framework/OCMock #{@env.symroot}/Release-iphoneos/OCMock.framework/OCMock #{@env.symroot}/Release-iphonesimulator/OCMock.framework/OCMock")
  
-        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock tvOS' -sdk appletvos12.1 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
-        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock tvOS' -sdk appletvsimulator12.1 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
+        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock tvOS' -sdk appletvos13.4 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
+        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock tvOS' -sdk appletvsimulator13.4 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
         tvosproductdir = "#{@env.productdir}/tvOS"                                           
         @worker.run("mkdir -p #{tvosproductdir}")
         @worker.run("cp -R #{@env.symroot}/Release-appletvos/OCMock.framework #{tvosproductdir}")
         @worker.run("lipo -create -output #{tvosproductdir}/OCMock.framework/OCMock #{@env.symroot}/Release-appletvos/OCMock.framework/OCMock #{@env.symroot}/Release-appletvsimulator/OCMock.framework/OCMock")
+
+        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock watchOS' -sdk watchos6.2 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
+        @worker.run("xcodebuild -project OCMock.xcodeproj -target 'OCMock watchOS' -sdk watchsimulator6.2 OBJROOT=#{@env.objroot} SYMROOT=#{@env.symroot}")
+        watchosproductdir = "#{@env.productdir}/watchOS"                                           
+        @worker.run("mkdir -p #{watchosproductdir}")
+        @worker.run("cp -R #{@env.symroot}/Release-watchos/OCMock.framework #{watchosproductdir}")
+        @worker.run("lipo -create -output #{watchosproductdir}/OCMock.framework/OCMock #{@env.symroot}/Release-watchos/OCMock.framework/OCMock #{@env.symroot}/Release-iphonesimulator/OCMock.framework/OCMock")
     end
     
     def signFrameworks(identity)
-        osxproductdir = "#{@env.productdir}/OSX"                                        
-        iosproductdir = "#{@env.productdir}/iOS\\ framework"                                           
-        tvosproductdir = "#{@env.productdir}/tvOS"                                           
+        osxproductdir = "#{@env.productdir}/macOS"
+        iosproductdir = "#{@env.productdir}/iOS\\ framework"
+        tvosproductdir = "#{@env.productdir}/tvOS"
+        watchosproductdir = "#{@env.productdir}/watchOS"
 
-        @worker.run("codesign -s 'Mac Developer: #{identity}' #{osxproductdir}/OCMock.framework")
-        @worker.run("codesign -f -s 'iPhone Developer: #{identity}' #{iosproductdir}/OCMock.framework")
-        @worker.run("codesign -f -s 'iPhone Developer: #{identity}' #{tvosproductdir}/OCMock.framework")
+        @worker.run("codesign -f -s 'Apple Development: #{identity}' #{osxproductdir}/OCMock.framework")
+        @worker.run("codesign -f -s 'Apple Development: #{identity}' #{iosproductdir}/OCMock.framework")
+        @worker.run("codesign -f -s 'Apple Development: #{identity}' #{tvosproductdir}/OCMock.framework")
+        @worker.run("codesign -f -s 'Apple Development: #{identity}' #{watchosproductdir}/OCMock.framework")
     end
 
     def createPackage(packagename, volumename)    
         @worker.chdir(@env.packagedir)  
-        @worker.run("hdiutil create -size 5m temp.dmg -layout NONE") 
+        @worker.run("hdiutil create -size 7m temp.dmg -layout NONE") 
         disk_id = nil
         @worker.run("hdid -nomount temp.dmg") { |hdid| disk_id = hdid.readline.split[0] }
         @worker.run("newfs_hfs -v '#{volumename}' #{disk_id}")
@@ -90,7 +99,6 @@ class Builder
         @worker.run("cp -R #{@env.productdir}/* '/Volumes/#{volumename}'")
         @worker.run("hdiutil eject #{disk_id}")
         @worker.run("hdiutil convert -format UDZO temp.dmg -o #{@env.packagedir}/#{packagename} -imagekey zlib-level=9")
-        @worker.run("hdiutil internet-enable -yes #{@env.packagedir}/#{packagename}")
         @worker.run("rm temp.dmg")
     end           
     
@@ -99,26 +107,28 @@ class Builder
     end
     
     def sanityCheck
-        osxproductdir = "#{@env.productdir}/OSX"                                        
+        osxproductdir = "#{@env.productdir}/macOS"                                        
         ioslibproductdir = "#{@env.productdir}/iOS\\ library"                                           
         iosproductdir = "#{@env.productdir}/iOS\\ framework"                                           
         tvosproductdir = "#{@env.productdir}/tvOS"                                           
+        watchosproductdir = "#{@env.productdir}/watchOS"                                           
 
-        @worker.run("lipo -info #{osxproductdir}/OCMock.framework/OCMock")
-        puts "^^ 1/4 binaries; architectures should be x86_64\n\n"
-        @worker.run("lipo -info #{ioslibproductdir}/libOCMock.a")
-        puts "^^ 2/4 binaries; architectures should be armv7 i386 x86_64 arm64\n\n"
-        @worker.run("lipo -info #{iosproductdir}/OCMock.framework/OCMock")
-        puts "^^ 3/4 binaries; architectures should be i386 x86_64 armv7 arm64\n\n"
-        @worker.run("lipo -info #{tvosproductdir}/OCMock.framework/OCMock")
-        puts "^^ 4/4 binaries; architectures should be x86_64 arm64\n\n"
-        
+        archs = nil
+        @worker.run("lipo -info #{osxproductdir}/OCMock.framework/OCMock") { |lipo| archs = /re: (.*)/.match(lipo.readline)[1].strip() }
+        puts "^^ wrong architecture for macOS framework; found: #{archs}\n\n" unless archs == "x86_64"
+        @worker.run("lipo -info #{ioslibproductdir}/libOCMock.a") { |lipo| archs = /re: (.*)/.match(lipo.readline)[1].strip() }
+        puts "^^ wrong architectures for iOS library; found: #{archs}\n\n" unless archs == "armv7 i386 x86_64 arm64"
+        @worker.run("lipo -info #{iosproductdir}/OCMock.framework/OCMock")  { |lipo| archs = /re: (.*)/.match(lipo.readline)[1].strip() }
+        puts "^^ wrong architectures for iOS framework; found: #{archs}\n\n" unless archs == "x86_64 i386 armv7 arm64"
+        @worker.run("lipo -info #{tvosproductdir}/OCMock.framework/OCMock")  { |lipo| archs = /re: (.*)/.match(lipo.readline)[1].strip() }
+        puts "^^ wrong architectures for tvOS framework; found: #{archs}\n\n" unless archs == "x86_64 arm64"
+        @worker.run("lipo -info #{watchosproductdir}/OCMock.framework/OCMock")  { |lipo| archs = /re: (.*)/.match(lipo.readline)[1].strip() }
+        puts "^^ wrong architectures for watchOS framework; found: #{archs}\n\n" unless archs == "x86_64 i386 armv7k arm64_32"
+
         @worker.run("codesign -dvv #{osxproductdir}/OCMock.framework")
-        puts "^^ 1/3 signed binaries\n\n"
         @worker.run("codesign -dvv #{iosproductdir}/OCMock.framework")       
-        puts "^^ 2/3 signed binaries\n\n"
         @worker.run("codesign -dvv #{tvosproductdir}/OCMock.framework")
-        puts "^^ 3/3 signed binaries\n\n"
+        @worker.run("codesign -dvv #{watchosproductdir}/OCMock.framework")
     end
     
     def upload(packagename, dest)
@@ -174,7 +184,10 @@ class Executer
 
     def run(cmd, &block)     
         if block == nil
-          system(cmd)
+          if !system(cmd)
+            puts "** command failed with error"
+            exit
+          end
         else
           IO.popen(cmd, &block)
         end

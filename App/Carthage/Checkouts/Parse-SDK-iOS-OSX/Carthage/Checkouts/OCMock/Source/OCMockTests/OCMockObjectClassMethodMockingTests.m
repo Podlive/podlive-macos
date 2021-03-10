@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2013-2018 Erik Doernenburg and contributors
+ *  Copyright (c) 2013-2020 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -25,6 +25,7 @@
 @interface TestClassWithClassMethods : NSObject
 + (NSString *)foo;
 + (NSString *)bar;
++ (void)bazWithArgument:(id)argument;
 - (NSString *)bar;
 @end
 
@@ -50,6 +51,10 @@ static NSUInteger initializeCallCount = 0;
 + (NSString *)bar
 {
     return @"Bar-ClassMethod";
+}
+
++ (void)bazWithArgument:(id)argument
+{
 }
 
 - (NSString *)bar
@@ -348,6 +353,26 @@ static NSUInteger initializeCallCount = 0;
     id newObject = [TestClassWithClassMethods new];
 
     XCTAssertEqualObjects(dummyObject, newObject, @"Should have stubbed +new method");
+}
+
+- (void)testArgumentsGetReleasedAfterStopMocking
+{
+    __weak id weakArgument;
+    id mock = OCMClassMock([TestClassWithClassMethods class]);
+    @autoreleasepool {
+        NSObject *argument = [NSObject new];
+        weakArgument = argument;
+        [TestClassWithClassMethods bazWithArgument:argument];
+        [mock stopMocking];
+    }
+    XCTAssertNil(weakArgument);
+}
+
+- (void)testThrowsWhenAttemptingToStubClassMethodOnStoppedMock
+{
+    id mock = [OCClassMockObject mockForClass:[TestClassWithClassMethods class]];
+    [mock stopMocking];
+    XCTAssertThrowsSpecificNamed([[[mock stub] andReturn:@"hello"] foo], NSException, NSInternalInconsistencyException);
 }
 
 @end

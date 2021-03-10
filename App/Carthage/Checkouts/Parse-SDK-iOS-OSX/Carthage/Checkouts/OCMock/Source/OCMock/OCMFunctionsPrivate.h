@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2014-2018 Erik Doernenburg and contributors
+ *  Copyright (c) 2014-2020 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -21,13 +21,20 @@
 @class OCPartialMockObject;
 
 
+BOOL OCMIsClassType(const char *objCType);
 BOOL OCMIsBlockType(const char *objCType);
 BOOL OCMIsObjectType(const char *objCType);
 const char *OCMTypeWithoutQualifiers(const char *objCType);
 BOOL OCMEqualTypesAllowingOpaqueStructs(const char *type1, const char *type2);
 CFNumberType OCMNumberTypeForObjCType(const char *objcType);
+BOOL OCMIsNilValue(const char *objectCType, const void *value, size_t valueSize);
+
+BOOL OCMIsAppleBaseClass(Class cls);
+BOOL OCMIsApplePrivateMethod(Class cls, SEL sel);
 
 Class OCMCreateSubclass(Class cls, void *ref);
+BOOL OCMIsMockSubclass(Class cls);
+void OCMDisposeSubclass(Class cls);
 
 BOOL OCMIsAliasSelector(SEL selector);
 SEL OCMAliasForOriginalSelector(SEL selector);
@@ -40,3 +47,32 @@ void OCMSetAssociatedMockForObject(OCClassMockObject *mock, id anObject);
 OCPartialMockObject *OCMGetAssociatedMockForObject(id anObject);
 
 void OCMReportFailure(OCMLocation *loc, NSString *description);
+
+BOOL OCMIsNonEscapingBlock(id block);
+
+
+
+struct OCMBlockDef
+{
+    void *isa; // initialized to &_NSConcreteStackBlock or &_NSConcreteGlobalBlock
+    int flags;
+    int reserved;
+    void (*invoke)(void *, ...);
+    struct block_descriptor {
+        unsigned long int reserved;                 // NULL
+        unsigned long int size;                     // sizeof(struct Block_literal_1)
+        // optional helper functions
+        void (*copy_helper)(void *dst, void *src);  // IFF (1<<25)
+        void (*dispose_helper)(void *src);          // IFF (1<<25)
+        // required ABI.2010.3.16
+        const char *signature;                      // IFF (1<<30)
+    } *descriptor;
+};
+
+enum
+{
+    OCMBlockIsNoEscape                     = (1 << 23),
+    OCMBlockDescriptionFlagsHasCopyDispose = (1 << 25),
+    OCMBlockDescriptionFlagsHasSignature   = (1 << 30)
+};
+

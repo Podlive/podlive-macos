@@ -72,9 +72,8 @@
 }
 
 - (void)tearDown {
-    [super tearDown];
-
     [[PFFileManager removeItemAtPathAsync:[self temporaryDirectory]] waitUntilFinished];
+    [super tearDown];
 }
 
 ///--------------------------------------
@@ -340,8 +339,8 @@
     BFTaskCompletionSource *taskCompletionSource = [BFTaskCompletionSource taskCompletionSource];
     __block PFProgressBlock progressBlock = nil;
 
-    id mockedCommandRunner = [mockedDataSource commandRunner];
-    OCMStub([mockedCommandRunner runFileDownloadCommandAsyncWithFileURL:tempPath
+    id<PFCommandRunning> commandRunner = [mockedDataSource commandRunner];
+    OCMStub([commandRunner runFileDownloadCommandAsyncWithFileURL:tempPath
                                                          targetFilePath:[OCMArg isNotNil]
                                                       cancellationToken:nil
                                                           progressBlock:[OCMArg checkWithBlock:^BOOL(id obj) {
@@ -396,9 +395,7 @@
 
     [taskCompletionSource trySetResult:nil];
 
-//    [self waitForTestExpectations];
-    //TODO:- Changed waitFOrExpectations
-    [self waitForExpectations:@[firstExpectation, secondExpectation] timeout:20.0];
+    [self waitForExpectations:@[firstExpectation, secondExpectation] timeout:50.0];
 }
 
 - (void)testUpload {

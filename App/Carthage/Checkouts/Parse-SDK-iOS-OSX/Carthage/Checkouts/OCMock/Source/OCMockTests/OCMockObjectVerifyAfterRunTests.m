@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2014-2018 Erik Doernenburg and contributors
+ *  Copyright (c) 2014-2020 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -114,7 +114,27 @@
 {
     id mock = [OCMockObject niceMockForClass:[TestBaseClassForVerifyAfterRun class]];
 
-    XCTAssertThrows([[mock verify] classMethod1], @"Should not have thrown an exception for class method that was called.");
+    XCTAssertThrows([[mock verify] classMethod1], @"Should have thrown an exception for class method that was not called.");
 }
+
+- (void)testThrowsWhenVerificationIsAttemptedAfterStopMocking
+{
+    id mock = [OCMockObject niceMockForClass:[TestBaseClassForVerifyAfterRun class]];
+
+    [TestBaseClassForVerifyAfterRun classMethod1];
+    [mock stopMocking];
+
+    @try
+    {
+        [[mock verify] classMethod1];
+        XCTFail(@"Should have thrown an exception.");
+    }
+    @catch(NSException *e)
+    {
+        XCTAssertEqualObjects([e name], NSInternalInconsistencyException);
+        XCTAssertTrue([[e reason] containsString:@"after stopMocking has been called"]);
+    }
+}
+
 
 @end

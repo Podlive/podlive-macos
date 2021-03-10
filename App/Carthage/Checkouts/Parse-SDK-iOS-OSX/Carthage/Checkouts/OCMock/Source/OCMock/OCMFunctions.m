@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2014-2018 Erik Doernenburg and contributors
+ *  Copyright (c) 2014-2020 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -60,6 +60,11 @@ static BOOL OCMIsUnqualifiedBlockType(const char *unqualifiedObjCType)
         return YES;
 
     return NO;
+}
+
+BOOL OCMIsClassType(const char *objCType)
+{
+    return OCMIsUnqualifiedClassType(OCMTypeWithoutQualifiers(objCType));
 }
 
 BOOL OCMIsBlockType(const char *objCType)
@@ -291,15 +296,70 @@ BOOL OCMEqualTypesAllowingOpaqueStructs(const char *type1, const char *type2)
     }
 }
 
+BOOL OCMIsNilValue(const char *objectCType, const void *value, size_t valueSize)
+{
+    // First, check value itself
+    for(size_t i = 0; i < valueSize; i++)
+        if(((const char *)value)[i] != 0)
+            return NO;
+    
+    // Depending on the compilation settings of the file where the return value gets recorded,
+    // nil and Nil get potentially different encodings. Check all known encodings.
+    if((strcmp(objectCType, @encode(void *))    == 0) ||    // Standard Objective-C
+       (strcmp(objectCType, @encode(int))       == 0) ||    // 32 bit C++ (before nullptr)
+       (strcmp(objectCType, @encode(long long)) == 0) ||    // 64 bit C++ (before nullptr)
+       (strcmp(objectCType, @encode(char *))    == 0))      // C++ with nullptr
+        return YES;
 
-#pragma mark  Creating classes
+    return NO;
+}
+
+
+BOOL OCMIsAppleBaseClass(Class cls)
+{
+    return (cls == [NSObject class]) || (cls == [NSProxy class]);
+}
+
+BOOL OCMIsApplePrivateMethod(Class cls, SEL sel)
+{
+    NSString *className = NSStringFromClass(cls);
+    NSString *selName = NSStringFromSelector(sel);
+    return ([className hasPrefix:@"NS"] || [className hasPrefix:@"UI"]) &&
+            ([selName hasPrefix:@"_"] || [selName hasSuffix:@"_"]);
+}
+
+
+BOOL OCMIsNonEscapingBlock(id block)
+{
+    struct OCMBlockDef *blockRef = (__bridge struct OCMBlockDef *)block;
+    return (blockRef->flags & OCMBlockIsNoEscape) != 0;
+}
+
+
+#pragma mark  Creating and disposing classes
+
+static NSString *const OCMSubclassPrefix = @"OCMock_";
 
 Class OCMCreateSubclass(Class class, void *ref)
 {
-    const char *className = [[NSString stringWithFormat:@"%@-%p-%u", NSStringFromClass(class), ref, arc4random()] UTF8String];
+    const char *className = [[NSString stringWithFormat:@"%@%@-%p-%u", OCMSubclassPrefix, NSStringFromClass(class), ref, arc4random()] UTF8String];
     Class subclass = objc_allocateClassPair(class, className, 0);
     objc_registerClassPair(subclass);
     return subclass;
+}
+
+BOOL OCMIsMockSubclass(Class cls)
+{
+    return [NSStringFromClass(cls) hasPrefix:OCMSubclassPrefix];
+}
+
+void OCMDisposeSubclass(Class cls)
+{
+    if(!OCMIsMockSubclass(cls))
+    {
+        [NSException raise:NSInvalidArgumentException format:@"Not a mock subclass; found %@\nThe subclass dynamically created by OCMock has been replaced by another class. This can happen when KVO or CoreData create their own dynamic subclass after OCMock created its subclass.\nYou will need to reorder initialization and/or teardown so that classes are created and disposed of in the right order.", NSStringFromClass(cls)];
+    }
+    objc_disposeClassPair(cls);
 }
 
 

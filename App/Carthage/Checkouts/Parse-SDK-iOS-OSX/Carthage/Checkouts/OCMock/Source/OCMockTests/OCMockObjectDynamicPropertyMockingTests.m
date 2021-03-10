@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2015-2018 Erik Doernenburg and contributors
+ *  Copyright (c) 2015-2020 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -20,7 +20,7 @@
 #pragma mark   Helper classes
 
 @interface TestClassWithDynamicProperties : NSObject
-@property(nonatomic, retain) NSDictionary *anObject;
+@property(nonatomic, copy) NSDictionary *anObject;
 @property(nonatomic, assign) NSUInteger aUInt;
 @property(nonatomic, assign) NSInteger __aPrivateInt;
 @property(getter=customGetter, setter=customSetter:) NSDictionary *aCustomProperty;
