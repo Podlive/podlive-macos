@@ -3,7 +3,7 @@
 //  Copyright © 2016 cocoa:naut. All rights reserved.
 //
 
-@interface CCNApplicationViewController : NSViewController  <NSWindowDelegate, NSToolbarDelegate>
+@interface CCNApplicationViewController : NSViewController  <NSWindowDelegate>
 
 - (void)showPreferences;
 - (void)showAvailablePodcasts;
