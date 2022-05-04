@@ -118,12 +118,12 @@ static const CGFloat kOverlayHeight = 55.0;
 
 - (void)setChannel:(CCNChannel *)channel {
     _channel = channel;
-    self.playPauseButton.hidden = !channel.isOnline;
+    self.playPauseButton.hidden = !channel.isLive;
 }
 
 - (void)setNeedsDisplay:(BOOL)needsDisplay {
     [super setNeedsDisplay:needsDisplay];
-    self.playPauseButton.hidden = !self.channel.isOnline;
+    self.playPauseButton.hidden = !self.channel.isLive;
 }
 
 - (NSRect)bottomOverlay {

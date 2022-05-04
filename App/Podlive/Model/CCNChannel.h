@@ -54,7 +54,7 @@ typedef void (^CCNChannelCoverartCompletion)(NSImage *_Nonnull fetchedImage);
 
 // MARK: - Computed Properties
 @property (nullable, nonatomic, readonly) NSURL *twitterURL;
-@property (nonatomic, readonly) BOOL isOnline;
+@property (nonatomic, readonly) BOOL isLive;
 
 // MARK: - Custom Properties
 @property (nonatomic, assign) NSInteger listenerCountPeak;

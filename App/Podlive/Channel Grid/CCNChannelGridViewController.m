@@ -257,7 +257,7 @@ typedef void(^CCNChannelGridViewDataSourceUpdatedCompletion)(NSSet<NSIndexPath *
             void (^disableHandler)(void) = ^{
                 @strongify(self);
                 let player = CCNPlayer.sharedInstance;
-                if ([player.currentChannel isEqual:theChannel] && !theChannel.isOnline) {
+                if ([player.currentChannel isEqual:theChannel] && !theChannel.isLive) {
                     [player stop];
                 }
 
