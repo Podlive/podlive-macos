@@ -119,7 +119,7 @@ static const CGFloat kLabelTopConstraintConstant = 2.0;
         return YES;
     }
     
-    return NO;
+    return [super performKeyEquivalent:event];
 }
 
 // MARK: - Auto Layout

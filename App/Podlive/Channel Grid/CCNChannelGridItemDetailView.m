@@ -54,9 +54,8 @@ static const CGFloat kCCNChannelGridItemArrowWidth = 42.0;
         }
         return YES;
     }
-    else {
-        return [super performKeyEquivalent:event];
-    }
+
+    return [super performKeyEquivalent:event];
 }
 
 - (void)dealloc {

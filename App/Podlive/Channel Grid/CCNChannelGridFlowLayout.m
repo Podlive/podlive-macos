@@ -51,6 +51,7 @@ NSCollectionViewSupplementaryElementKind const CCNSelectedItemFrameKeyPath      
     self.minimumInteritemSpacing = kGridItemPadding;
     self.minimumLineSpacing      = kLinePadding;
     self.itemSize                = NSMakeSize(kGridItemWidth, kGridItemHeight);
+    self.estimatedItemSize       = NSZeroSize;
 //    self.headerReferenceSize     = NSMakeSize(CGFLOAT_MAX, kSectionheaderHeight);
 
     self.selectedItemFrame = NSZeroRect;

@@ -10,7 +10,7 @@
 + (NSArray *)channelStates {
     static NSArray *_channelStates = nil;
     if (!_channelStates) {
-        _channelStates = @[ @"preshow", @"live", @"postshow", @"offline", @"online", @"break" ];
+        _channelStates = @[ @"preshow", @"live", @"postshow", @"offline", @"online", @"break", @"invalid", @"test" ];
     }
     return _channelStates;
 }

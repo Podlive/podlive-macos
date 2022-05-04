@@ -100,7 +100,7 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     [nc addObserver:self selector:@selector(handleChannelSubscriptionUpdatedNotification:)  name:CCNChannelSubscriptionUpdatedNotification  object:nil];
     [nc addObserver:self selector:@selector(handlePlayerDidStartPlayingNotification:)       name:CCNPlayerDidStartPlayingNotification       object:nil];
     [nc addObserver:self selector:@selector(handlePlayerDidStopPlayingNotification:)        name:CCNPlayerDidStopPlayingNotification        object:nil];
-    [nc addObserver:self selector:@selector(handleSearchViewShouldAppearNotification:)      name:CCNSearchViewShouldAppearNotification      object:nil];
+//    [nc addObserver:self selector:@selector(handleSearchViewShouldAppearNotification:)      name:CCNSearchViewShouldAppearNotification      object:nil];
     [nc addObserver:self selector:@selector(handleSearchViewShouldDisappearNotification:)   name:CCNSearchViewShouldDisappearNotification   object:nil];
 }
 
@@ -113,7 +113,7 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
     }
 
     if (!self.searchViewTopConstraint) {
-        self.searchViewTopConstraint = [self.searchViewController.view.topAnchor constraintEqualToAnchor:self.gridViewController.view.topAnchor];
+        self.searchViewTopConstraint = [self.searchViewController.view.topAnchor constraintEqualToAnchor:self.searchViewController.view.superview.topAnchor];
         self.searchViewTopConstraint.constant = -kCCNSearchViewHeight;
     }
 

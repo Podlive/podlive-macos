@@ -94,6 +94,7 @@
 }
 
 - (void)application:(NSApplication *)application didReceiveRemoteNotification:(NSDictionary<NSString *, id> *)userInfo {
+    CCNLog(@"didReceiveRemoteNotification: %@", userInfo);
     let notificationCoordinator = [CCNNotificationCoordinator coordinatorWithRemoteNotification:userInfo];
     [notificationCoordinator handleRemoteNotification];
 }

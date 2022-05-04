@@ -15,8 +15,7 @@
  */
 
 #import <XCTest/XCTest.h>
-#import <OCMock/OCMock.h>
-#import "OCMBoxedReturnValueProvider.h"
+#import "OCMock/OCMock.h"
 
 
 #pragma mark    Helper classes and protocols for testing
@@ -91,13 +90,13 @@ TestOpaque myOpaque;
 
 @interface TestClassWithBlockArgMethod : NSObject
 
-- (void)doStuffWithBlock:(void (^)(void))block andString:(id)aString;
+- (void)doStuffWithBlock:(__unused void (^)(void))block andString:(id)aString;
 
 @end
 
 @implementation TestClassWithBlockArgMethod
 
-- (void)doStuffWithBlock:(void (^)(void))block andString:(id)aString;
+- (void)doStuffWithBlock:(__unused void (^)(void))block andString:(id)aString;
 {
     // stubbed out anyway
 }
@@ -157,13 +156,13 @@ TestOpaque myOpaque;
 
 @interface TestClassWithProtocolBlockArgMethod : NSObject
 
-- (void)doStuffWithBlock:(void (^)(id<TestProtocol> arg))block;
+- (void)doStuffWithBlock:(__unused void (^)(id<TestProtocol> arg))block;
 
 @end
 
 @implementation TestClassWithProtocolBlockArgMethod
 
-- (void)doStuffWithBlock:(void (^)(id<TestProtocol> arg))block;
+- (void)doStuffWithBlock:(__unused void (^)(id<TestProtocol> arg))block;
 {
     // stubbed out anyway
 }
@@ -192,6 +191,27 @@ TestOpaque myOpaque;
 
 @end
 
+@interface TestClassThatMayNotSupportMocking : NSObject
+@end
+
+@implementation TestClassThatMayNotSupportMocking
+static NSString *testClassThatMayNotSupportMockingReason = nil;
+
++ (void)setReason:(NSString *)reason
+{
+	testClassThatMayNotSupportMockingReason = reason;
+}
+
++ (BOOL)supportsMocking:(NSString **)reasonPtr
+{
+	if(testClassThatMayNotSupportMockingReason == nil)
+		return YES;
+
+	*reasonPtr = testClassThatMayNotSupportMockingReason;
+	return NO;
+}
+
+@end
 
 static NSString *TestNotification = @"TestNotification";
 
@@ -868,7 +888,7 @@ static NSString *TestNotification = @"TestNotification";
 
     __block BOOL wasCalled = NO;
     __block id<TestProtocol> firstParam;
-    void (^block)(id<TestProtocol> arg) = ^(id<TestProtocol> arg) {
+    void (^block)(id<TestProtocol>) = ^(id<TestProtocol> arg) {
         wasCalled = YES;
         firstParam = arg;
     };
@@ -877,6 +897,24 @@ static NSString *TestNotification = @"TestNotification";
     XCTAssertTrue(wasCalled, @"Should have invoked block.");
     XCTAssertEqual(firstParam, mockProtocol, @"Param does not match");
 }
+
+- (void)testBlockConstraintRetainedByStub
+{
+    __block BOOL wasCalled = NO;
+    id mock = OCMClassMock([NSString class]);
+    @autoreleasepool 
+    {
+        // The autorelease pool makes sure that the OCMArg is retained by the stub.
+        // If this test fails it will likely be due to a crash.
+        OCMStub([mock enumerateLinesUsingBlock:([OCMArg invokeBlockWithArgs:@"Happy", [OCMArg defaultValue], nil])]);
+    }
+    [mock enumerateLinesUsingBlock:^(NSString * _Nonnull line, BOOL * _Nonnull stop) 
+    {
+        wasCalled = YES;
+    }];
+    XCTAssertTrue(wasCalled);
+}
+
 
 #pragma mark    accepting expected methods
 
@@ -1098,6 +1136,26 @@ static NSString *TestNotification = @"TestNotification";
 
     XCTAssertNoThrow([mock verify], @"Should not have any unmet expectations.");
 
+}
+
+- (void)testThrowsWhenTryingToMockClassThatSaysItDoesNotSupportMocking
+{
+    [TestClassThatMayNotSupportMocking setReason:@"Irreconcilable Differences"];
+    XCTAssertThrowsSpecificNamed(OCMClassMock([TestClassThatMayNotSupportMocking class]), NSException, NSInvalidArgumentException);
+}
+
+- (void)testDoesNotThrowWhenClassImplementsMockingSupportMethodButReturnsYes
+{
+	[TestClassThatMayNotSupportMocking setReason:nil];
+	XCTAssertNoThrow(OCMClassMock([TestClassThatMayNotSupportMocking class]));
+}
+
+
+#pragma mark    creating mock objects
+
+- (void)testTryingToCreateAnInstanceOfOCMockObjectRaisesAnException
+{
+    XCTAssertThrows([[OCMockObject alloc] init]);
 }
 
 
