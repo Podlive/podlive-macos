@@ -27,7 +27,9 @@
  THE SOFTWARE.
  */
 
-#import <QuartzCore/QuartzCore.h>
+@import Carbon;
+@import QuartzCore;
+
 #import "CCNPreferencesWindowController.h"
 
 
@@ -36,7 +38,6 @@ static NSString *const CCNPreferencesToolbarSegmentedControlIdentifier = @"CCNPr
 static NSString *const CCNPreferencesWindowFrameAutoSaveName           = @"CCNPreferencesWindowFrameAutoSaveName";
 static NSRect CCNPreferencesDefaultWindowRect;
 static NSSize CCNPreferencesToolbarSegmentedControlItemInset;
-static unsigned short const CCNEscapeKey = 53;
 
 
 /**
@@ -420,7 +421,7 @@ static unsigned short const CCNEscapeKey = 53;
 
 - (void)keyDown:(NSEvent *)theEvent {
     switch(theEvent.keyCode) {
-        case CCNEscapeKey:
+        case kVK_Escape:
             [self orderOut:nil];
             [self close];
             break;

@@ -15,7 +15,8 @@
  */
 
 #import <XCTest/XCTest.h>
-#import <OCMock/OCMock.h>
+#import "OCMock.h"
+
 
 static NSString *TestNotificationOne = @"TestNotificationOne";
 
@@ -34,7 +35,10 @@ static NSString *TestNotificationOne = @"TestNotificationOne";
 - (void)setUp
 {
 	center = [[NSNotificationCenter alloc] init];
-	mock = [OCMockObject observerMock]; 
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+	mock = [OCMockObject observerMock];
+  #pragma clang diagnostic pop
 }
 
 - (void)testAcceptsExpectedNotification

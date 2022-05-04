@@ -15,13 +15,12 @@
  */
 
 #import <objc/runtime.h>
-#import "OCMockObject.h"
 #import "OCPartialMockObject.h"
-#import "NSMethodSignature+OCMAdditions.h"
 #import "NSObject+OCMAdditions.h"
 #import "OCMFunctionsPrivate.h"
 #import "OCMInvocationStub.h"
 #import "NSInvocation+OCMAdditions.h"
+#import "NSMethodSignature+OCMAdditions.h"
 
 
 @implementation OCPartialMockObject
@@ -30,11 +29,9 @@
 
 - (id)initWithObject:(NSObject *)anObject
 {
-    if(anObject == nil)
+     if(anObject == nil)
         [NSException raise:NSInvalidArgumentException format:@"Object cannot be nil."];
-
     Class const class = [self classToSubclassForObject:anObject];
-    [self assertClassIsSupported:class];
 	[super initWithClass:class];
 	realObject = [anObject retain];
     [self prepareObjectForInstanceMethodMocking];
@@ -55,6 +52,7 @@
 
 - (void)assertClassIsSupported:(Class)class
 {
+    [super assertClassIsSupported:class];
     NSString *classname = NSStringFromClass(class);
     NSString *reason = nil;
     if([classname hasPrefix:@"__NSTagged"] || [classname hasPrefix:@"NSTagged"])
@@ -68,16 +66,16 @@
 
 - (Class)classToSubclassForObject:(id)object
 {
-    /* object_getClass() gives us the actual class backing the object, whereas [object class]
-     * is sometimes overridden, by KVO or CoreData, for example, to return a subclass.
-     *
-     * With KVO, if we replace and subclass the actual class, as returned by object_getClass(),
-     * we lose notifications. So, in that case only, we return the class reported by the class 
-     * method.
-     */
-
     if([object observationInfo] != NULL)
+    {
+        // Special treatment for objects that are observed with KVO. The KVO implementation sets
+        // a subclass for such objects and it overrides the -class method to return the original
+        // class. If we base our subclass on the KVO subclass, as returned by object_getClass(),
+        // crashes will occur. So, we take the real class instead. Unfortunately, this removes
+        // any observers set up before.
+        NSLog(@"Warning: Creating a partial mock for %@. This object has observers, which will now stop receiving KVO notifications. If you want to receive KVO notifications, create the partial mock first, and then register the observer.", object);
         return [object class];
+    }
 
     return object_getClass(object);
 }
@@ -105,6 +103,14 @@
         [self setupForwarderForSelector:[[aStub recordedInvocation] selector]];
 }
 
+- (void)addInvocation:(NSInvocation *)anInvocation
+{
+    // If the mock invokes a method on the real object we end up here a second time, but because
+    // the mock has added the invocation already we do not want to add it again.
+    if((invocationFromMock == nil) || ([anInvocation selector] != [invocationFromMock selector]))
+        [super addInvocation:anInvocation];
+}
+
 - (void)handleUnRecordedInvocation:(NSInvocation *)anInvocation
 {
 	// In the case of an init that is called on a mock we must return the mock instance and
@@ -118,12 +124,16 @@
 		targetReceivingInit = [anInvocation target];
 		[realObject retain];
 	}
+
+	invocationFromMock = anInvocation;
 	[anInvocation invokeWithTarget:realObject];
-	if (targetReceivingInit)
+    invocationFromMock = nil;
+
+	if(targetReceivingInit)
 	{
 		id returnVal;
 		[anInvocation getReturnValue:&returnVal];
-		if (returnVal == realObject)
+		if(returnVal == realObject)
 		{
 			[anInvocation setReturnValue:&self];
 			[realObject release];
@@ -245,7 +255,6 @@
         [anInvocation invoke];
     }
 }
-
 
 
 #pragma mark    Verification handling

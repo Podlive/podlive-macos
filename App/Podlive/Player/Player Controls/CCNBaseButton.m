@@ -32,7 +32,7 @@
     self.tintColor          = NSColor.lightGrayColor;
     self.tintHighlightColor = NSColor.whiteColor;
     self.mouseHovered       = NO;
-    self.state              = NSOffState;
+    self.state              = NSControlStateValueOff;
     self.style              = CCNBaseButtonStyleRoundedRect;
 
     self.trackingArea  = [[NSTrackingArea alloc] initWithRect:self.bounds

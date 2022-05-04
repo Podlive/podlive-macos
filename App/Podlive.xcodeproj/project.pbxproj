@@ -12,8 +12,6 @@
 		FD34550A21D66D0300014909 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FD34550921D66D0300014909 /* Cartfile */; };
 		FD34550F21D6770900014909 /* CCNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34550E21D6770900014909 /* CCNNavigationController.m */; };
 		FD34551521D6771800014909 /* CCNPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34551121D6771800014909 /* CCNPreferencesWindowController.m */; };
-		FD34551921D6782400014909 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34551821D6782400014909 /* Bolts.framework */; };
-		FD34551B21D6784C00014909 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34551A21D6784C00014909 /* Parse.framework */; };
 		FD34553621D67B1C00014909 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552121D67B1C00014909 /* EXTSelectorChecking.m */; };
 		FD34553721D67B1C00014909 /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552421D67B1C00014909 /* EXTConcreteProtocol.m */; };
 		FD34553821D67B1C00014909 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552921D67B1C00014909 /* EXTScope.m */; };
@@ -23,6 +21,8 @@
 		FD34553C21D67B1C00014909 /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552D21D67B1C00014909 /* EXTSafeCategory.m */; };
 		FD34553D21D67B1C00014909 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34552F21D67B1C00014909 /* NSMethodSignature+EXT.m */; };
 		FD34553E21D67B1C00014909 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD34553321D67B1C00014909 /* EXTNil.m */; };
+		FD3476F3240EF8D1006A19F6 /* CCNSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */; };
+		FD3476F6240EFF0C006A19F6 /* CCNSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3476F5240EFF0C006A19F6 /* CCNSearchView.m */; };
 		FD4BF7E61EDC1E9B00BC15E9 /* CCNPlayerVolumeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FD859FED1E9410420089CD34 /* CCNPlayerVolumeControl.m */; };
 		FD4BF7E71EDC1E9B00BC15E9 /* CCNChannelGridItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4C672B1E7FF6A2001F012E /* CCNChannelGridItemDetailView.m */; };
 		FD4BF7E81EDC1E9B00BC15E9 /* NSBKeyframeAnimationFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4FD3561E981ED00081CEA8 /* NSBKeyframeAnimationFunctions.m */; };
@@ -72,6 +72,7 @@
 		FD6C8A9021D649DE00EAF6DD /* NSTextField+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A8F21D649DE00EAF6DD /* NSTextField+Tools.m */; };
 		FD6C8A9321D64A5800EAF6DD /* NSImageView+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A9221D64A5800EAF6DD /* NSImageView+Podlive.m */; };
 		FD6C8A9621D64BCB00EAF6DD /* NSString+UILabels.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C8A9521D64BCB00EAF6DD /* NSString+UILabels.m */; };
+		FD70E9A525F981E0002E1DFF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD34551821D6782400014909 /* Bolts.framework */; };
 		FD732BBD208550CE00734A48 /* Parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD732BBC208550CE00734A48 /* Parse.plist */; };
 		FD7792F61FD5E105006D2D62 /* NSApplication+MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7792F51FD5E105006D2D62 /* NSApplication+MainMenu.m */; };
 		FD7E632B1EDF57D20011BE89 /* NSFont+Podlive.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7E63291EDF57D20011BE89 /* NSFont+Podlive.m */; };
@@ -163,6 +164,10 @@
 		FD34553321D67B1C00014909 /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTNil.m; sourceTree = "<group>"; };
 		FD34553421D67B1C00014909 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		FD34553521D67B1C00014909 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTCoroutine.h; sourceTree = "<group>"; };
+		FD3476F1240EF8D1006A19F6 /* CCNSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNSearchViewController.h; sourceTree = "<group>"; };
+		FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNSearchViewController.m; sourceTree = "<group>"; };
+		FD3476F4240EFF0C006A19F6 /* CCNSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNSearchView.h; sourceTree = "<group>"; };
+		FD3476F5240EFF0C006A19F6 /* CCNSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNSearchView.m; sourceTree = "<group>"; };
 		FD36B9981E7893F100FB9456 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FD36B99A1E7893FD00FB9456 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FD4603151E5D6E6E00BB5442 /* Podlive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Podlive.entitlements; sourceTree = "<group>"; };
@@ -289,6 +294,7 @@
 		FDE9F01F1E79E18400D27FF6 /* CCNPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerView.h; sourceTree = "<group>"; };
 		FDE9F0201E79E18400D27FF6 /* CCNPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPlayerView.m; sourceTree = "<group>"; };
 		FDEB0BFB1E7A86A20008EDD3 /* CCNPlayerView_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPlayerView_Private.h; sourceTree = "<group>"; };
+		FDEE15722410337700A414AB /* CCNSearchViewController_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNSearchViewController_Private.h; sourceTree = "<group>"; };
 		FDEFB89C1E858EB9000AD128 /* CCNUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNUserManager.h; sourceTree = "<group>"; };
 		FDEFB89D1E858EB9000AD128 /* CCNUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNUserManager.m; sourceTree = "<group>"; };
 		FDF642B51E5CCD260005EA72 /* CCNApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNApplicationViewController.h; sourceTree = "<group>"; };
@@ -300,11 +306,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD34551921D6782400014909 /* Bolts.framework in Frameworks */,
 				FD4BF8101EDC1E9B00BC15E9 /* AVFoundation.framework in Frameworks */,
 				FD4BF80C1EDC1E9B00BC15E9 /* IOKit.framework in Frameworks */,
 				FD4BF80B1EDC1E9B00BC15E9 /* QuartzCore.framework in Frameworks */,
-				FD34551B21D6784C00014909 /* Parse.framework in Frameworks */,
+				FD70E9A525F981E0002E1DFF /* Bolts.framework in Frameworks */,
 				FD4BF80D1EDC1E9B00BC15E9 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +432,18 @@
 			name = extobjc;
 			path = Submodules/extobjc;
 			sourceTree = SOURCE_ROOT;
+		};
+		FD3476F0240EF892006A19F6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				FD3476F4240EFF0C006A19F6 /* CCNSearchView.h */,
+				FD3476F5240EFF0C006A19F6 /* CCNSearchView.m */,
+				FDEE15722410337700A414AB /* CCNSearchViewController_Private.h */,
+				FD3476F1240EF8D1006A19F6 /* CCNSearchViewController.h */,
+				FD3476F2240EF8D1006A19F6 /* CCNSearchViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
 		};
 		FD4FD34F1E981EA10081CEA8 /* Core Animation */ = {
 			isa = PBXGroup;
@@ -641,9 +658,10 @@
 				FD95F2781E8582E500F5B394 /* Model */,
 				FDE9F01E1E79E15500D27FF6 /* Player */,
 				FD3385221E6B750F007D0D74 /* Preferences */,
+				FD3476F0240EF892006A19F6 /* Search */,
 				FD888C4C1ED0DEDA00A6B8BB /* StyleKit */,
-				FDF6428B1E5CC4870005EA72 /* Supporting Files */,
 				FD34551C21D67AFC00014909 /* Submodules */,
+				FDF6428B1E5CC4870005EA72 /* Supporting Files */,
 			);
 			path = Podlive;
 			sourceTree = "<group>";
@@ -757,8 +775,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CCN;
-				LastUpgradeCheck = 1240;
-				ORGANIZATIONNAME = "cocoa:naut";
+				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = Woodbytes;
 				TargetAttributes = {
 					FD4BF7E01EDC1E9B00BC15E9 = {
 						ProvisioningStyle = Automatic;
@@ -835,7 +853,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "/opt/homebrew/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -887,6 +905,7 @@
 				FD4BF7FD1EDC1E9B00BC15E9 /* CCNChannelGridViewController.m in Sources */,
 				FDAE07161EDF0DE6009E5A2D /* PFUser+Podlive.m in Sources */,
 				FDD41EB321D6410D007F4C8D /* NSViewController+Podlive.m in Sources */,
+				FD3476F6240EFF0C006A19F6 /* CCNSearchView.m in Sources */,
 				FDAE071D1EDF0EAA009E5A2D /* CCNChannel+Convenience.m in Sources */,
 				FD4BF7FE1EDC1E9B00BC15E9 /* CCNChannelGridSectionHeaderView.m in Sources */,
 				FD4BF7FF1EDC1E9B00BC15E9 /* CCNChannelGridItem.m in Sources */,
@@ -901,6 +920,7 @@
 				FDAE07261EDF0F9D009E5A2D /* CCNConstants.m in Sources */,
 				FDAE071B1EDF0EA3009E5A2D /* CCNChannel.m in Sources */,
 				FD88D1411EE80CCF00875AD5 /* CCNApplicationDelegate.m in Sources */,
+				FD3476F3240EF8D1006A19F6 /* CCNSearchViewController.m in Sources */,
 				FDAE071F1EDF0ECE009E5A2D /* PodliveDefaultStyleKit.m in Sources */,
 				FD34553821D67B1C00014909 /* EXTScope.m in Sources */,
 				FD34550F21D6770900014909 /* CCNNavigationController.m in Sources */,
@@ -956,10 +976,10 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_ENTITLEMENTS = "Podlive/Supporting Files/Podlive.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201;
+				CURRENT_PROJECT_VERSION = 202;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -978,8 +998,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Podlive/Supporting Files/Podlive-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.0.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0.15;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1022,7 +1042,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201;
+				CURRENT_PROJECT_VERSION = 202;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1041,8 +1061,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Podlive/Supporting Files/Podlive-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.0.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0.15;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1123,7 +1143,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -1175,7 +1195,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};

@@ -92,14 +92,14 @@ static const CGFloat kOverlayHeight = 55.0;
 - (void)performPlayPauseButtonOnState:(NSNotification *)note {
     CCNChannel *playingChannel = note.userInfo[kUserInfoPlayingChannelKey];
     if ([playingChannel isEqual:self.channel]) {
-        self.playPauseButton.state = NSOnState;
+        self.playPauseButton.state = NSControlStateValueOn;
     }
 }
 
 - (void)performPlayPauseButtonOffState:(NSNotification *)note {
     CCNChannel *playingChannel = note.userInfo[kUserInfoPlayingChannelKey];
     if ([playingChannel isEqual:self.channel]) {
-        self.playPauseButton.state = NSOffState;
+        self.playPauseButton.state = NSControlStateValueOff;
     }
 }
 
@@ -107,10 +107,10 @@ static const CGFloat kOverlayHeight = 55.0;
     CCNChannel *playingChannel = note.userInfo[kUserInfoPlayingChannelKey];
     CCNChannel *replacedChannel = note.userInfo[kUserInfoReplacedChannelKey];
     if ([replacedChannel isEqual:self.channel]) {
-        self.playPauseButton.state = NSOffState;
+        self.playPauseButton.state = NSControlStateValueOff;
     }
     else if([playingChannel isEqual:self.channel]) {
-        self.playPauseButton.state = NSOnState;
+        self.playPauseButton.state = NSControlStateValueOn;
     }
 }
 

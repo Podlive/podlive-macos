@@ -6,5 +6,6 @@
 @interface NSWindow (Podlive)
 
 + (instancetype)mainWindowWithContentViewController:(__kindof NSViewController *)contentViewController;
+- (CGFloat)titlebarHeight;
 
 @end

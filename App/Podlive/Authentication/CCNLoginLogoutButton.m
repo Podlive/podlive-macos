@@ -42,7 +42,7 @@
 
 - (void)setLoggedIn:(BOOL)loggedIn {
     _loggedIn = loggedIn;
-    [self setNeedsDisplay];
+//    [self setNeedsDisplay];
 }
 
 @end

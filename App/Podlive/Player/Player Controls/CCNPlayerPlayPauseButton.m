@@ -17,7 +17,7 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     NSColor *color = (self.isMouseHovered ? self.tintHighlightColor : self.tintColor);
-    if (self.state == NSOnState) {
+    if (self.state == NSControlStateValueOn) {
         [PodliveGUIKit drawPauseButtonWithFrame:self.bounds resizing:PodliveGUIKitResizingBehaviorAspectFit color:color radius:self.cornerRadius borderWidth:self.borderWidth];
     }
     else {

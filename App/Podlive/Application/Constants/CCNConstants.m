@@ -55,10 +55,6 @@ static NSString *const CCNParseServerUrl     = @"ParseServerUrl";
 @end
 
 
-// NSEvent keyCode's
-unsigned short CCNReturnKeyCode = 13;
-unsigned short CCNEscapeKeyCode = 53;
-
 
 // Autolayout
 const CGFloat kOuterEdgeMargin       = 20.0;
@@ -98,7 +94,8 @@ NSString *const CCNPlayerDidPausePlayingNotification       = @"CCNPlayerDidPause
 NSString *const CCNPlayerDidStopPlayingNotification        = @"CCNPlayerDidStopPlayingNotification";
 NSString *const CCNPlayerDidResumePlayingNotification      = @"CCNPlayerDidResumePlayingNotification";
 NSString *const CCNPlayerErrorPlayingNotification          = @"CCNPlayerErrorPlayingNotification";
-
+NSString *const CCNSearchViewShouldAppearNotification      = @"CCNSearchViewShouldAppearNotification";
+NSString *const CCNSearchViewShouldDisappearNotification   = @"CCNSearchViewShouldDisappearNotification";
 
 
 // KVO KeyPath's
@@ -114,3 +111,9 @@ NSString *const kUserInfoReplacedChannelKey                = @"replacedChannel";
 NSString *const kUserInfoChannelStateId                    = @"channelId";
 NSString *const kUserInfoChannelStateOld                   = @"oldState";
 NSString *const kUserInfoChannelStateNew                   = @"newState";
+
+
+// main windiw toolbar item identifiers
+NSString *const kCCNChannelFilterSegmentControlIdentifier = @"ChannelFilterSegmentControlIdentifier";
+NSString *const kCCNToolbarLoginButtonIdentifier = @"ToolbarLoginButtonIdentifier";
+

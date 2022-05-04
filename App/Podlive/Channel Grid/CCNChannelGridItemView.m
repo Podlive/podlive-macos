@@ -3,7 +3,10 @@
 //  Copyright © 2017 cocoa:naut. All rights reserved.
 //
 
+@import Carbon;
+
 #import "CCNApplicationDelegate.h"
+#import "CCNApplicationViewController.h"
 #import "CCNChannelGridItemView.h"
 #import "CCNChannelGridItemControlView.h"
 #import "CCNChannel.h"
@@ -98,6 +101,25 @@ static const CGFloat kLabelTopConstraintConstant = 2.0;
 
 - (void)setupNotifications {
 
+}
+
+// MARK: - Handle Keyboard Events
+
+- (BOOL)performKeyEquivalent:(NSEvent *)event {
+    let flags = event.modifierFlags & NSEventModifierFlagDeviceIndependentFlagsMask;
+    let keyCode = event.keyCode;
+    
+    if (kVK_Escape == keyCode) {
+        
+    }
+    
+    // Search triggered: command+F
+    if (NSEventModifierFlagCommand == flags && kVK_ANSI_F == keyCode) {
+        [NSNotificationCenter.defaultCenter postNotificationName:CCNSearchViewShouldAppearNotification object:nil];
+        return YES;
+    }
+    
+    return [super performKeyEquivalent:event];
 }
 
 // MARK: - Auto Layout

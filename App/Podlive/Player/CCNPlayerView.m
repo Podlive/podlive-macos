@@ -102,11 +102,11 @@
 
 - (void)setupNotifications {
     let nc = NSNotificationCenter.defaultCenter;
-    [nc addObserver:self selector:@selector(handlePlayerDidStartPlayingNotification:)       name:CCNPlayerDidStartPlayingNotification object:nil];
-    [nc addObserver:self selector:@selector(handlePlayerDidResumePlayingNotification:)      name:CCNPlayerDidResumePlayingNotification object:nil];
-    [nc addObserver:self selector:@selector(handlePlayerDidPausePlayingNotification:)       name:CCNPlayerDidPausePlayingNotification object:nil];
-    [nc addObserver:self selector:@selector(handlePlayerDidStopPlayingNotification:)        name:CCNPlayerDidStopPlayingNotification object:nil];
-    [nc addObserver:self selector:@selector(handlePlayerDidChangedChannelNotification:)     name:CCNPlayerDidChangedChannelNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidStartPlayingNotification:)           name:CCNPlayerDidStartPlayingNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidResumePlayingNotification:)          name:CCNPlayerDidResumePlayingNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidPausePlayingNotification:)           name:CCNPlayerDidPausePlayingNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidStopPlayingNotification:)            name:CCNPlayerDidStopPlayingNotification object:nil];
+    [nc addObserver:self selector:@selector(handlePlayerDidChangedChannelNotification:)         name:CCNPlayerDidChangedChannelNotification object:nil];
     [nc addObserver:self selector:@selector(handlePushNotificationChannelListenerCountUpdated:) name:CCNPushNotificationChannelListenerCountUpdated object:nil];
 }
 
@@ -153,29 +153,29 @@
 // MARK: - Notifications
 
 - (void)handlePlayerDidStartPlayingNotification:(NSNotification *)note {
-    self.playPauseButton.state = NSOnState;
+    self.playPauseButton.state = NSControlStateValueOn;
 }
 
 - (void)handlePlayerDidResumePlayingNotification:(NSNotification *)note {
-    self.playPauseButton.state = NSOnState;
+    self.playPauseButton.state = NSControlStateValueOn;
 }
 
 - (void)handlePlayerDidPausePlayingNotification:(NSNotification *)note {
-    self.playPauseButton.state = NSOffState;
+    self.playPauseButton.state = NSControlStateValueOff;
 }
 
 - (void)handlePlayerDidStopPlayingNotification:(NSNotification *)note {
-    self.playPauseButton.state = NSOffState;
+    self.playPauseButton.state = NSControlStateValueOff;
 }
 
 - (void)handlePlayerDidChangedChannelNotification:(NSNotification *)note {
     CCNChannel *playingChannel = note.userInfo[kUserInfoPlayingChannelKey];
     CCNChannel *replacedChannel = note.userInfo[kUserInfoReplacedChannelKey];
     if ([playingChannel isEqual:self.channel]) {
-        self.playPauseButton.state = NSOffState;
+        self.playPauseButton.state = NSControlStateValueOff;
     }
     else if([replacedChannel isEqual:self.channel]) {
-        self.playPauseButton.state = NSOnState;
+        self.playPauseButton.state = NSControlStateValueOn;
     }
 }
 
