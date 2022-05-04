@@ -187,7 +187,7 @@
 }
 
 - (void)updateChannelStatusLabel {
-    if (self.channel.isOnline) {
+    if (self.channel.isLive) {
         let channelStateString = [CCNChannel humanReadableStateStringForChannelState:self.channel.state];
         let listenerCountFormat = (self.channel.listenerCount == 1 ? [NSString listenerCountSingularFormatString] : [NSString listenerCountPluralFormatString]);
         let listenerCountString = [NSString stringWithFormat:listenerCountFormat, self.channel.listenerCount];

@@ -979,7 +979,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 202;
+				CURRENT_PROJECT_VERSION = 203;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -999,7 +999,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.0.15;
+				MARKETING_VERSION = 1.0.14;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1042,7 +1042,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 202;
+				CURRENT_PROJECT_VERSION = 203;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1062,7 +1062,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.0.15;
+				MARKETING_VERSION = 1.0.14;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

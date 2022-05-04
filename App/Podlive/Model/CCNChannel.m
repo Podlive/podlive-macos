@@ -194,8 +194,8 @@ NSString *const CCNChannelFieldIsEnabled            = @"isEnabled";
     return nil;
 }
 
-- (BOOL)isOnline {
-    return (self.state != CCNChannelStateUndefined && self.state != CCNChannelStateOffline);
+- (BOOL)isLive {
+    return (self.state != CCNChannelStateUndefined && self.state != CCNChannelStateOffline && self.state != CCNChannelStateOnline);
 }
 
 // MARK: - Debugging
