@@ -52,4 +52,22 @@
     return _string;
 }
 
++ (NSString *)remove {
+    static dispatch_once_t onceToken;
+    static NSString *_string = nil;
+    dispatch_once(&onceToken, ^{
+        _string = NSLocalizedString(@"Delete", @"Button Label");
+    });
+    return _string;
+}
+
++ (NSString *)save {
+    static dispatch_once_t onceToken;
+    static NSString *_string = nil;
+    dispatch_once(&onceToken, ^{
+        _string = NSLocalizedString(@"Save", @"Button Label");
+    });
+    return _string;
+}
+
 @end

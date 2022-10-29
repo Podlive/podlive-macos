@@ -10,5 +10,7 @@
 + (NSString *)abort;
 + (NSString *)next;
 + (NSString *)previous;
++ (NSString *)remove;
++ (NSString *)save;
 
 @end

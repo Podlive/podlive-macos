@@ -6,6 +6,7 @@
 
 @protocol CCNUserInfoViewDelegate <NSObject>
 - (void)userInfoViewControllerWantsLogoutAction;
+- (void)userInfoViewControllerWantsUserDeleteAction;
 @end
 
 @interface CCNUserInfoView : NSView

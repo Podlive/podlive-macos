@@ -24,6 +24,7 @@
 #import "NSColor+Podlive.h"
 #import "NSImage+Podlive.h"
 #import "NSImage+Tools.h"
+#import "NSString+UILabels.h"
 #import "NSViewController+Podlive.h"
 #import "NSWindow+Podlive.h"
 
@@ -228,7 +229,10 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
         let user = PFUser.currentUser;
         let avatarImage = [[NSImage anonymousAvatarWithSize:NSMakeSize(25.0, 25.0)] imageTintedWithColor:NSColor.userLoggedOutStatusColor];
 
-        _button = [CCNLoginLogoutButton buttonWithImage:avatarImage actionHandler:([PFAnonymousUtils isLinkedWithUser:user] ? self.authenticateButtonLoggedOutStateAction : self.authenticateButtonLoggedInStateAction)];
+        _button = [CCNLoginLogoutButton
+                   buttonWithImage:avatarImage
+                   actionHandler:(CCNUserManager.sharedManager.userIsAuthenticated ? self.authenticateButtonLoggedInStateAction : self.authenticateButtonLoggedOutStateAction)
+        ];
         _button.frame = NSMakeRect(0, 0, avatarImage.size.width, avatarImage.size.height);
 
         if (user.email) {
@@ -452,6 +456,36 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
             [self closeUserInfoPopover];
         });
     }];
+}
+
+- (void)userInfoViewControllerWantsUserDeleteAction {
+    NSInteger result = [self presentConfirmationWithTitle:NSLocalizedString(@"Delete Account", @"Alert Title")
+                                              messageText:NSLocalizedString(@"Do you really want to delete your account?", @"Alert Message")
+                                          informativeText:nil
+                                        actionButtonTitle:NSString.remove];
+
+    switch (result) {
+        // Cancel
+        case NSAlertFirstButtonReturn: {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self closeUserInfoPopover];
+            });
+            break;
+        }
+
+        // Delete Account
+        case NSAlertSecondButtonReturn: {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [CCNUserManager.sharedManager deleteAccountWithCompletion:^(Boolean deleteExecuted) {
+//                    if (deleteExecuted == YES) {
+//                        [NSNotificationCenter.defaultCenter postNotificationName:CCNLogOutNotification object:nil];
+//                    }
+                    [self closeUserInfoPopover];
+                }];
+            });
+            break;
+        }
+    }
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem {

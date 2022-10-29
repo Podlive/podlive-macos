@@ -190,6 +190,20 @@
     }];
 }
 
+- (void)deleteAccountWithCompletion:(CCNDeleteAccountResultHandler)completion {
+    if (PFUser.currentUser.delete) {
+        [self logOutInBackgroundWithCompletion:^(NSError *error) {
+            if (error != nil) {
+                completion(NO);
+                return;
+            }
+            completion(YES);
+        }];
+    } else {
+        completion(NO);
+    }
+}
+
 // MARK: - User Content
 
 // Info's found here: http://en.gravatar.com/site/implement/images/
@@ -215,7 +229,7 @@
 }
 
 - (BOOL)userIsAuthenticated {
-    return PFUser.currentUser.email != nil;
+    return PFUser.currentUser.email != nil && PFUser.currentUser.isAuthenticated;
 }
 
 - (NSString *)userEmail {

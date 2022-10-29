@@ -9,7 +9,6 @@
 @interface CCNLoginLogoutButton : NSButton
 
 + (instancetype)buttonWithImage:(NSImage *)image actionHandler:(CCNButtonActionhandler)actionHandler;
-
 + (instancetype)buttonWithTitle:(NSString *)title image:(NSImage *)image actionHandler:(CCNButtonActionhandler)actionHandler NS_UNAVAILABLE;
 + (instancetype)buttonWithTitle:(NSString *)title actionHandler:(CCNButtonActionhandler)actionHandler NS_UNAVAILABLE;
 + (instancetype)checkboxWithTitle:(NSString *)title actionHandler:(CCNButtonActionhandler)actionHandler NS_UNAVAILABLE;

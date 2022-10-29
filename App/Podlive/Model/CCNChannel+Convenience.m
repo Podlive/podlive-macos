@@ -41,7 +41,7 @@
 + (NSArray *)streamingBackends {
     static NSArray *_streamingBackends = nil;
     if (!_streamingBackends) {
-        _streamingBackends = @[ @"xenim", @"studiolink" ];
+        _streamingBackends = @[ @"studiolink" ];
     }
     return _streamingBackends;
 }

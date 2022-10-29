@@ -18,6 +18,7 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
 @property (nonatomic, strong) NSTextField *emailLabel;
 @property (nonatomic, strong) NSTextField *emailTextField;
 @property (nonatomic, strong) NSButton *logoutButton;
+@property (nonatomic, strong) NSButton *userDeleteButton;
 @end
 
 @implementation CCNUserInfoView
@@ -61,7 +62,7 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
     usernameLabel.stringValue = NSLocalizedString(@"Username", @"TextField Label");
     [usernameLabel sizeToFit];
     self. usernameLabel = usernameLabel;
-    [self addSubview:self.usernameLabel];
+    [self addSubview: self.usernameLabel];
 
 
     let usernameTextField = [self defaultTextField];
@@ -70,7 +71,7 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
     usernameTextField.stringValue = user.username;
     [usernameTextField sizeToFit];
     self.usernameTextField = usernameTextField;
-    [self addSubview:self.usernameTextField];
+    [self addSubview: self.usernameTextField];
 
 
     let emailLabel = [self defaultTextField];
@@ -79,7 +80,7 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
     emailLabel.stringValue = NSLocalizedString(@"Email Address", @"TextField Label");
     [emailLabel sizeToFit];
     self.emailLabel = emailLabel;
-    [self addSubview:self.emailLabel];
+    [self addSubview: self.emailLabel];
 
 
     let emailTextField = [self defaultTextField];
@@ -88,7 +89,15 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
     emailTextField.stringValue = user.email;
     [emailTextField sizeToFit];
     self.emailTextField = emailTextField;
-    [self addSubview:self.emailTextField];
+    [self addSubview: self.emailTextField];
+
+
+    let userDeleteButton = [NSButton buttonWithTitle:NSLocalizedString(@"Delete Account", @"Button Title") target:self action:@selector(handleUserDeleteButtonAction:)];
+    userDeleteButton.translatesAutoresizingMaskIntoConstraints = NO;
+    userDeleteButton.wantsLayer = YES;
+    [userDeleteButton sizeToFit];
+    self.userDeleteButton = userDeleteButton;
+    [self addSubview: self.userDeleteButton];
 
 
     let logoutButton = [NSButton buttonWithTitle:NSLocalizedString(@"Logout", @"Button Title") target:self action:@selector(handleLogoutButtonAction:)];
@@ -96,13 +105,17 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
     logoutButton.wantsLayer = YES;
     [logoutButton sizeToFit];
     self.logoutButton = logoutButton;
-    [self addSubview:self.logoutButton];
+    [self addSubview: self.logoutButton];
 }
 
 // MARK: - Actions
 
 - (void)handleLogoutButtonAction:(NSButton *)sender {
     [self.delegate userInfoViewControllerWantsLogoutAction];
+}
+
+- (void)handleUserDeleteButtonAction:(NSButton *)sender {
+    [self.delegate userInfoViewControllerWantsUserDeleteAction];
 }
 
 // MARK: - Auto Layout
@@ -130,7 +143,10 @@ static const CGFloat kAvatarImageViewEdgeLength = 64.0;
         [self.emailTextField.centerXAnchor constraintEqualToAnchor:self.emailTextField.superview.centerXAnchor],
         [self.emailTextField.heightAnchor constraintEqualToConstant:self.emailTextField.font.boundingRectForFont.size.height],
 
-        [self.logoutButton.centerXAnchor constraintEqualToAnchor:self.logoutButton.superview.centerXAnchor],
+        [self.userDeleteButton.leadingAnchor constraintEqualToAnchor:self.userDeleteButton.superview.leadingAnchor constant:kOuterEdgeMargin],
+        [self.userDeleteButton.bottomAnchor constraintEqualToAnchor:self.logoutButton.superview.bottomAnchor constant:-kOuterEdgeMargin],
+
+        [self.logoutButton.trailingAnchor constraintEqualToAnchor:self.logoutButton.superview.trailingAnchor constant:-kOuterEdgeMargin],
         [self.logoutButton.bottomAnchor constraintEqualToAnchor:self.logoutButton.superview.bottomAnchor constant:-kOuterEdgeMargin],
     ]];
 }

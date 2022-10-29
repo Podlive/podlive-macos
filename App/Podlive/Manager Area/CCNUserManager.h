@@ -7,6 +7,7 @@ typedef void (^CCNSignUpSuccessHandler)(PFUser *user);
 typedef void (^CCNSignUpFailureHandler)(NSError *error);
 typedef void (^CCNLoginSuccessHandler)(PFUser *user);
 typedef void (^CCNLoginFailureHandler)(NSError *error);
+typedef void (^CCNDeleteAccountResultHandler)(Boolean deleteExecuted);
 typedef void (^CCNLogoutHandler)(NSError *error);
 typedef void (^CCNResetPasswordSuccessHandler)(void);
 typedef void (^CCNResetPasswordFailureHandler)(NSError *error);
@@ -25,6 +26,7 @@ typedef void (^CCNAvatarImageHandler)(NSImage *fetchedImage);
 - (void)loginInBackgroundWithUsername:(NSString *)username password:(NSString *)password success:(CCNLoginSuccessHandler)success failure:(CCNLoginFailureHandler)failure;
 - (void)logOutInBackgroundWithCompletion:(CCNLogoutHandler)completion;
 - (void)resetPasswordForEmail:(NSString *)email success:(CCNResetPasswordSuccessHandler)success failure:(CCNResetPasswordFailureHandler)failure;
+- (void)deleteAccountWithCompletion:(CCNDeleteAccountResultHandler)completion;
 
 // MARK: - User Content
 

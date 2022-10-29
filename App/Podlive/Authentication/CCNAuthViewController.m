@@ -316,24 +316,4 @@
     self.contentView.actionButton.enabled = self.hasValidLoginData;
 }
 
-- (void)presentAlertWithTitle:(NSString *)alertTitle messageText:(NSString *)messageText informativeText:(NSString *)informativeText style:(NSAlertStyle)alertStyle {
-    let alert = NSAlert.new;
-    alert.messageText     = messageText;
-    alert.informativeText = (informativeText ?: @"");
-    alert.alertStyle      = alertStyle;
-    switch (alertStyle) {
-        case NSAlertStyleInformational:
-            alert.icon = NSImage.alertSignInfo;
-            break;
-
-        case NSAlertStyleWarning:
-        case NSAlertStyleCritical:
-            alert.icon = NSImage.alertSignError;
-            break;
-    }
-
-    [alert addButtonWithTitle:NSString.ok];
-    [alert runModal];
-}
-
 @end

@@ -1,6 +1,6 @@
-[![Twitter: @TheCocoaNaut](https://img.shields.io/badge/Twitter-@TheCocoaNaut-c9d840.svg?style=flat)](https://twitter.com/TheCocoaNaut)
-[![Twitter: @PodliveApp](https://img.shields.io/badge/Twitter-@PodliveApp-ca94d4.svg?style=flat)](https://twitter.com/PodliveApp)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://cocoanaut.mit-license.org)
+[![Mastodon: @phranck](https://img.shields.io/badge/Mastodon-@phranck-blue.svg?style=flat)](https://chaos.social/@phranck)
+[![Mastodon: @Podlive](https://img.shields.io/badge/Mastodon-@Podlive-ca94d4.svg?style=flat)](https://chaos.social/@Podlive)
+[![License](https://img.shields.io/badge/license-MIT-c9d840.svg?style=flat)](http://cocoanaut.mit-license.org)
 [![Release](https://img.shields.io/github/release/phranck/podlive-macos.svg)]()
 
 # Podlive for macOS
@@ -56,7 +56,7 @@ git submodule update
 * :memo: [Read our blog](https://podlive.io/blog)
 
 ## License
-This software is published under the [MIT License](http://cocoanaut.mit-license.org).
+This software is published under the [MIT License](http://woodbytes.mit-license.org).
 
 ## Documentations
 
