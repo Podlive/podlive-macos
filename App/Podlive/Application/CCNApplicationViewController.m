@@ -477,9 +477,6 @@ typedef void(^CCNLoginLogoutButtonAction)(__kindof NSButton *actionButton);
         case NSAlertSecondButtonReturn: {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [CCNUserManager.sharedManager deleteAccountWithCompletion:^(Boolean deleteExecuted) {
-//                    if (deleteExecuted == YES) {
-//                        [NSNotificationCenter.defaultCenter postNotificationName:CCNLogOutNotification object:nil];
-//                    }
                     [self closeUserInfoPopover];
                 }];
             });
