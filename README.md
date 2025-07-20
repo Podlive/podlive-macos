@@ -29,7 +29,7 @@ To contribute, just clone this project and start to develop. *Please avoid to sp
 
 In order to test your code you have to use our test-backend. This requires access keys, which aren’t included in this repository.
 
-> **NOTE: To use these keys please send a request to our [email address](mailto:mail@podlive.io?Subject=Parse-Server-Key-Request)**.
+> **NOTE: To use these keys please send a request to our [email address](mailto:mail@podlive.eu?Subject=Parse-Server-Key-Request)**.
 
 ## Developer Notes
 Podlive uses GitFlow. There are two branches, `master` and `develop`. The `develop` branch is our default branch. To make your (changes|fixes|additions) you just have to create your working branch with `develop` as parent. If you’re done, open a pull request.
@@ -51,9 +51,8 @@ git submodule update
 
 ## Contact
 
-* :envelope: [Write us an email](mailto:mail@podlive.io)
+* :envelope: [Write us an email](mailto:mail@podlive.eu)
 * :bird: [Ping us on Twitter](https://twitter.com/PodliveApp)
-* :memo: [Read our blog](https://podlive.io/blog)
 
 ## License
 This software is published under the [MIT License](http://woodbytes.mit-license.org).
